@@ -1,0 +1,98 @@
+
+.main section {
+  margin: 5px;
+  border-radius: 3px;
+  background: #F5F0CF;
+  padding: 5px;
+  flex: 1;
+}
+.main h1 {
+  color: #3f100f;
+  font-size: 2.0rem;
+}
+.main li {
+  margin-top: 6px;
+}
+.main {
+  display: flex;
+}
+.main img {
+    float: right;
+    margin-right:10px;
+}
+
+.main2 section {
+  margin: 5px;
+  border-radius: 3px;
+  background: #C5F0CF;
+  padding: 5px;
+  flex: 1;
+}
+.main2 h1 {
+  color: #003f00;
+  font-size: 2.0rem;
+}
+.main2 li {
+  margin-top: 6px;
+}
+.main2 {
+  display: flex;
+}
+.main2 img {
+    float: right;
+    margin-right:10px;
+}
+
+.main3 section {
+  margin: 5px;
+  border-radius: 3px;
+  background: #C5F0CF;
+  padding: 5px;
+  flex: 1;
+}
+.main3 h1 {
+  color: #003f00;
+  font-size: 2.0rem;
+}
+.main3 li {
+  margin-top: 6px;
+}
+.main3 {
+  display: flex;
+}
+.main3 img {
+    float: right;
+    margin-right:10px;
+}
+
+
+.main4 section {
+  margin: 5px;
+  border-radius: 5px;
+  background: #F5F0CF;
+  padding: 2px;
+  flex: 1;
+}
+.main4 h1 {
+  color: #003f00;
+  font-size: 2.0rem;
+}
+.main4 li {
+  margin-top: 6px;
+}
+.main4 {
+  display: flex;
+}
+.main4 img {
+    float: right;
+    margin-right:2px;
+}
+
+
+.main5 section {
+  margin: 5px;
+  border-radius: 5px;
+  background: #F5F0CF;
+  padding: 2px;
+  flex: 1;
+}
