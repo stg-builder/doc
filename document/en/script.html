@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href ="../../index.css">
+
+<BODY>
+	<a name="TOP" id="TOP"></a>
+	<IMG SRC="../../png/A_160x80.png">
+	<a href="manual.html">back to the original page</a>
+	<hr>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script00.png">
+			<H1>Script editing</H1>
+			I want to have detailed control over my character's behavior. You want to handle everything yourself<BR>
+			The script provides some of those features
+			<P></P>
+			<a href="common.html">Here's help for common operation of the edit window</a >
+			<P></P>
+			<div class="main3">
+				<section>
+					<H5>Command details</H5>
+					<a name="command"></a>
+					<div class="main4">
+						<section>
+							<a href="script_label.html">label</a>
+						</section>
+						<section>
+							<a href="script_ctrl.html">control</a>
+						</section>
+					</div>
+					<div class="main4">
+						<section>
+							<a href="script_move.html">move</a>
+						</section>
+						<section>
+							<a href="script_attack.html">attack</a>
+						</section>
+					</div>
+					<div class="main4">
+						<section>
+							<a href="script_draw.html">Drawing</a>
+						</section>
+						<section>
+							<a href="script_sound.html">Sound</a>
+						</section>
+					</div>
+					<div class="main4">
+						<section>
+							<a href="script_scroll.html">background</a>
+						</section>
+						<section>
+							<a href="script_score.html">score</a>
+						</section>
+					</div>
+					<div class="main4">
+						<section>
+							<a href="script_var.html">variable</a>
+						</section>
+						<section>
+						</section>
+					</div>
+				</section>
+			</div>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<UL>
+				<LI>Control field <BR>The blue circles on the right side of the control field are arranged in a grid Place the control panel here. Place the control panel here</LI>
+				<LI>The control panel <BR>control panel is divided into several groups, with the color of the panel You can identify it. Switching the tabs on the left side will bring up the control panels you can place.
+					When you find the panel you want to place, drag it to the right side of the control field (note that dropping it on top of an existing panel replaces it). (Note that dropping it on top of an existing panel will replace it.
+					If you want to move an already placed control panel, drag it onto the control field</LI>
+
+				<LI>Execution Order and GATE<BR>
+					The scripted program executes the control panel according to certain rules.
+					There is a down arrow extending from the upper left corner "GATE" of the control field.
+					This position called "GATE" is the starting position for execution.
+					The control panel that starts at the gate will be executed in the downward direction unless there is nothing else.
+					(There's a small arrow between the control panels so you can see which way it runs.
+					The area where there is no control panel will be passed downward.
+					When the panel is executed to the bottom of the screen, it is executed again from "GATE".
+				</LI>
+
+				<LI>Scripting Parameters <BR>All control panels have a script parameter called It has several control values. These are configurable in the edit panel at the top of the window by clicking on the control panel where you placed them. LI>
+				<LI>Weight <BR>Weight can be set for all control panels except some. Once a weight is set, after executing that panel, the user will move to the next panel until the set time has elapsed. I do not. Note that if you let it loop infinitely without letting time pass, it will deadlock
+					<UL>
+						<LI>No waiting for time <BR>Move to the next panel even if that panel's execution is not finished</LI>
+						<LI>Wait for the completion of the action <BR>Wait for the next panel when the action of that panel is completed. If the execution is immediate, there is no time lapse. There is no time lapse if the execution terminates immediately</LI>
+						<LI>Wait for the specified number of frames <BR>Wait for the specified number of frames, regardless of what that panel does, and then move to the next panel</LI>
+					</UL>
+				</LI>
+				Can I move to the next one if I haven't finished running the <LI> panel? <BR>
+					If you move to the next panel without waiting for it to finish, it will continue to run in the background (apparently) If you try to run the exact same control panel, however, the last time it was running will be stopped. However, if you try to run the exact same control panel, the previous execution will stop. Different panels (e.g. move, rotate and attack) can all be executed in parallel
+				</LI>
+				<LI>Panel size can be freely set within the range of 1x1 to 32x32</LI>
+			</UL>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<h5>Wait for time</h5>
+			Many of the control panels allow you to set up a time delay, and you can choose from three different waiting options
+			<UL>
+				<LI>No <BR>Execute the next control panel immediately</LI>
+				<LI>Execute the next control panel when that control panel finishes the specified action</LI> until the action is completed.
+				<LI>Number of frames <BR>Execute the next control panel after the specified number of frames</LI>
+			</UL>
+			<b>If you deploy a large number of control panels with no timeouts, you may get the error "Infinite loop detected" at runtime</b>
+		</section>
+		</div>
+
+	<div class="main4">
+		<section>
+			<h5>Direction of travel</h5>
+			Specify the control panel to run next
+		</section>
+		</div>
+
+	<div class="main2">
+		<section>
+			<H5>Multiple select and copy and paste panels</H5>
+			You can select multiple control panels by CTRL+Left Click (or SHIFT+Left Click) (the selected panel will have a white frame).
+			You can also left-drag a control field to select a range of fields.
+			When you right-click on a panel, a menu will open and you can select the command you want to execute
+			<ul>
+				<li>Copy<br>Copy the selected panel to the clipboard</li>
+				<li>Cut<br>Copy the selected panel to the clipboard and delete the panel</li>
+				<li>Paste<br>Paste the copied panel to the clipboard and export it to the cursor position</li>
+				<li>Create Gate<br>Gates can only be created in the upper left corner. If the gate does not exist, the task will not be executed (inheritance script, default See script description)</li>
+				<li>Remove gate<br>Remove gate</li>
+				<li>Edit memo<br>Gives a memo to the panel. The content is done in the text box at the bottom of the screen</li>
+				<li>Remove memo<br> Deletes the memo assigned to the panel</li>
+			</ul>
+		</section>
+	</div>
+
+
+	<div class="main4">
+		<section>
+			<H5>Multitasking</H5>
+			Scripts can run up to 16 tasks simultaneously (users have 8 tasks at their disposal) (up to a task). To edit another task, use the "Task Combo Box" to switch between them
+
+			Notes on editing other tasks
+			<ul>
+				<li>Don't forget to create a gate<br>If you don't have a gate, it won't run (see Inheritance Script, Default Script) </li>
+				<li>Label is local per task<br>You can't jump to other tasks</li>
+				<li>Loop counters are local per task<br>and have no effect on other tasks</li>
+				<li>Variables, signals, etc. are the same for all tasks<br>Please do not duplicate them</li>
+				<li>All user tasks other than the main task must be launched manually<br>by using the "Start Task" command</li>
+			</ul>
+		</section>
+	</div>
+
+
+	<div class="main2">
+		<section>
+			<H5>Automatic activation</H5>
+			Some tasks may be automatically launched by the system
+			<ul>
+				<li>Attack hit<br>Automatically activated when the attacker is hit</li>
+				<li>Defensive Hit<br>Automatically activated when attacked by an opponent (not called for destruction)</li>
+				<li>Destruction<br>Automatically activated when health reaches 0 and is destroyed</li>
+				<li>Menu<br>This task is dedicated to the menu. Launching is manual</li>
+				<li>Player<br>Launches when the player appears</li>
+				<li>Wall Hit<br>Wall hit<br>When you hit a wall (background with hit detection)</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<H5>Inherited Scripts and Default Scripts</H5>
+			If you do not write the required script (GATE does not exist in the task), the script registered as an inheritance script will be executed<br>
+			If the inheritance script did not exist, or if it is not registered, the system-provided script, called the default script, will be executed
+			<br>
+			In other words, the default script is invoked without the user having to write any script, so the basic behavior can be skipped<br>
+			<br>
+			You can save yourself a lot of trouble by creating an inheritance script for all characters
+		</section>
+	</div>
+<p></p>
+
+
+	<HR>
+	<a href="#TOP">Back to the top of the page</a><br>
+</BODY>
+
+</html>

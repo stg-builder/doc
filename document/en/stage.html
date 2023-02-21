@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href ="../../index.css">
+
+<BODY>
+	<a name="TOP" id="TOP"></a>
+	<IMG SRC="../../png/A_160x80.png">
+	<a href="manual.html">back to the original page</a>
+	<hr>
+
+	<div class="main2">
+		<section>
+			<H1>Stage editing</H1>
+			<a href="common.html">Here's help for common operation of the edit window</a ><BR>
+		</section>
+	</div>
+
+
+	<div class="main4">
+		<section>
+			<H2>Primary Settings Tab</H2>
+			<IMG SRC="png/stage00.png">
+			<UL>
+				<li>Main BGM<BR>The played at the start of the stage. Select background music</li>
+				<li>Special layout <BR>Specifies a layout specific to this stage (default layout will be applied if not specified)</li>
+				<li>Basic scrolling direction <BR>Switch between vertical and horizontal scrolling here</li>
+				<li>Shadow rendering settings</li>
+				<UL>
+					Sets the parameters for drawing a character's shadow
+					<li>Draw shadow of character<li> Check the box to draw a shadow in the stage. <a href="chara.html">character</a>Specify attributes in the settings </li>
+					<li>Transparency (alpha)<br>Shadow transparency (0-255)</li>
+					<li>Scale (equal to 100)<br>Scale (equal to 100)<br>Scale of the shadow in terms of magnification</li>
+					<li>Display offset<br> Specifies the position of the shadow to be drawn</li>
+				</UL>
+				<li>Disable pause<br>Check this box if you want to disable the pause button in the main stage</li>
+				<li>Disable buttons<br>Disable button operation for scene transitions outside of the main stage</li>
+			</UL>
+		</section>
+	</div>
+
+
+	<div class="main2">
+		<section>
+			<H2>Display preference tab</H2>
+			<IMG SRC="png/stage01.png">
+			This section allows you to set the priority and scrolling speed of characters and backgrounds to be displayed on the stage.
+			<UL>
+				<LI>Priority List <BR>Add as many backgrounds as you need here. Once you have selected your background, click the buttons above and below to determine the priority (the higher the priority, the higher the priority). Once you've determined the priority, set the parameters on the right <BR>
+				<B>The sky and the midair are the layers in which the characters appear</B></LI>
+				<LI>Main background <BR>Only background on which the scrolling is based. Characters that sync to the background will sync to this checked background.
+				<LI>ID(Referred from script)<BR>Identification ID used to change the scrolling position and speed from the script</LI>
+				<LI>Scroll start position <BR>The position to display the background at the start of the stage</LI>
+				<LI>Scroll speed <BR>Specifies the speed at which the background scrolls</LI>
+				<LI>Drawing Method <BR>Specifies the method for drawing the background</LI>
+				<LI>Foreground color <BR>Specifies the color for drawing the background in ARGB 32 bits.
+				<LI>Wraparound <BR>Repeatedly show outside the background range</LI>
+				<LI>Scroll even when time is paused <BR>Do not stop scrolling even when a time pause character appears</LI>
+				<li>Free scrolling<br>Scrolls the background left and right as the ship moves left and right. . Make the background width larger than the screen size<BR>
+					In horizontal scrolling, the background scrolls up and down to match the up and down movement of the time.
+				<LI>Please set to Yes if the background has a hit on it (HIT must have been set in the background settings)</LI>
+				<LI>Attack strength <BR>Attack strength when hitting the background</LI>
+			</UL>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<H2>Enemy Location Tab</H2>
+			<IMG SRC="png/stage02.png">
+			The first thing to do here is to specify the length of the entire stage in frames (the whole of the lower right (time). Then, scroll the placement area (right-drag or drag the time bar) and place it in Enter the desired location (time) on the screen.
+			You can place characters by dragging and dropping them from the project window's character list or formation list to the placement area
+			<UL>
+				<LI>Concept of placement <BR>There are two main types of placement methods</LI>
+				<LI>Arrangement by time (blue) <BR>This is a type of enemy that will appear when the specified time comes. Most STGs with no background (infinite loop) are placed in this way.
+				<LI>Positioning by coordinates (green) <BR>This is a type of enemy that is placed at a specified position. Used to create enemies that are synchronized with the background. However, you must register a background called the main background in order to use this type of enemy (the main background is (Only one background can exist on stage.)
+				</LI>
+				<LI>How to change the placement method<BR>You can change the placement method with the buttons "Time placement" and "Coordinate placement" in the placement list</LI>
+				<LI>Concept of Time <BR>Time is a minimum unit of measurement, the frame (1/60th of a second). In the placement screen, one frame is one pixel long (see the timeline)</LI>
+			</UL>
+			<H2>Modification of post-deployment data</H2>
+			<UL>
+				Click on the item in the placement list that you want to change (double-click to center it in the placement area). (Focus). Then, various information will be displayed above the placement area, so you can make changes, etc.
+				<LI>Time (invalid for coordinate placement) <BR>Positioned time information</LI>
+				<LI>X<BR>Located X position information</LI>
+				<LI>Y (invalid for time placement) <BR>Positioned Y information</LI>
+				<LI>PARAM_A,B<BR><A HREF="script.html">Script </A> Comparison of conditional bifurcation parameters passed to the script You can do it.
+				<LI>When you select <BR>"Do not appear if you are in the screen," the appearance will be skipped if there is a fast-turning target (character setting)</LI>
+				<LI>Item <BR>Select the item that will appear when you destroy it. In the case of formation, it will be set as the last enemy in the formation</LI>
+			</UL>
+			<H2>Mouse operation</H2>
+			Range selection, dragging the icon to the left<BR>
+			Drag right to scroll and wheel to zoom in and out.
+		</section>
+	</div>
+
+
+	<HR>
+	<a href="#TOP">Back to the top of the page</a>
+</BODY>
+
+</html>
+

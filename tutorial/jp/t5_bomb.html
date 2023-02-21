@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../index.css">
+
+<BODY>
+    <a name="TOP" id="TOP"></a>
+    <IMG SRC="../../png/A_160x80.png">
+    <a href="index.html">■元のページへ戻る</a>
+    <hr>
+    <div class="main2">
+        <section class="col-1">
+            <H2>5.爆発を作成する</H2>
+            敵等が爆発するときのエフェクトを作成します<br>
+            前回のチュートリアルで作成したプロジェクトファイルを開いておいてください<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/bomb00.png">
+            <h2>爆発スプライトの作成</h2>
+            スプライトを新規作成し、名前を'BOMB'とします<br>
+            リソースフォルダからimg_bomb01.bmpを登録します<br>
+            当たり判定は必要ありません<br>
+            <br>
+            アニメーション編集タブへ切り替え、アニメーションを一つ作成します<br>
+            ループにチェックが入っている場合はチェックを外します<br>
+            <b>この時のアニメ番号をパターン番号の代わりに指定するとアニメーションが再生されます</b><br>
+            <br>
+            アニメフレームを11個追加し、パターン番号に1～11を、フレーム数に2を入力します<br>
+            <br>
+            プレビューを再生してアニメーションを確認します<br>
+            (ループ無しの設定でもループ再生されます)
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/bomb01.png">
+            <h2>爆発キャラクタの作成</h2>
+            種類に敵（空中物）を選択<br>
+            パターン番号に-1を設定(負の数なのでアニメ番号になります)<br>
+            スプライトとスクリプトを登録します<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/bomb02.png">
+            <h2>爆発スクリプトの作成</h2>
+            先ほど作成したスクリプトを編集します<br>
+            タスク「0:メイン」に制御カテゴリの通過と消滅を配置します<br>
+            通過の時間待ちの項目をフレーム数に切り替え、アニメーションの長さである22を入力します<br>
+            <br>
+            これでアニメーションを再生しきった時点で消滅するようになります
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/bomb03.png">
+            <h2>デフォルトの爆発として登録する</h2>
+            作成したスプライト、キャラクタ、スクリプトを保存して閉じてください<br>
+            <br>
+            ゲーム設定を開き、デフォルト指定タブをクリックします<br>
+            その中にあるデフォルト爆発の...をクリックして先ほど作成したBOMBを登録します
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/bomb04.png">
+            <h2>テストプレイし、敵が爆発するか確認する</h2>
+            前回の敵作成と同様にENEMY-Aが出現するようにテストプレイし、ショットで敵を破壊します<br>
+            爆発が表示されれば成功です
+        </section>
+    </div>
+    <hr>
+    <a href="#TOP">■ページ上部へ戻る</a><br>
+    <P>
+</BODY>
+
+</html>

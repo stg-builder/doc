@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../index.css">
+
+<BODY>
+	<a name="TOP" id="TOP"></a>
+	<IMG SRC="../../png/A_160x80.png">
+	<a href="script.html">■元のページへ戻る</a>
+	<hr>
+
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_ctrl.png">
+			<H1>スクリプトコマンド</H1>
+			<H2>制御グループ</H2>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_ctrl00.png">
+			<h2>通過</h2>
+			<ul>
+				<li>何もしない制御パネルです<br>無限ウエイトという特殊機能があります</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_ctrl01.png">
+			<h2>消滅</h2>
+			<ul>
+				<li>自キャラクタを消滅させます<br>破壊タスクは実行されません</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_ctrl02.png">
+			<h2>ループ開始</h2>
+			一連の制御パネルを一定回数繰り返す時に使用します
+			<ul>
+				<li>ループ番号<br>0～15を指定、同一番号のループ終了パネルとの間で繰り替え処理が行われます</li>
+				<li>ループ回数<br>繰り返す回数</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_ctrl03.png">
+			<h2>ループ終了</h2>
+			<ul>
+				<li>ループ番号<br>0～15を指定、同一番号のループ開始パネルとの間で繰り替え処理が行われます</li>
+			</ul>
+			多重ループの際はループ番号の付け方に注意してください
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_ctrl04.png">
+			<h2>条件分岐</h2>
+			<ul>
+				<li>比較対象
+					<ul>
+						<li>PARAM_A,B<br>ステージ設定の出現テーブルで設定された値</li>
+					</ul>
+				</li>
+				<li>分岐条件<br>比較対象と値が条件を満たしたときに右へ分岐します<br>
+					そうでない場合はそのまま下へ抜けます
+				</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_ctrl05.png">
+			<h2>フラグ</h2>
+			<ul>
+				<li>アトリビュートフラグ<br>キャラクタ編集で設定したフラグを一つ選択</li>
+				<li>ON,OFFする<br>選択したアトリビュートフラグのON､OFFを切り替えます</li>
+			</ul>
+			<b>アトリビュートフラグ「多関節キャラ」は変更できません</b>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_ctrl06.png">
+			<h2>タスク開始</h2>
+			<ul>
+				<li>タスク番号<br>0～15を指定<br>GATEの無いタスクは開始されません<br>継承スクリプト、デフォルトスクリプトの項目を参照</li>
+				<li>最初から開始する<br>チェック時は無条件にGATEから開始されます<br>
+					非チェック時、タスクがすでに動作中は何もしません<br>
+					非チェック時、タスクが一時停止していた場合、その場から再開されます
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_ctrl07.png">
+			<h2>タスク終了</h2>
+			<ul>
+				<li>タスク番号<br>0～15を指定<br>指定したタスクを一時停止させます<br>
+				一時停止から再会した場合、次のパネルから実行されます</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_ctrl08.png">
+			<h2>信号送信</h2>
+			<ul>
+				<li>送信先
+					<ul>
+						<li>自分<br>常に有効</li>
+						<li>親<br>親が居ない場合は無効</li>
+						<li>子<br>子IDで対象の子を選択、居ない場合は無効</li>
+						<li>関節（子）<br>キャラクタ編集で多関節タブで節に付与したオプションキャラクタ。全関節が対象
+						</li>
+					</ul>
+				</li>
+				<li>子ID<br>送信先が子の場合の対象</li>
+				<li>シグナル番号<br>SIGNAL_00～SIGNAL_15を指定</li>
+				<li>送信モード<br>そのまま送信するか、送信先と演算を行うか選択</li>
+				<li>送信データ<br>変数の内容を送信するのか値を送信するのか選択</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_ctrl09.png">
+			<h2>信号受信</h2>
+			受信済みの信号内容と比較を行い条件分岐する
+			<ul>
+				<li>シグナルを受信するまでウエイトする<br>一度もシグナルを受信していない場合、このパネルで待ち続ける</li>
+				<li>シグナル番号<br>SIGNAL_00～SIGNAL_15を指定</li>
+				<li>分岐条件<br>シグナル値と(値or変数)が条件を満たしたときに右へ分岐します<br>
+					そうでない場合はそのまま下へ抜けます
+			</ul>
+			<b>シグナルを一度でも受信したかどうかのフラグは「信号クリア」パネルでリセットされる</b>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_ctrl10.png">
+			<h2>信号クリア</h2>
+			シグナルを一度でも受信したかどうかのフラグをリセットする<bR>
+			また、受信シグナル値が0クリアされます(選択可)
+			<ul>
+				<li>すべてのシグナルをクリアする<br>チェック時SIGNAL_00～SIGNAL_15すべてが対象となる</li>
+				<li>受信データを0にしない<br>チェック時、受信シグナル値には何もしない</li>
+				<li>シグナル番号<br>SIGNAL_00～SIGNAL_15を指定</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_ctrl11.png">
+			<h2>メニュー</h2>
+			簡易プレイヤー選択用メニュー<br>
+			簡易メニューの作り方
+			<ul>
+				<li>システム選択<br>プレイヤー選択を選んでください</li>
+				<li>各種効果音<br>動作時の効果音を選択してください</li>
+				<li>キャンセル可<br>Bボタンでキャンセル可能になります</li>
+				<li>左右で選択<br>上下で選択するか左右で選択するか</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_ctrl12.png">
+			<h2>表示優先</h2>
+			<ul>
+				<li>表示優先<br>ステージ編集・優先リスト上のどのレイヤーに表示するかを選択します</li>
+				<li>Z値オフセット<br>キャラクタ編集のZ値オフセットを変更します(値or変数)</li>
+				</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_ctrl13.png">
+			<h2>ランダム</h2>
+			<ul>
+				<li>指定された確率で右へ分岐する<br>0～100%</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_ctrl14.png">
+			<h2>体力</h2>
+			<ul>
+				<li>残り体力が指定された割合を下回る(イコールを含む)と右へ分岐する<br>0～100%で指定、小数点以下切り捨て</li>
+				<li>分岐するまで無期限でウエイト<br>非チェック時は下へ抜けます</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_ctrl15.png">
+			<h2>アイテム</h2>
+			アイテムキャラクタを作成時に時間で内容を切り替える時に使用されます
+			<ul>
+				<li>アイテムの内容の変更先<br>アイテム用キャラクタを選択</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_ctrl16.png">
+			<h2>ボタン判定</h2>
+			<ul>
+				<li>ボタン<br>なしを選択すると常に非成立になります</li>
+				<li>押されるまでウエイトする<br>非チェック時は下へ抜けます</li>
+				<li>押しっぱなしでも有効<br>非チェック時はトリガー判定となります</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_ctrl17.png">
+			<h2>面クリア</h2>
+			<ul>
+				<li>次のステージを登録する<br>メインステージ以外は無視されます<br>指定が無い場合はメインステージ内の次の項目が選ばれます</li>
+				<li>今すぐ遷移<br>非チェック時はステージクリア時に遷移</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_ctrl18.png">
+			<h2>その他</h2>
+			<ul>
+				<li>破壊<br>HPが0になって破壊されたのと同じ状態になります。破壊タスクも起動します</li>
+				<li>アプリ終了<br>テストプレイ中は無効</li>
+				<li>タイトルへ遷移する<br>現シーンを終了し、タイトルへ遷移する</li>
+				<li>プレイヤー選択へ遷移する<br>現シーンを終了し、プレイヤー選択へ遷移する</li>
+				<li>オープニングへ遷移する<br>現シーンを終了し、オープニングへ遷移する</li>
+				<li>エンディングへ遷移する<br>現シーンを終了し、オープニングへ遷移する</li>
+				<li>ランキングへ遷移する<br>現シーンを終了し、ランキングへ遷移する</li>
+				<li>メインステージへ遷移する<br>現シーンを終了し、メインステージの先頭へ遷移する</li>
+
+				
+			</ul>
+			<br>
+			シーン遷移系に関して<br>
+			リプレイ記録は破棄されます<br>
+			リプレイ再生中、オートデモ中は無視されます
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_ctrl19.png">
+			<h2>ゲーム速度</h2>
+			ステージ開始時にデフォルトに戻ります
+			<ul>
+				<li>速度選択</li>
+			</ul>
+		</section>
+	</div>
+
+	<a href="#TOP">■ページ上部へ戻る</a><br>
+
+</BODY>
+
+</html>

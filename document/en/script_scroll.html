@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href ="../../index.css">
+
+<BODY>
+	<a name="TOP" id="TOP"></a>
+	<IMG SRC="../../png/A_160x80.png">
+	<a href="script.html">back to the original page</a>
+	<hr>
+
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_scroll.png">
+			<H1>Script commands</H1>
+			<H2>Background Group</H2>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_scroll00.png">
+			<h2>Speed</h2>
+			Change the scrolling speed of the background
+			<ul>
+				<li>Background ID<br><a href="stage.html">Stage editing</a> Priority List Background ID</li>
+				<li>XY speed<br>Background scrolling speed, either relative or absolute</li>
+				<li>Number of frames to change<br>Number of frames to reach the set speed</li>
+			</ul>
+		</section>
+	</div>
+	
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_scroll01.png">
+			<h2>Color</h2>
+			<ul>
+				<li>Background ID<br><a href="stage.html">Stage editing</a> Priority List Background ID</li>
+				<li>Rendering color<br>Sets the vertex color for drawing the background in ARGB 32 bits</li>
+				<li>Drawing function
+				<ul>
+					<li>Opaque<br>The fastest of all the common drawing methods</li>
+					<li> Semi-transparent<br>When the texture has an alpha value or you want to change the alpha value of the vertex color, you need to use this rendering method</li>
+					<li>Add<br>Draw by adding color to the already drawn object</li>
+					<li>Subtract<br>Subtract the color from the already drawn object</li>
+				</ul>
+				</li>
+				<li>Number of frames to change<br>Number of frames to reach the set color</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_scroll02.png">
+			<h2>Control</h2>
+			<ul>
+				<li>Background ID<br><a href="stage.html">Stage editing</a> Priority List Background ID</li>
+				<li>Turn display<br>Turn display on or off</li>
+				<li>Judgment to hit<br>Switches the hit judgment on/off</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_scroll03.png">
+			<h2>Move</h2>
+			<ul>
+				<li>Background ID<br><a href="stage.html">Stage editing</a> Priority List Background ID</li>
+				<li>Move to
+					<ul>
+						<li>Specifies the target coordinates in absolute coordinates<br>Specifies the destination coordinates in
+							absolute coordinates. The top-left corner of the screen is the (0,0) point</li>
+						<li>Specifies the target coordinates relative to the current coordinates<br>The destination coordinates are
+							relative to the current coordinates. If the number is positive, it is the bottom right corner. Positive
+							numbers point to the lower right and negative numbers point to the upper left</li>
+						<li>Specify the movement force in absolute value<br>Specify the movement force in the XY direction in
+							absolute value</li>
+						<li>Specify the force to move in the direction of
+						<li>XY</li>, which is a relative value.
+					</ul>
+				</li>
+				<li>Movement formula<br>
+					Valid only for coordinates.
+					<ul>
+						<li>Current velocity<br>Current velocity to the target location</li>
+						<li>Acceleration, rapid acceleration<br>Accelerate while moving from the start point</li>
+						<li>Decelerate, decelerate rapidly<br>When you get close to the target point, you will move while
+							decelerating</li>
+						<li>Acceleration and deceleration, rapid acceleration and deceleration</li>
+					</ul>
+				</li>
+				<li>Number of frames to move<br>This is the number of frames it takes to reach the target coordinates, the shortest
+					being 1 frame</li>
+				<li>Range by random number<br>Range of coordinates or force to move to</li>
+				<li>Use a variable<br>Use a variable to specify coordinates and force of movement</li>
+			</ul>
+			<b>When you specify a target coordinate, the speed of movement will be maintained after reaching the target<br>Check
+				"Stop when target is reached" to stop it. </b>
+		</section>
+	</div>
+	<a href="#TOP">Back to the top of the page</a><br>
+
+</BODY>
+
+</html>
+

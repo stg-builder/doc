@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../index.css">
+
+<BODY>
+    <a name="TOP" id="TOP"></a>
+    <IMG SRC="../../png/A_160x80.png">
+    <a href="index.html">back to the original page</a>
+    <hr>
+    <div class="main2">
+        <section class="col-1">
+            <H2>6. Creating enemy bullets</H2>
+            Keep the project file created in the previous tutorial open<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/shoot00.png">
+            <h2>Create a sprite for enemy bullets</h2>
+            Create a new sprite and name it 'SYSTEM'<br>
+            Register img_system.bmp from the resource folder<br>
+            This time we register the pattern number of only one enemy bullet (including the hit decision)<br>
+            Later we will also add patterns such as items and guided missiles<br>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/shoot01.png">
+            <h2>Creating a character for enemy bullets</h2>
+            Create a new character and name it 'SHOOT'<br>
+            Set the type of enemy bullets (normal) and parameters as shown in the figure to the right<br>
+            Register a sprite (SYSTEM) and a script (new)<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/shoot02.png">
+            <h2>Creating a script for enemy bullets</h2>
+            Place the control group's passing panel in the task "0: Main" and set the time wait to complete the operation<br>
+            <br> <br>
+            Place the <b>Annihilation Panel of Control Group</b> after creating the <b>gates to the tasks "9: Attack Hits" and "10: Defensive Hits"</b>
+            <br> <br>
+            It will disappear when an attack hits something or when you are hit by a bomb-like attack<br>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/shoot04.png">
+            <h2> Register as the default bullet</h2>
+            Save and close the sprites, characters and scripts you have created<br>
+            <br> <br>
+            Open the game settings and click on the Specify Defaults tab<br>
+            Register the SHOOT you just created by clicking on the default bullets in it... of the default bullets in it ... and register the SHOOT that you just created
+            <br> <br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/shoot03.png">
+            <h2>Let the enemy shoot the bullets</h2>
+            Open the script for the straight-line enemy 'ENEMY-A' that you created earlier<br>
+            <br> <br>
+            Leave a gap between the move panel and the pass-through panel (drag the pass-through panel down) as shown on the right<br>
+            Place the shot panel of the attack group<br>
+            <br> <br>
+            Set the parameters as shown in the figure to the right<br>
+            SHOOT the bullets, set the interval to 5, firing frequency to 2, and speed to 400<br>
+            <br> <br>
+            Perform a test run and make sure that bullets are fired at your plane from the enemy<br>
+            <br> <br>
+            <b>At the moment it will not be destroyed if it hits its own plane</b
+        </section>
+    </div>
+    <hr>
+    <a href="#TOP">Back to top of page</a><br>
+    <P>
+</BODY>
+
+</html>
+

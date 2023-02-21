@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href ="../../index.css">
+
+<BODY>
+	<a name="TOP" id="TOP"></a>
+	<IMG SRC="../../png/A_160x80.png">
+	<a href="manual.html">back to the original page</a>
+	<hr>
+
+	<div class="main2">
+		<section>
+			<H1>Bullet editing</H1>
+			<a href="common.html">Here's help for common operation of the edit window</a ><BR>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/danmak00.png">
+
+			<UL>
+				<LI>Lifetime (number of frames)<BR>This is the amount of time, in frames, before the barrage ends</LI>
+				<LI>Target <BR>Specifies the direction and offset angle of the target.
+					<UL>
+						<LI>Britain's direction will be 0 degrees</LI>
+						<LI>Direction of travel <BR>The direction the character is moving will be 0 degrees</LI>
+						<LI>Fixed direction <BR>Bottom of the screen will be 0 degrees</LI>
+						<LI>Your direction <BR>The direction your character is facing will be 0 degrees</LI>
+					</UL>
+				<li>Keep the angle of the first bullet<br>When aiming at a moving target, the angle of the first bullet and thereafter changes and the angle of the first bullet is maintained. It will If you check, the angle of the first bullet is applied to all subsequent bullets</li>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<UL>
+			<LI>Minimum and maximum values <BR>As a barrage parameter, some of the values that are set have a certain range There are three parameters (e.g. injection position and direction). When specifying these parameters, the minimum value, the maximum value and the calculation method are specified
+				<UL>
+					<LI>Random <BR>Randomly choose a value from minimum to maximum</LI>
+					<LI>Linear <BR>It gradually varies from the minimum value immediately after the start to the maximum value. The maximum value is reached in the same amount of time as the lifetime</LI>
+					<LI>Sine wave <BR>Varies with the same period as the sine wave (sine wave). The initial value is the median of the minimum and maximum value</LI>
+				</UL>
+			</LI>
+				<LI>Offset value for injection position XY<BR>Offset value for injection position</LI>
+				<LI>Injection angle <BR>Offset value of the injection angle</LI>
+				<LI>Injection speed <BR>Injection speed in absolute value</LI>
+				<LI>Injection Interval <BR>Injection and Injection Interval, per frame</LI>
+				<LI>Ejection rate <BR>Specifies the number of bullets to be ejected in one shot</LI>
+			</UL>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			The following parameters are parameters that change with each shot in simultaneous injection
+			<UL>
+				<LI>XY<BR>Ejection position is changed with each shot</LI>
+				<LI>Angle <BR>Ejection angle for each shot</LI>
+				<LI>Interval <BR>Varying the interval between each shot</LI>
+			</UL>
+
+		</section>
+	</div>
+
+	<HR>
+	<a href="#TOP">Back to the top of the page</a>
+</BODY>
+
+</html>
+

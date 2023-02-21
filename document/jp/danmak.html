@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../index.css">
+
+<BODY>
+	<a name="TOP" id="TOP"></a>
+	<IMG SRC="../../png/A_160x80.png">
+	<a href="manual.html">■元のページへ戻る</a>
+	<hr>
+
+	<div class="main2">
+		<section>
+			<H1>弾幕編集</H1>
+			<a href="common.html">■編集ウインドウ共通操作ヘルプはこちら</a><BR>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/danmak00.png">
+
+			<UL>
+				<LI>寿命(フレーム数)<BR>弾幕が終了するまでの時間をフレーム単位で指定します</LI>
+				<LI>ターゲット<BR>狙う方角とオフセット角度を指定します
+					<UL>
+						<LI>自機<BR>自機の方角が0度になります</LI>
+						<LI>進行方向<BR>キャラクタが移動している方角が0度になります</LI>
+						<LI>固定方向<BR>画面下が0度になります</LI>
+						<LI>自分の方向<BR>キャラクタが向いている方角が0度になります</LI>
+					</UL>
+				<li>初弾の角度をキープする<br>動いている標的を狙う場合、初弾以降も角度が変化してしまいます。チェックすると、初弾の角度をそれ以降の弾全てに適用されます</li>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<UL>
+			<LI>最小値と最大値<BR>弾幕パラメータとして設定する値には一定の範囲を持つものがあります（射出位置や射出方向等）。それらのパラメータを指定する際に、最小値、最大値、計算方法の３つを指定します
+				<UL>
+					<LI>ランダム<BR>最小値から最大値までの値をランダムに選びます</LI>
+					<LI>線形<BR>開始直後の最小値から最大値までを徐々に変化させます。最大値に到達するのは寿命と同じ時間です</LI>
+					<LI>サイン波<BR>サイン波（正弦波）と同じ周期で変化します。初期値は最小値と最大値の中央値です</LI>
+				</UL>
+			</LI>
+				<LI>射出位置ＸＹ<BR>射出位置のオフセット値を指定します</LI>
+				<LI>射出角度<BR>射出角度のオフセット値を指定します</LI>
+				<LI>射出速度<BR>射出速度を絶対値で指定します</LI>
+				<LI>射出間隔<BR>射出と射出の間隔をフレーム単位で指定します</LI>
+				<LI>射出数<BR>一回で射出する弾数を指定します</LI>
+			</UL>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			以下のパラメータは同時射出内で一発ごとに変化させるパラメータです
+			<UL>
+				<LI>ＸＹ<BR>一発ごとの射出位置を変化させていきます</LI>
+				<LI>角度<BR>一発ごとの射出角度を変化させていきます</LI>
+				<LI>間隔<BR>一発ごとの射出間隔を変化させていきます</LI>
+			</UL>
+
+		</section>
+	</div>
+
+	<HR>
+	<a href="#TOP">■ページ上部へ戻る</a>
+</BODY>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../index.css">
+
+<BODY>
+    <a name="TOP" id="TOP"></a>
+    <IMG SRC="../../png/A_160x80.png">
+    <a href="index.html">back to the original page</a>
+    <hr>
+    <div class="main2">
+        <section class="col-1">
+            <h1>2. Create a player</h1>
+            Create your own machine (player) for human operation<br>
+            It is also possible to create multiple players and have them selected at the beginning of the game<br>
+            <br> <br>
+            There are three parts required for a player: the player, the character, and the script<br>
+            We will start by creating a character<br>
+            Keep the project file created in the previous tutorial open<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/player00.png">
+            <h2>Create a character for the player</h2>
+            Click on the project's character and press the New button to create the character<br>
+            Double-click the created character to open it and name it 'TYPE-A'<br>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/player01.png">
+            <h2>Enter your character's parameters</h2>
+            Type... My Machine
+            Attribute flags... Check as shown in the figure to the right<br>
+            Parameters... Leave it all at 0<br>
+            Sprite... Add the previously created sprite 'MYSHIP' by pressing the Add button<br>
+
+            <br> <br>
+            Script will be added later, so we don't need it this time<br>
+            Adding the script will cause it to disappear when your plane is destroyed<br>
+            Also, there is no need to touch any tabs other than the main tab<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/player02.png">
+            <h2>Enter the player's parameters</h2>
+            Click on a player in the project and press the New button to create a player<br>
+            Name: 'TYPE-A'<br>
+            <br> <br>
+            Click on the character item... and select the character you just created, 'TYPE-A'<br>
+            500<br> in the normal column of the movement speed settings
+            Enter the pattern number for each of the pattern settings<br>
+            <br> <br>
+            Change the pattern number depending on the direction of movement<br>
+            Check the pattern number to open the sprite edit<br>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/player03.png">
+            <h2>Register the player in the game settings</h2>
+            Open the main menu "Settings" -> "Game Settings" and select the player tab<br>
+            (Shortcut key is F8)<br>
+            <br> <br>
+            Click Add Player List to add the player 'TYPE-A' that you just created<br>
+            Later, if you create more than one player, you will add them to the player list<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/player04.png">
+            <h2>Test Run</h2>
+            Select "Test" -> "Run" from the main menu to open the Test Play window<br>
+            Automatic Start
+            (Shortcut key F5)<br>
+            <br> <br>
+            Press the Stop button (shortcut key F6) to stop<br>
+            <br> <br>
+            The player appears at the bottom of the screen, with the cursor keys or joypad<br>
+            If you can move it up, down, left and right, you're done!
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <h3>Now we will make the player's shot</h3>
+        </section>
+    </div>
+    <hr>
+    <a href="#TOP">Back to top of page</a><br>
+    <P>
+</BODY>
+
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href ="../../index.css">
+
+<BODY>
+	<a name="TOP" id="TOP"></a>
+	<IMG SRC="../../png/A_160x80.png">
+	<a href="manual.html">back to the original page</a>
+	<hr>
+
+
+	<div class="main2">
+		<section >
+			<H1>Character editing</H1>
+			<a href="common.html">Here's help for common operation of the edit window</a >
+		</section>
+	</div>
+
+	<div class="main">
+		<section >
+
+			<H2>Main Tab</H2>
+			<IMG SRC="png/object00.png">
+			<UL STYLE="list-style-type : disc">
+				<LI>Type <BR>Type of the character. Affects hit detection and initial altitude</LI>
+				<LI>Custom editing <BR>You can set up the details of the hit decision and initial appearance altitude</LI>
+				<LI>Select the gauge to associate <BR>with</LI>
+				<LI>Performs a hit with the background <BR>Selects the action when it makes contact with the background that is judged to be hit</LI>
+				<LI>The used by the sprite <BR>character Register a sprite</LI>
+				to be executed by the <LI> script <BR>character Register the script</LI>
+			</UL>
+			<div class="main2">
+				<section >
+					<H3>Parameters</H3>
+					<UL STYLE="list-style-type : disc">
+						<LI>Pattern number <BR>Pattern number or animation number set by the sprite</LI>
+						<LI>Vitality, Attack Power, Defense Power<BR>When an attack hits, the attacker's attack power minus the defense power is calculated from the vitality. It is subtracted; if it reaches 0, it is destroyed</LI>
+						<LI>Number of points <BR>Value to be added upon destruction</LI>
+						<LI>Money, Experience <BR>Unused</LI>
+						<LI>Z-value offset <BR>Value to be added to the drawing priority (negative number: front, positive number: back)</LI>
+						<li>Adjusts the character's position XY<br> Adds to the character's coordinates. Normally, the character appears from outside the screen by 32 pixels. (a negative number) </li>
+						<LI>Load Factor <BR>You can get the total load factor in the screen from the script</LI>
+					</UL>
+				</section>
+			</div>
+			<div class="main4">
+				<section >
+					<H3>Attribute flags</H3>
+					<UL STYLE="list-style-type : disc">
+						<LI>Turn on <BR>if you want to attack some opponent with an attack decision</LI>
+						<LI>Turn on if you are attacked by some opponent with <BR>defensive judgement</LI>
+						<LI>Synchronize <BR>Main background Synchronize with the scrolling (set in <A HREF="stage.html">Stage Edit</A>).
+						<LI>Automatically rotates the direction of the <BR>character facing the direction of movement. When this flag is turned on, the sprite must be facing downward</LI>
+						<LI>Articulated character <BR>Turn ON when using the articulated character described below</LI>
+						<LI>Out-of-game characters <BR>Main area The image will be drawn outside of the "Layout Editor". Turn off hit detection</LI>
+						<LI>Pause time in appearance<BR>If any of the characters with this flag are present, time will stop progressing</LI>
+						<LI>No automatic disappearance<BR>Characters do not disappear when they go off screen</LI>
+						<LI>No drawing</LI> <BR>This will stop only drawing. The hit decision etc. remains unchanged.
+						<LI>Invincible <BR>Defense decisions disappear</LI>
+						<LI>control <BR>player controls will be enabled</LI>
+						<li>Draw a shadow<br>Draw the shadow of the character <a href="stage.html">stage settings</a> are also required) </li>
+						<li>Respond to Flash<br>Transformed to the character specified in the flash effect</li>
+						<li>Vitality Display at the location specified in the layout settings</li>
+						<li>Optimize drawing<br>Normally off</li>
+						<li>Inhibit auto-animation in the auto-machine<br>Do not switch the pattern number when moving the machine</li>
+						<li>Do not synchronize the coordinates with the parent<li>Ignore the coordinate scaling of the parent</li>
+						<li>Don't synchronize colors with the parent<li> Ignore the parent's color changes</li>
+						<li>When you are in a fast-turning target<br>, the target character will not appear in the stage edit</li>
+						<li>Not subject to induction<br>Not subject to induction panel</li>
+						<li>Important Characters<br>The maximum number of characters to be set in the game settings</li>
+						<li>Never be affected by the parent's drawing priority<li> Ignore the parent's drawing priority</li>
+					</UL>
+				</section>
+			</div>
+		</section>
+	</div>
+
+	<div class="main3">
+		<section >
+			<H2>Multi Indirect Tab</H2>
+			<IMG SRC="png/object01.png">
+			<UL STYLE="list-style-type : disc">
+				<li>Control Method<br> Specifies the indirect method of operation</li>
+				<ul>
+					<li>IK (Inverse Kinematics)<br>Determines the position and angle of each joint in accordance with the movement of the tip</li>
+					<li>FK (Forward Kinematics)<br>Separately set the angle and distance of each joint (not used)</li>
+					<li>Tracking<br> Each joint moves to trace the movement of the root</li>
+					<li>Lagging<br> Each joint moves between the root and the tip in a complementary manner. Gentle curves</li>
+					<li>Straight<br>Equal space between the root and the tip is completed</li>
+				</ul>
+				<li>Drawing Method<br>Specify the drawing method of the joint</li>
+				<ul>
+					<li>Draw a solid<br>joint character as is</li>
+					<li>Skinning<br>Draw the polygons of each joint by deforming them so that they are continuous</li>
+				</ul>
+				<li>Minimum angle, maximum angle<br>Minimum and maximum value of the angle formed by the previous joint (IK only)</li>
+				<li>Minimum distance<br>Set the distance to the previous joint (IK only)</li>
+				<li>Max Distance<br>Unused</li>
+				<li>Maximum angle of motion per frame<br>100 times the angle of the joint's rotation in one frame (IK only)</li>
+				<li>Pattern number<br>Pattern number of the joint</li>
+				<li>Target<br>Specifies the target to be tracked (IK only)</li>
+				<li>Optional Characters<br>Select the characters to place on the joint. Placed characters will be synchronized to the position of the joint</li>
+			</ul>
+
+		</section>
+	</div>
+
+
+	<div class="main">
+		<section >
+			<H2>Item Tab</H2>
+			<IMG SRC="png/object02.png">
+			<P>
+				Set up the item character.
+			<UL STYLE="list-style-type : disc">
+				<li>Add score<BR>Set the score to be added</li>
+				<li>Add remaining player cards<BR>Set the remaining player cards to be added</li>
+				<li>Recover HP <BR>Add HP</li>
+				<li>Bomb recovery <BR>Set the number of bombs to be added</li>
+				<li>Weapon Recovery <BR>Unused</li>
+				<li>Money added <BR>Unused</li>
+				<li>Add weapon experience <BR>Set the amount to increase the level of the weapon</li>
+				<li>Speed Experience Added <BR>Set the amount to increase the level of speed</li>
+				<li>Switch main weapon <BR>Set main weapon index</li>
+				<li>Sub-weapon switching <BR>Set sub-weapon index</li>
+				<li>Bomber switching <BR>Set the index of the bomber</li>
+				<li>Add options<BR>Specifies the number of options to add (decreasing by a negative number)</li>
+				<li>Optional Weapon Switching <BR>Sets the index of an optional weapon</li>
+				<li>Power-up Gauge <BR>Specifies the number of power-up gauges to increase</li>
+			</UL>
+
+
+			<div class="main3">
+				<section >
+					Weapon index and <a href="player.html">player editing</a >This is a number in the list of weapons <br>
+					However, for main, sub and bomber weapons, they will be independent numbers.
+
+					For example, the list of weapons.
+					<table border="1">
+						<tr>
+							<td>Main Weapon A</td>
+						</tr>
+						<tr>
+							<td>Main Weapon B</td>
+						</tr>
+						<tr>
+							<td>Subweapon A</td>
+						</tr>
+						<tr>
+							<td>Main Weapon C</td>
+						</tr>
+						<tr>
+							<td>Subweapon B</td>
+						</tr>
+						<tr>
+							<td>Bomber</td>
+						</tr>
+					</table>
+					then the index value of the main weapon is<br>
+					<UL STYLE="list-style-type : disc">
+						<li>Main Weapon A → 0</li>
+						<li>Main Weapon B → 1</li>
+						<li>Main Weapon C → 2</li>
+						and the index value of the sub-weapon is
+						<li>Subweapon A → 0</li>
+						<li>Subweapon B → 1</li>
+						and the bomber's index value is
+						<li>Bomber → 0</li>
+					</UL>
+					It will be <br>
+				</section>
+			</div>
+
+			<div class="main4">
+				<section >
+			<h4>Attraction</h4>
+			When the distance to the ship is less than the specified value, it will start moving toward the ship<br>
+			<UL STYLE="list-style-type : disc">
+				<li>Attack distance<br>Specifies how far your ship can be drawn during an attack</li>
+				<li>Distance when not attacking<br>This is the distance your ship can attract while not attacking</li>
+				<li>Specifies how long it takes to stop attacking and become non-attacking (not how long it takes to start attracting)</li>
+			</UL>
+			The decision to retrieve an item from your ship is made when the ship's attack judgment and the item's defense judgment intersect, and then it is released. The size of the hit is Make sure to allow for a large enough hit ratio.
+				</section>
+				</div>
+		</section>
+	</div>
+
+	<div class="main3">
+		<section >
+			<H2>String tab</H2>
+			<IMG SRC="png/object03.png">
+			<ul>
+				<li>Print the string <BR>Display the specified string in the specified font</li>
+				<BR>Centered position for <BR>expansion and rotation relative to the center of the string</li>
+				<li>Displayed characters <BR>Unable to display one-byte alphanumeric characters and characters not in the font</li>
+				<li>If you don't specify the font <BR>, the system font will be used</li>
+
+			</ul>
+
+		</section>
+	</div>
+
+	<div class="main">
+		<section >
+			<H2>Effects tab</H2>
+			<IMG SRC="png/object04.png">
+			You can split and deform a vertex when displaying a character
+			The finer the number of segments, the smoother it will be, but the computational complexity will increase.
+			It is also possible to use multiple effects at the same time. Turn on the enable checkbox for each tab
+
+			<div class="main2">
+				<section >
+					<ul>
+						<li>Raster X<BR>You can deform the X coordinates and U values of each vertex with a sin wave</li>
+						<ul>
+							<li>Direction<BR>Wave direction</li>
+							<li>Choose the method <BR>Whether to transform the X coordinate or the U-value</li>
+							<li> Amplitude <BR>Width of the wave, in pixels</li>
+							<li>Period <BR>Wave period, in pixels</li>
+							<li>Angular velocity <BR>The speed at which the wave travels</li>
+						</ul>
+					</ul>
+				</section>
+			</div>
+
+			<div class="main2">
+				<section >
+					<ul>
+						<li>Raster Y<BR>You can deform the Y-coordinate and V-value of each vertex with a sin wave
+						<ul>
+							<li>Direction<BR>Wave direction</li>
+							<li>Choose the method <BR>Deform Y coordinate or V-value</li>
+							<li> Amplitude <BR>Width of the wave, in pixels</li>
+							<li>Period <BR>Wave period, in pixels</li>
+							<li>Angular velocity <BR>The speed at which the wave travels</li>
+						</ul>
+					</ul>
+				</section>
+			</div>
+
+			<div class="main2">
+				<section >
+					<ul>
+						<li>UV scrolling<BR>Variate the UV value of each vertex to make it look like it's scrolling<br>(if you don't use it with the raster, reduce the number of divisions)
+						<ul>
+							<li>U position <BR>Initial U-value (in pixels)</li>
+							<li>V position <BR>Initial value of V-value in pixels</li>
+							<li>U speed <BR>value to be added to U per frame (pixel unit x 100)</li>
+							<li>V speed <BR>Value to be added to V per frame (in pixels x 100)</li>
+						</ul>
+					</ul>
+				</section>
+			</div>
+
+			<div class="main2">
+				<section >
+					<ul>
+					<li>Aspect ratio<BR>Separate aspect ratio<BR>(If not used with raster, please reduce the number of divisions)
+						<ul>
+							<li>Lateral scale <BR>Lateral scaling (100 is equal to 100)</li>
+							<li>Vertical scale <BR>Vertical scale (100 is equal to 100)</li>
+						</ul>
+					</ul>
+				</section>
+			</div>
+		</section>
+	</div>
+
+	<div class="main3">
+		<section >
+			<H2>The Blur Tab</H2>
+			<IMG SRC="png/object05.png">
+			Draws a motion blur-like effect as a character<BR>
+			Normally, the character is drawn in the main area, but if you check the box for an out-of-game character, the character will be drawn in the whole area<BR>
+		</section>
+	</div>
+
+	<HR>
+		<a href="#TOP">Back to the top of the page</a><br>
+		<P>
+</BODY>
+</html>
+

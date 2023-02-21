@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../index.css">
+
+<BODY>
+    <a name="TOP" id="TOP"></a>
+    <IMG SRC="../../png/A_160x80.png">
+    <a href="index.html">■元のページへ戻る</a>
+    <hr>
+    <div class="main2">
+        <section class="col-1">
+            <H2>11.敵ボスの作成</H2>
+            ステージの最後に出てくるボスキャラを作成します<br>
+            親子階層を使ってパーツを組み合わせて作ります<br>
+            <br>
+            ボス本体 - ボス脚4本 - ボス砲台3種 という構造になります<br>
+            <br>
+            前回のチュートリアルで作成したプロジェクトファイルを開いておいてください<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/boss00.png">
+            <H2>ボス用のスプライト作成</H2>
+            <br>
+            イメージファイルに'resource/img_boss.bmp'を読み込み、カラーキーを設定します<br>
+            <br>
+            パターンリストを構築し、当たり判定を設定します<br>
+            脚パーツの中心位置が真ん中ではないので注意してください<br>
+            <br>
+            脚パーツの防御判定が、砲台パーツより大きいとショットの攻撃が通らなくなるので旨くサイズ調整をしてください<br>
+            <br>
+            <b>スプライトを演出や移動時に回転が必要になる場合は、下向きを基準に画像を用意してください<br></b>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <h2>ボス本体、脚、砲台の3種類のキャラクタを作成する</h2>
+            <table>
+                <tr bgcolor="#F5F0CF">
+                    <td>
+                        ボス本体の設定、ボスが出現中は時間を止めるのがポイントになります<br>
+                        体力を表示するにチェックが入っていますが、現時点では表示の準備ができていないため表示されません<br>
+                        後々レイアウトの設定で説明します<br>
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss01.png">
+                    </td>
+                </tr>
+                <tr bgcolor="#C5F0CF">
+                    <td>
+                        ボス脚パーツの設定
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss02.png">
+                    </td>
+                </tr>
+                <tr bgcolor="#F5F0CF">
+                    <td>
+                        ボス砲台の設定<br>
+                        3種類の切り替えはスクリプトで行います
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss03.png">
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/boss04.png">
+            <H2>ボス本体用のスクリプト作成</H2>
+            脚パーツを子として４つ生成し<br>
+            画面上部から回転しながら登場します<br>
+            <br>
+            回転はタスク１で行います<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <h2>パネルの内容を編集する</h2>
+            <table>
+                <tr>
+                    <td>
+                        本体を回転させるためのタスク１を起動します
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss10.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        脚パーツを子として配置します<br>
+                        優先、角度、距離、オフセット角度が違うので注意して設定してください<br>
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss11.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss12.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss13.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss14.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        画面上方の画面外へ移動させます
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss15.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        画面内へ移動させます
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss16.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        登場シーンを終了します
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss17.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        タスク１は回転パネル一つだけです
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss18.png">
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/boss05.png">
+            <h2>ボスが破壊された時のスクリプト</h2>
+            破壊タスクに何も記述しない場合、雑魚の破壊エフェクトになります<br>
+            <br>
+            派手目な爆発エフェクトにします
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <h2>パネルの内容を編集する</h2>
+            <table>
+                <tr>
+                    <td>
+                        爆発エフェクト
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss06.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        爆発エフェクト
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss07.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        最後に消滅を忘れずに配置します
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss08.png">
+                    </td>
+                </tr>
+            </table>
+            </section>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/boss20.png">
+            <H2>ボス脚用のスクリプト作成</H2>
+            砲台を3種類、子として生成します<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <h2>パネルの内容を編集する</h2>
+            <table>
+                <tr>
+                    <td>
+                        砲台パーツを子として配置します<br>
+                        PARAM_Aは子側で受けることができ、見た目や動作を分岐させることができます<br>
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss21.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        座標、描画優先、PARAM_Aが違うので注意して設定してください<br>
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss22.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss23.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss24.png">
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/boss30.png">
+            <H2>ボス砲台用のスクリプト作成</H2>
+            PARAM_Aで砲台のパターン番号を切り替える<br>
+            攻撃は一定間隔で行う(タスク1)<br>
+            自機の方向を向くように回転する(タスク2)<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <h2>パネルの内容を編集する</h2>
+            <table>
+                <tr>
+                    <td>
+                        回転用のタスク1を起動する
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss31.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        攻撃用のタスク2を起動する
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss32.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        親（脚パーツ）からPARAM_Aを受け取っているのでそれを変数00へ代入する
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss33.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        パターン番号へ変数00の内容を反映させる
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss34.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        タスク0はこれで終了
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss35.png">
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/boss40.png">
+            <H2>ボス砲台用のスクリプト作成2</H2>
+            攻撃用のタスク1を編集します
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <h2>パネルの内容を編集する</h2>
+            <table>
+                <tr>
+                    <td>
+                        攻撃まで100フレームウエイト
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss41.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        砲台の向いている方向に弾を発射
+                        発射後、120フレームウエイト
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss42.png">
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/boss43.png">
+            <H2>ボス砲台用のスクリプト作成3</H2>
+            自機の方向を向くように回転パネルを設定します
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <H2>テストプレイ</H2>
+            キャラクタ単体テストでボスの動作を確認できたら<br>
+            ステージ編集で全体時間の少し手前へ'BOSS'を配置します<br>
+            <br>
+            ステージ単体テストでテストプレイして問題なく動いているか確認します<br>
+            ボスを倒すと全体時間まで経過後、自動的に次のステージへ進みます<br>
+        </section>
+    </div>
+    <hr>
+    <a href="#TOP">■ページ上部へ戻る</a><br>
+    <P>
+</BODY>
+
+</html>

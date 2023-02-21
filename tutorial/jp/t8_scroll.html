@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../index.css">
+
+<BODY>
+    <a name="TOP" id="TOP"></a>
+    <IMG SRC="../../png/A_160x80.png">
+    <a href="index.html">■元のページへ戻る</a>
+    <hr>
+    <div class="main2">
+        <section class="col-1">
+            <h1>8.背景を作成する</h1>
+            背景には主に2種類あります。今回は両方作成します<br>
+            1．ループスクロールするだけの画像としての背景<br>
+            2．地上物を配置しキャラクタと同期する背景<br>
+            <br>
+            前回のチュートリアルで作成したプロジェクトファイルを開いておいてください<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/bg00.png">
+            <h2>ループスクロールする背景を作成する</h2>
+            プロジェクトの背景を新規作成します<br>
+            名前を'BG_CLOUD'とします<br>
+            <br>
+            イメージファイル'resource/img_cloud.bmp'を読み込みます<br>
+            画像が600x800と大きいので縮小表示して画面内に収まるようにしてみてください<br>
+            <br>
+            チップサイズを100,100に、マップサイズを6,8にします<br>
+            (更新ボタンをクリックしてください)<br>
+            <br>
+            左側のプレビュー画像を全て選択します(赤枠)<br>
+            右側のマップをセットモードに切り替え、全マップチップを配置します<br>
+            <br>
+            これでループスクロール用の背景は完成です<br>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/bg01.png">
+            <h2>地上物を配置する背景を作成する</h2>
+            プロジェクトの背景を新規作成します<br>
+            名前を'BG_MAP'とします<br>
+            <br>
+            イメージファイル'resource/img_bg00.bmp'を読み込みます<br>
+            チップサイズを32,32に、マップサイズを12,128にします<br>
+            (更新ボタンをクリックしてください)<br>
+            <br>
+            マップサイズがかなり大きいので拡大縮小（ホイール）とスクロール（右ドラッグ）を使ってうまくマップパーツを配置してください<br>
+            マップの全部を埋めてしまうと奥の背景が見えなくなるので旨く配置してください<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/bg02.png">
+            <h2>ステージを作成して背景を設定する</h2>
+            プロジェクトのステージを新規作成します<br>
+            名前を'STAGE1'とします<br>
+            <br>
+            基本設定タブはそのままで、背景優先設定タブを開きます<br>
+            <br>
+            優先リストの追加ボタンをクリックしてBG_MAPを追加します<br>
+            上向きの三角矢印をクリックして優先を変更します<br>
+            <br>
+            右図のようにBG_MAPのパラメータを設定します<br>
+            スクロールの位置がマップ表示開始位置になるので忘れずに設定してください<br>
+            <b>地上物配置に使うのでメイン背景にチェックを入れます<br></b>
+            <br>
+            <br>
+            <br>
+            優先リストの追加ボタンをクリックしてBG_CLOUDを追加します<br>
+            右図のようにBG_CLOUDのパラメータを設定します<br>
+            <br>
+            ラップアラウンドにチェックを入れることでループスクロールにします<br>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/bg03.png">
+            <h2>デフォルトステージに設定する</h2>
+            ゲーム設定のデフォルト指定タブを開きます<br>
+            <br>
+            デフォルトステージへ'STAGE1'を登録します<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/stage03.png">
+            <h2>メインステージへ登録する</h2>
+            ゲーム設定のシーンタブを開きます<br>
+            <br>
+            メインステージへ'STAGE1'を追加します<br>
+            <br>
+
+            メインステージへ登録することにより、通しプレイでのテストが出来るようになります
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/bg04.png">
+            <h2>テストプレイ</h2>
+            テストプレイウインドウを表示し、プロジェクトのステージリストにある'STAGE1'をウインドウへドラッグ＆ドロップします<br>
+            <br>
+            テストモードがステージ単体に変更され、自機が登場して背景のスクロールが始まります<br>
+        </section>
+    </div>
+    <hr>
+    <a href="#TOP">■ページ上部へ戻る</a><br>
+    <P>
+</BODY>
+
+</html>

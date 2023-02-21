@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../index.css">
+
+<BODY>
+    <a name="TOP" id="TOP"></a>
+    <IMG SRC="../../png/A_160x80.png">
+    <a href="index.html">■元のページへ戻る</a>
+    <hr>
+    <div class="main2">
+        <section class="col-1">
+            <H2>4.敵キャラクタを作成する</H2>
+            敵キャラクタ用のスプライトを作成し、キャラクタとスクリプトを作成します<br>
+            前回のチュートリアルで作成したプロジェクトファイルを開いておいてください<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/enemy00.png">
+            <h2>敵用スプライトの作成</h2>
+            スプライトを新規作成し、名前を'ENEMY'とします<br>
+            リソースフォルダからimg_zako00.bmpを登録します<br>
+            パターンリストと当たり判定を入力します<br>
+            <br>
+            パターン11はダミーとして置いておきます<br>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/enemy01.png">
+            <h2>敵用キャラクタの作成</h2>
+            キャラクタを新規作成し、名前を'ENEMY-A'とします<br>
+            スプライトを登録し、スクリプトを新規作成します(名前'ENEMY-A')<br>
+            右図のようにパラメータを入力します<br>
+            <br>
+            体力を増やすと敵が固くなります<br>
+        </section>
+    </div>
+
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/enemy02.png">
+            <h2>敵用スクリプトの作成</h2>
+            先ほど作成したスクリプトを編集します<br>
+            タスク「0:メイン」に移動カテゴリの直交座標を配置<br>
+            その下に制御カテゴリの通過を配置します<br>
+            パラメータを右図下図のように設定してください<br>
+            <br>
+            出現すると直進する敵が出来ました<br>
+            画面外へ出ると自動消滅します<br>
+            <IMG SRC="png/enemy03.png">
+            <IMG SRC="png/enemy04.png">
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/enemy05.png">
+            <h2>テスト実行する</h2>
+            テストプレイウインドウを表示し、プロジェクトのキャラクタリストにある'ENEMY-A'をウインドウへドラッグ＆ドロップします<br>
+            <br>
+            テストモードがキャラクタ単体に変更され、指定した場所からキャラクタがエンドレスに出現するようになります<br>
+            テストモードと出現場所は自由に変更可能です<br>
+            <br>
+            自機を操作し、ショットで敵を破壊（消えるだけ）できることを確認できたら完成です
+        </section>
+    </div>
+    <hr>
+    <a href="#TOP">■ページ上部へ戻る</a><br>
+    <P>
+</BODY>
+
+</html>

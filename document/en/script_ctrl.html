@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href ="../../index.css">
+
+<BODY>
+	<a name="TOP" id="TOP"></a>
+	<IMG SRC="../../png/A_160x80.png">
+	<a href="script.html">back to the original page</a>
+	<hr>
+
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_ctrl.png">
+			<H1>Script commands</H1>
+			<H2>Control Group</H2>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_ctrl00.png">
+			<h2>Nop</h2>
+			<ul>
+				<li>It's a do-nothing control panel<li>with a special feature called infinite weight</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_ctrl01.png">
+			<h2>Destroy</h2>
+			<ul>
+				<li>Annihilate your character<li>No destruction task will be performed</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_ctrl02.png">
+			<h2>Loop in</h2>
+			Used to repeat a series of control panels a certain number of times.
+			<ul>
+				<li>Loop numbers<br>0-15, repeating with the same numbered end-of-loop panel</li>
+				<li>Number of loops<br>Repeated times</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_ctrl03.png">
+			<h2>Loop out</h2>
+			<ul>
+				<li>Loop numbers<br>0-15, repeating with the same numbered loop start panel</li>
+			</ul>
+			Be careful how you number the loops when you do multiple loops
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_ctrl04.png">
+			<h2>Conditions</h2>
+			<ul>
+				<li>Compare
+					<ul>
+						<li>PARAM_A,B<br>Value set in the stage setting's appearance table</li>
+					</ul>
+				</li>
+				<li>Split condition<br>Branch to the right when the comparison target and value satisfy the conditions<br>
+					If not, we'll just go straight down.
+				</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_ctrl05.png">
+			<h2>Flag</h2>
+			<ul>
+				<li>Attribute flag<li>Select one of the flags set in the character edit</li>
+				<li>Turn ON,OFF<br>Switch the selected attribute flag on or off</li>
+			</ul>
+			<b>Attribute flag "Articulated Character" cannot be changed</b>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_ctrl06.png">
+			<h2>Task run</h2>
+			<ul>
+				<li>Task number<br>0-15<br>Task without GATE will not be started<br>See Inherited Scripts, Default Scripts section</li>
+				<li>Start from the beginning<br>When checking, it starts from GATE unconditionally<br>
+					When unchecked, do nothing while the task is already running<br>
+					When unchecked, if a task is paused, it will be restarted from there
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_ctrl07.png">
+			<h2>Task stop</h2>
+			<ul>
+				<li>Task number<br>0-15<br>Suspend the specified task<br>
+				If you stop your own task, be sure to include one frame of weight</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_ctrl08.png">
+			<h2>Send Signal</h2>
+			<ul>
+				<li>Send to
+					<ul>
+						<li>You<br>always valid</li>
+						<li>Invalid if the parent<br>is not present</li>
+						<li>Select the target child by Child<br>child ID, disabled if not present</li>
+						<li>Artist(Child)<br>An optional character added to a node on the Articulation tab in the Character Edit window. . All joints are covered.
+						</li>
+					</ul>
+				</li>
+				<li>Child ID<br>To be sent to a child</li>
+				<li>Signal number<br>SIGNAL_00 to SIGNAL_15</li>
+				<li>Send mode<br>Select to send as-is or to compute with the recipient</li>
+				<li>Choose whether to send the contents of the data <br> or the value of the variable</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_ctrl09.png">
+			<h2>Recv Signal</h2>
+			Compare with the received signal and conditional branching
+			<ul>
+				<li>Wait until a signal is received<br>If you have never received a signal, continue to wait in this panel</li>
+				<li>Signal number<br>SIGNAL_00 to SIGNAL_15</li>
+				<li>Split condition<li>Split to the right when the signal value and (value or variable) meet the conditions<li>
+					If not, we'll just go straight down.
+			</ul>
+			<b>The flag whether a signal has been received at least once is reset in the "Clear Signal" panel</b>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_ctrl10.png">
+			<h2>Clear Signal</h2>
+			Reset the flag whether a signal has been received at least once <bR>
+			Also, the received signal value is cleared to zero (selectable).
+			<ul>
+				<li>Clear all signals<br>All signals from SIGNAL_00 to SIGNAL_15 are covered when checked</li>
+				<li>Do not set the received data to 0<li>No action on the received signal value when checking</li>
+				<li>Signal number<br>SIGNAL_00 to SIGNAL_15</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_ctrl11.png">
+			<h2>Menu</h2>
+			Simple player selection menu<br>
+			How to make a simple menu
+			<ul>
+				<li>Select System Selection<br>Select Player Selection</li>
+				<li>Select sound effects<br>Select sound effects during operation</li>
+				<li>Cancelable<br>Cancelable by pressing B</li>
+				<li>Select left and right<br>Select up and down or left and right</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_ctrl12.png">
+			<h2>Priority</h2>
+			<ul>
+				<li>Display Priority<br>Select which layer on the stage edit/priority list to display on</li>
+				<li>Z-value offset<br>Changes the z-value offset for character editing (value or variable)</li>
+				</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_ctrl13.png">
+			<h2>Random</h2>
+			<ul>
+				<li>Branch to the right with a specified probability<br>0-100%</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_ctrl14.png">
+			<h2>Life</h2>
+			<ul>
+				<li>Branch to the right if the remaining strength is below the specified percentage (including equals)<br>0-100%, rounded down to the nearest whole number</li>
+				<li>Weighting indefinitely until the branching out<br>Exit to the bottom when unchecked</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_ctrl15.png">
+			<h2>Item</h2>
+			Used to switch content by time when creating an item character
+			<ul>
+				<li>Select the character for the item<li>Select the character for the item</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_ctrl16.png">
+			<h2>Button</h2>
+			<ul>
+				Selecting no <li> button<br> always results in a failure</li>
+				<li>Wait until pressed<br>Exit to the bottom when unchecked</li>
+				<li>Evalidated by holding down the button<br>If unchecked, it will be triggered</li>
+			</ul>
+		</section>
+	</div>
+	
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_ctrl17.png">
+			<h2>Next</h2>
+			<ul>
+				<li>Register the next stage<br>Except for the main stage, the other stages will be ignored<br>If not specified, the next item in the main stage will be selected</li>
+				<li>Transit Now<br>When unchecked, transition when the stage is cleared</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_ctrl18.png">
+			<h2>Various</h2>
+			<ul>
+				<li>Destruction<br>They will be in the same state as being destroyed with zero HP. Destroy task will also be activated</li>
+				<li>Exit App<br>Disabled during test play</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_ctrl19.png">
+			<h2>Game Speed</h2>
+			It will return to default at the start of the stage.
+			<ul>
+				<li>Speed selection</li>
+			</ul>
+		</section>
+	</div>
+
+	<a href="#TOP">Back to the top of the page</a><br>
+
+</BODY>
+
+</html>

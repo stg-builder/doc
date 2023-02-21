@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href ="../../index.css">
+
+<BODY>
+	<a name="TOP" id="TOP"></a>
+	<IMG SRC="../../png/A_160x80.png">
+	<a href="manual.html">back to the original page</a>
+	<hr>
+
+	<div class="main2">
+		<section>
+			<H1>Edit Layout</H1>
+			<a href="common.html">Here's help for common operation of the edit window</a >
+		</section>
+	</div>
+
+
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/layout00.png">
+			<UL>
+				<LI>Layout parts <BR>Select the parts you want to place from here and drag and drop them to the center</LI>
+				<LI>It's a list of parts that are already in place. The detailed information of the selected part will be displayed at the bottom and you can edit it</LI>
+				<LI>Preview<BR>It will show you the position and size of the part you are placing</LI>
+			</UL>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			If you don't specify a font, you can use to specify the font. Display in the default font
+			<ul>
+				<li>Display the text<br>with the specified font</li>
+				<LI>Main Area<BR>This is the area where the actual play content is displayed. <B>Must have at least one</B></li>
+				<li>Sprite<br>Show the specified sprite</li> Specify a pattern and animation number</li>
+				<li>Scores<br> Displays the score in the specified font. </li>
+				<li>Remaining machine<br>Display the number of remaining machines in a specified font</li>
+				<li>Bomb<br>Display the number of bombs remaining in the specified font</li>
+				<li>Gage<br>Draw a gauge for the player or a boss HP gauge. Draw gauges using patterns and animation numbers with registered sprites</li>
+				<li>Ranking<br>Parts for displaying a list of rankings in a ranking scene. Edit the content in the advanced settings</li>
+				<li>Weapon icon<br> Displays the player's weapon icon. Edit the content in the advanced settings</li>
+				<li>Powerup Panel<br>Show the powerup panel for the player. You will also need the Power Up Panel in the player edit</li>
+				<li>Number of combos<br>Display the number of combos in the specified font</li>
+				<li>Display the contents of the variable<br> in the specified font</li>
+			</ul>
+			<div class="main4">
+				<section>
+					<H3>Weapon icon detail settings</H3>
+					<IMG SRC="png/layout01.png">
+					<UL>
+						<LI>Eligible players <BR>Set this if only certain players apply</LI>
+						<LI>Weapon type <BR>Specify which weapon to target</LI>
+						<LI>Sprite for icon <BR>Display</LI>
+						<LI>Color <BR>Specifies the color for drawing in ARGB 32-bit</LI>
+						<LI>Pattern number list <BR>Pattern numbers for each icon</LI>
+						<LI>XY in <BR> list of <LI>specifying position</LI> will be enabled.
+					</UL>
+				</section>
+			</div>
+			<div class="main3">
+				<section>
+					<H3>Advanced Ranking Settings</H3>
+					<IMG SRC="png/layout02.png">
+					<UL>
+						<LI>Fonts <BR>Fonts for displaying rankings</LI>
+						<LI>Cursor sound <BR>Sound of the cursor moving</LI>
+						<LI>Decision sound <BR>Sound of decision</LI>
+						<LI>Cancellation sound <BR>Sound of cancellation</LI>
+						<LI>Cursor color <BR>Cursor color for drawing in ARGB 32 bits <BR>Since you are drawing on top of the string, make it translucent</LI>
+						<LI>Whole number of rankings <BR>If it doesn't fit on one page, you will switch pages. Up to 100</LI>
+						<LI>Number of displays per page<BR>Make sure it fits within the screen</LI>
+						<LI>Display height of one line <BR>font size + line spacing in pixels</LI>
+						<LI>Number of possible name entries <BR>Characters</LI>
+						<div class="main4">
+							<section>
+								<H4>Displayed items</H4>
+								<UL>
+									<LI>Rank <BR>Serial Number</LI>
+									<LI>Score <BR>Final Score</LI>
+									<LI>Name <BR>If you have not entered a name, the default game settings string will be displayed</LI>
+									<LI>Clear Stage <BR>Scene tab in game settings, index in main stage</LI>
+									<LI>Automobile type <BR>Player tab in game settings, index in the player list</LI>
+									<LI>Replay ID <BR>Used for the file name to be saved</LI>
+									<LI>Display format <BR></LI>
+								</UL>
+							</section>
+						</div>
+					</UL>
+				</section>
+			</div>
+		</section>
+	</div>
+
+
+	<a href="#TOP">Back to the top of the page</a><br>
+</BODY>
+
+</html>
+

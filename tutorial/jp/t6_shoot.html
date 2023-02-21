@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../index.css">
+
+<BODY>
+    <a name="TOP" id="TOP"></a>
+    <IMG SRC="../../png/A_160x80.png">
+    <a href="index.html">■元のページへ戻る</a>
+    <hr>
+    <div class="main2">
+        <section class="col-1">
+            <H2>6.敵弾を作成する</H2>
+            前回のチュートリアルで作成したプロジェクトファイルを開いておいてください<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/shoot00.png">
+            <h2>敵弾用スプライトの作成</h2>
+            スプライトを新規作成し、名前を'SYSTEM'とします<br>
+            リソースフォルダからimg_system.bmpを登録します<br>
+            今回は敵弾一つだけパターン番号を登録します(当たり判定を含む)<br>
+            後々アイテムや誘導弾といったパターンも追加していきます<br>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/shoot01.png">
+            <h2>敵弾用キャラクタの作成</h2>
+            キャラクタを新規作成し、名前を'SHOOT'とします<br>
+            種類を敵弾（ノーマル）、パラメータを右図のように設定します<br>
+            スプライト(SYSTEM)とスクリプト(新規)を登録します<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/shoot02.png">
+            <h2>敵弾用スクリプトの作成</h2>
+            タスク「0:メイン」に制御グループの通過パネルを置き、時間待ちを動作完了までに設定します<br>
+            <br>
+            タスク「9:攻撃ヒット」「10:防御ヒット」に<b>ゲートを作成してから</b>制御グループの消滅パネルを置きます<br>
+            <br>
+            何かに攻撃がヒットしたときや、ボムのような攻撃を受けたときに消滅するようになります<br>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/shoot04.png">
+            <h2>デフォルトの弾として登録する</h2>
+            作成したスプライト、キャラクタ、スクリプトを保存して閉じてください<br>
+            <br>
+            ゲーム設定を開き、デフォルト指定タブをクリックします<br>
+            その中にあるデフォルト弾の...をクリックして先ほど作成したSHOOTを登録します
+            <br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/shoot03.png">
+            <h2>敵に弾を撃たせる</h2>
+            以前作成した直進する敵'ENEMY-A'のスクリプトを開きます<br>
+            <br>
+            右図のように移動パネルと通過パネルの間に隙間を空け（通過パネルをドラッグして下にずらす）<br>
+            攻撃グループのショットパネルを配置します<br>
+            <br>
+            パラメータを右図の通りに設定します<br>
+            弾をSHOOT、発射間隔を5、発射回数2、速度400に設定しています<br>
+            <br>
+            テスト実行し、敵から弾が自機を狙って発射されていることを確認します<br>
+            <br>
+            <b>現時点では自機に当たっても破壊されません</b>
+        </section>
+    </div>
+    <hr>
+    <a href="#TOP">■ページ上部へ戻る</a><br>
+    <P>
+</BODY>
+
+</html>

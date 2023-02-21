@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href ="../../index.css">
+
+<BODY>
+	<a name="TOP" id="TOP"></a>
+	<IMG SRC="../../png/A_160x80.png">
+	<a href="manual.html">back to the original page</a>
+	<hr>
+
+	<div class="main2">
+		<section>
+		<IMG SRC="png/path00.png">
+			<H1>Edit Paths</H1>
+			You can place points and move your character along the points<br>
+			Interpolation of movement paths by Bezier and splines is possible<br>
+			You can also specify the angle and scale<br>
+			<a href="common.html">Here's help for common operation of the edit window</a ><BR>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+		<h2>Points list</h2>
+		The list on the left side of the screen is a list of registered points<BR>
+		If you want to select a point, click on this list or click directly on the point<BR>
+		The content of the selected point is displayed as a parameter
+		</section>
+		</div>
+
+	<div class="main2">
+		<section>
+		<h2>Coordinate interpolation method</h2>
+		<UL>
+			<li>Linear<br>linearly interpolate points with straight lines</li>
+			<li>Bézier<br>Bézier curve interpolation. You can control the curve with the handles</li>
+			<li>Spline<br>Interpolate points and points with curves. Adjust the bend in the bend with tension</li>
+		</UL>
+		</section>
+		</div>
+
+	<div class="main4">
+		<section>
+		<h2>Mode switch button</h2>
+		<UL>
+			<li>Range selection <BR>Dragging an empty space allows you to select a point in the range You can move a point by clicking and dragging a range selection. After selecting a range, CTRL+drag to move the specified point <BR>
+			<li>Add Points<br>You can add points. The first point you add will be the starting point, and will be drawn with a red cross cursor</li>
+			<li>Splitting lines<br>Click in the middle of a line to insert a point at that location</li>
+			<li>Remove Points<br>Delete the selected points</li>
+			<li>Flip left and right<br>Flip the selected point left and right</li>
+			<li>Flip up/down<br>Flip the selected point up/down</li>
+		</UL>
+		You can move the mouse cursor over a point or a control point to move that point
+		</section>
+		</div>
+		
+	<div class="main2">
+		<section>
+		<h2>Parameters</h2>
+		Please select the point(s) before changing the parameters.
+		<UL>
+			<li>Scale<br>To use scale, set it to "Use". Specify a number for the scale by multiplying the scale by 100</li>
+			<li>Rotation<br>When using rotation, select a directional reference from the combo box Please do so. The direction will be 0 degrees. If you want to change the direction of rotation, choose which direction you want to rotate to</li>
+			<li>Number of frames to stop<br>This is the number of frames to be stopped when the camera comes to a point</li>
+			<li>Number of frames to go next<br>This is the number of frames it takes to reach the next point</li>
+			<li>Control Point Link<br>When you drag a control point, you can move the opposite control point as well</li>
+		</UL>
+
+		</section>
+	</div>
+
+	<HR>
+	<a href="#TOP">Back to the top of the page</a>
+</BODY>
+
+</html>
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../index.css">
+
+<BODY>
+    <a name="TOP" id="TOP"></a>
+    <IMG SRC="../../png/A_160x80.png">
+    <a href="index.html">■元のページへ戻る</a>
+    <hr>
+    <div class="main2">
+        <section class="col-1">
+            <h1>2.プレイヤーを作成する</h1>
+            人間が操作するための自機（プレイヤー）を作成します<br>
+            複数のプレイヤーを作成し、ゲーム開始時に選択させることも可能です<br>
+            <br>
+            プレイヤーに必要なパーツは、「プレイヤー」「キャラクタ」「スクリプト」の三つになります<br>
+            まずはキャラクタから作成していきます<br>
+            前回のチュートリアルで作成したプロジェクトファイルを開いておいてください<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/player00.png">
+            <h2>プレイヤー用キャラクタの作成</h2>
+            プロジェクトのキャラクタをクリックして新規ボタンを押し、キャラクタを作成します<br>
+            作成したキャラクタをダブルクリックして開き、名前を'TYPE-A'とします<br>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/player01.png">
+            <h2>キャラクタのパラメータを入力</h2>
+            種類...自機<br>
+            アトリビュートフラグ...右図のようにチェックを付けます<br>
+            パラメータ...全部0のままでよい<br>
+            スプライト...追加ボタンを押して前回作成したスプライト'MYSHIP'を登録します<br>
+
+            <br>
+            スクリプトは後で追加するので今回はいりません<br>
+            スクリプトを追加すると自機が破壊された時に、消滅するようになります<br>
+            また、メインタブ以外のタブも触る必要はありません<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/player02.png">
+            <h2>プレイヤーのパラメータを入力</h2>
+            プロジェクトのプレイヤーをクリックして新規ボタンを押し、プレイヤーを作成します<br>
+            名前を'TYPE-A'とします<br>
+            <br>
+            キャラクタ項目の...をクリックして先ほど作成したキャラクタ'TYPE-A'を選択します<br>
+            移動速度設定の通常欄に500<br>
+            パターン設定の各項目にパターン番号を入力します<br>
+            <br>
+            移動する方向によってパターン番号を変えています<br>
+            パターン番号はスプライト編集を開いて確認してください<br>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/player03.png">
+            <h2>ゲーム設定にプレイヤーを登録する</h2>
+            メインメニューの「設定」->「ゲーム設定」を開き、プレイヤータブを選択します<br>
+            (ショートカットキーはF8)<br>
+            <br>
+            プレイヤーリストの追加をクリックし、先ほど作成したプレイヤー'TYPE-A'を登録します<br>
+            後々複数のプレイヤーを作成した場合には、プレイヤーリストへ追加していきます<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/player04.png">
+            <h2>テスト実行する</h2>
+            メインメニューの「テスト」->「実行」を選ぶとテストプレイウインドウが開き<br>
+            自動でスタートします
+            (ショートカットキーはF5)<br>
+            <br>
+            停止ボタン（ショートカットキーはF6）を押すと停止します<br>
+            <br>
+            画面下部にプレイヤーが出現し、カーソルキーもしくはジョイパッドで<br>
+            上下左右に移動できれば完了です<br>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <h3>次はプレイヤーのショットを作成していきます</h3>
+        </section>
+    </div>
+    <hr>
+    <a href="#TOP">■ページ上部へ戻る</a><br>
+    <P>
+</BODY>
+
+</html>

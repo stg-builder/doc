@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../index.css">
+
+<BODY>
+    <a name="TOP" id="TOP"></a>
+    <IMG SRC="../../png/A_160x80.png">
+    <a href="index.html">■元のページへ戻る</a>
+    <hr>
+    <div class="main2">
+        <section class="col-1">
+            <h1>7.プレイヤーを拡張する</h1>
+            登場シーン、破壊シーンを作成します<br>
+            前回のチュートリアルで作成したプロジェクトファイルを開いておいてください<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/player00.png">
+            <h2>登場シーンの作成</h2>
+            以前に作成した、自機用キャラクタ'TYPE-A'を開き<br>
+            空のままだったスクリプト欄に新規作成して登録します<br>
+            スクリプトの名前は'TYPE-A'にします<br>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/player10.png">
+            <h2>スクリプト編集、前準備</h2>
+            さきほど作成したスクリプトを開き、パネルサイズを変更して制御フィールドを広めに設定します<br>
+            <br>
+            使用するパネル数に対して制御フィールドが広すぎるとメモリを無駄に消費するので適切なサイズを選択してください<br>
+            <br>
+            右図のようにタスク「0:メイン」にパネルを並べてください
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <h2>パネルの内容を編集する</h2>
+            <table>
+                <tr>
+                    <td>
+                        防御判定をOFFにして無敵状態にします
+                    </td>
+                    <td>
+                        <IMG SRC="png/player11.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        自機コントロールをOFFにして操作できないようにします
+                    </td>
+                    <td>
+                        <IMG SRC="png/player12.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        画面外の下方へ移動し、そこで停止するようにします<br>
+                        座標は絶対座標で指定を選んでいます。画面左上が(0,0)になります<br>
+                        移動には最低1フレーム必要です<br>
+                    </td>
+                    <td>
+                        <IMG SRC="png/player13.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        画面内へ向かって移動し、移動後停止するようにします<br>
+                        座標は相対座標で指定を選んでいます<br>
+                        移動には60フレーム（1秒間）かけています<br>
+                    </td>
+                    <td>
+                        <IMG SRC="png/player14.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        自機コントロールをONにして操作できるようにします<br>
+                        この状態(無敵)で120フレーム（2秒間)待ちます<br>
+                    </td>
+                    <td>
+                        <IMG SRC="png/player15.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        防御判定をONにして無敵を解除します
+                    </td>
+                    <td>
+                        <IMG SRC="png/player16.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        タスク「0:メイン」を停止して登場シーンを終了します
+                    </td>
+                    <td>
+                        <IMG SRC="png/player17.png">
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/player20.png">
+            <h2>破壊タスクの編集</h2>
+            破壊タスクを作成しない場合、自機が破壊された時点で消滅してしまいます<br>
+            爆発エフェクトを出した後、再度登場タスクを起動します<br>
+            <br>
+            <b>防御判定はシステムが自動的にOFFにします<br></b>
+            <br>
+            右図のようにタスク「11:破壊」にパネルを並べてください
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <h2>パネルの内容を編集する</h2>
+            <table>
+                <tr>
+                    <td>
+                        自機コントロールをOFFにして操作できないようにします
+                    </td>
+                    <td>
+                        <IMG SRC="png/player21.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ショットパネルを使って爆発キャラクタをばらまきます
+                    </td>
+                    <td>
+                        <IMG SRC="png/player22.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        登場タスクを起動します
+                    </td>
+                    <td>
+                        <IMG SRC="png/player23.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        破壊タスクを終了します
+                    </td>
+                    <td>
+                        <IMG SRC="png/player24.png">
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/player25.png">
+            <h2>テストプレイ</h2>
+            敵が出るようにテストプレイを開始し、敵弾や体当たりにあたってください<br>
+            破壊後、下方から再度出現すれば完成です<br>
+            <br>
+            無敵状態かどうかは当たり判定にチェックをいれると見た目で判別できます<br>
+            赤い矩形が攻撃判定、水色の矩形が防御判定です<br>
+        </section>
+    </div>
+    <hr>
+    <a href="#TOP">■ページ上部へ戻る</a><br>
+    <P>
+</BODY>
+
+</html>

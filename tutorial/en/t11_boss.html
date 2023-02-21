@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../index.css">
+
+<BODY>
+    <a name="TOP" id="TOP"></a>
+    <IMG SRC="../../png/A_160x80.png">
+    <a href="index.html">back to the original page</a>
+    <hr>
+    <div class="main2">
+        <section class="col-1">
+            <H2>11. Making the enemy boss</H2>
+            Create a boss character to come out at the end of the stage<br>
+            Make a combination of parts using the parent-child hierarchy<br>
+            <br> <br>
+            Boss body - 4 boss legs - 3 boss turrets<br>
+            <br> <br>
+            Keep the project file created in the previous tutorial open<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/boss00.png">
+            <H2>Create a sprite for a boss</H2>
+            <br> <br>
+            Load 'resource/img_boss.bmp' into the image file and set the color key<br>
+            <br> <br>
+            Build the pattern list and set the hit decision<br>
+            Note that the center position of the leg parts is not in the middle<br>
+            <br> <br>
+            Adjust the size of the leg parts to your liking, because if the defense judgment of the leg parts is larger than the turret parts, the shot's attack will not be able to pass<br>
+            <br> <br>
+            <b>If you will need to rotate the sprite when directing or moving it, please prepare the image with respect to the downward direction<br></b>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <h2>Create three types of characters: boss body, legs, and turret</h2>
+            <table>
+                <tr bgcolor="#F5F0CF">
+                    <td>
+                        Setting up the boss body, the key is to stop time while the boss is appearing<br>
+                        Show stamina is checked, but at this time it is not ready to be displayed<br>
+                        Later on in the layout settings will be discussed<br>
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss01.png">
+                    </td>
+                </tr>
+                <tr bgcolor="#C5F0CF">
+                    <td>
+                        The configuration of the boss leg parts
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss02.png">
+                    </td>
+                </tr>
+                <tr bgcolor="#F5F0CF">
+                    <td>
+                        The setting of the boss turret<br>
+                        Switching between the three types is done in a script
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss03.png">
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/boss04.png">
+            <H2>Scripting for the boss body</H2>
+            Generate four leg parts as children<br>
+            Appears while rotating from the top of the screen<br>
+            <br> <br>
+            Rotation is done in task 1<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <h2>Edit the contents of the panel</h2>
+            <table>
+                <tr>
+                    <td>
+                        Launch Task 1 for rotating the body
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss10.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Place the leg parts as children<br>
+                        Note that the priority, angle, distance and offset angle are different<br>
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss11.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss12.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss13.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss14.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Move it off the screen above the screen
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss15.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Move it into the screen
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss16.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Finish the scene
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss17.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Task 1 is only one rotating panel
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss18.png">
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/boss05.png">
+            <h2>Scripts for when the boss is destroyed</h2>
+            If you do not describe anything in the destruction task, it will be a small fry destruction effect<br>
+            <br> <br>
+            For flashy explosion effects
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <h2>Edit the contents of the panel</h2>
+            <table>
+                <tr>
+                    <td>
+                        Explosion effects
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss06.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Explosion effects
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss07.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Finally, do not forget to place the annihilation
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss08.png">
+                    </td>
+                </tr>
+            </table>
+            </section>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/boss20.png">
+            <H2>Scripting for boss legs</H2>
+            Generate three types of turrets, as children<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <h2>Edit the contents of the panel</h2>
+            <table>
+                <tr>
+                    <td>
+                        Place the turret parts as a child<br>
+                        PARAM_A can be taken on the child side and can be branched in appearance and behavior<br>
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss21.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Note that the coordinates, drawing priority and PARAM_A are different<br>
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss22.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss23.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss24.png">
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/boss30.png">
+            <H2>Scripting for the boss turret</H2>
+            Switching the pattern number of the turret in PARAM_A<br>
+            Attacks at regular intervals (Task 1)<br>
+            Rotate to face the direction of your plane (Task 2)<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <h2>Edit the contents of the panel</h2>
+            <table>
+                <tr>
+                    <td>
+                        Launch task 1 for rotation
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss31.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Launch task 2 for the attack
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss32.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Assign it to variable 00 since we have received PARAM_A from the parent (leg parts)
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss33.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Reflect the contents of the variable 00 to the pattern number
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss34.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Task 0 is now finished
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss35.png">
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/boss40.png">
+            <H2>Scripting for the boss turret 2</H2>
+            Edit task 1 for the attack
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <h2>Edit the contents of the panel</h2>
+            <table>
+                <tr>
+                    <td>
+                        100 frame weight to attack
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss41.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Firing bullets in the direction the turret is facing
+                        After firing, 120 frame weight
+                    </td>
+                    <td>
+                        <IMG SRC="png/boss42.png">
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/boss43.png">
+            <H2>Scripting for the boss turret 3</H2>
+            Set the rotating panel to face the direction of your machine
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <H2>Test Play</H2>
+            If you can verify the behavior of the boss in character unit tests<br>
+            Place 'BOSS' a little before the whole time in the stage edit<br>
+            <br> <br>
+            Test play a stage unit test to make sure it is working fine<br>
+            Defeat the boss and advance to the next stage automatically after the entire time has elapsed<br>
+        </section>
+    </div>
+    <hr>
+    <a href="#TOP">Back to top of page</a><br>
+    <P>
+</BODY>
+
+</html>

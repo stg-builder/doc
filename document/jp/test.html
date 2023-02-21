@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../index.css">
+
+<BODY>
+	<a name="TOP" id="TOP"></a>
+	<IMG SRC="../../png/A_160x80.png">
+	<a href="manual.html">■元のページへ戻る</a>
+	<hr>
+
+
+	<div class="main2">
+		<section>
+			<H1>テストプレイ</H1>
+			<IMG SRC="png/test00.png">
+			<H2 STYLE="color:red">注意事項</H2>
+			テストプレイを行うと全ての変更結果がプロジェクトファイルへ上書き保存されます<br>
+			<a href="editer.html">エディタ設定</a>で変更できます
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<H2>テスト内容</H2>
+			<UL>
+				<LI>通しプレイ<BR>全てのシーンを最初から最後までプレイします</LI>
+				<LI>ステージ単体<BR><A HREF="stage.html">ステージ</A>を実行ウインドウにドロップするとこのモードになります</LI>
+				<LI>キャラクタ単体<BR><A HREF="chara.html">キャラクタ</A>を実行ウインドウにドロップすることでこのモードになります。配置位置を選択できます</LI>
+				<LI>編隊単体<BR><A HREF="group.html">編隊</A>を実行ウインドウにドロップすることでこのモードになります。配置位置を選択できます</LI>
+				<LI>弾幕単体<BR><A HREF="danmak.html">弾幕</A>を実行ウインドウにドロップすることでこのモードになります。発射位置は真ん中上より固定です</LI>
+				<b>上記のモードはコンボボックスで切り替えることも出来ます</b>
+				<LI>デバッグ<BR>デバッグボタンを押すとデバッグ情報ウインドウを開きます</LI>
+			</UL>
+
+			<div class="main3">
+				<section>
+					<UL>
+						<LI>総フレーム<br>実行中のステージで設定されている全体フレーム数</LI>
+						<LI>現フレーム<br>実行中のステージの現フレーム</LI>
+						<LI>スケール<br>デバッグ用のウインドウサイズ、デバッグ時にのみ有効です</LI>
+						<LI>負荷、表示ボタンで以下を切り替え
+							<ul>
+								<li>ms（ミリ秒）<br>1フレームの処理にかかった時間</li>
+								<li>FPS<br>秒間のフレームレート</LI>
+							</ul>
+						</LI>
+						<li>総キャラ数<br>出現中のキャラクタ数</li>
+						<li>加速<br>16倍速再生と等倍をトグル切り替え</li>
+						<li>無敵<br>自機のやられ判定をオフにします</li>
+						<li>ミュート<br>全てのサウンドの音量を0にします</li>
+						<li>当たり判定<br>当たり判定を描画します</li>
+						<li>キーボード無効<br>ゲーム内のキーボード操作を無効化します</li>
+					</UL>
+				</section>
+			</div>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<H2>ショートカットキー</H2>
+			<UL>
+				他の編集ウインドウがアクティブでも有効です
+				<LI>F5<BR>実行。実行中の場合は再実行</LI>
+				<LI>F6<BR>停止</LI>
+				<LI>CTRL+D<BR>デバッグ情報ウインドウを表示します</LI>
+			</UL>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<H3>デバッグ情報ウインドウ</h3>
+			<IMG SRC="png/test01.png">
+			<UL>
+				<LI>実行中のゲーム内のシステム変数の閲覧と変更ができます、どちらかを選んでください<br>
+					<UL>
+						<LI>ゲーム開始時に初期化されるフラグ<br></LI>
+						<LI>ゲーム終了後も保存されるフラグ<br></LI>
+					</UL>
+					表示形式と表示桁数を選択できます<br>
+					<br>
+				</li>
+				<LI>マウスで変更したい場所をクリックします<br>
+					右上の編集ボックスで数値を編集後、ENTERキーで反映されます</LI>
+				<li>ログ<br>スクリプトコマンド、「変数・デバッグ」の内容が表示されます</li>
+		</section>
+	</div>
+
+	<HR>
+	<a href="#TOP">■ページ上部へ戻る</a><br>
+
+</BODY>
+
+</html>

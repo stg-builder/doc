@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href ="../../index.css">
+
+<BODY>
+	<a name="TOP" id="TOP"></a>
+	<IMG SRC="../../png/A_160x80.png">
+	<a href="script.html">back to the original page</a>
+	<hr>
+
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_var.png">
+			<H1>Script commands</H1>
+			<H2> variable group</H2>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_var00.png">
+			<h2>System</h2>
+			Reads and writes what the system is using to a variable<br>
+			Those with read-only are read-only<br>
+			Switch between reading and writing in the transfer direction
+			<ul>
+				<li>System variable to be initialized<li>0-255</li>
+				<li>Number of system variables to be stored in <li>0-255</li>
+				<li>Mouse coordinates XY(read-only)<br>Unimplemented</li>
+				<li>Number of characters eligible for a quick turn in the screen (read-only) <br>
+					Attribute flag in <a href="object.html">character editing</a> Counts the number of characters that are being checked for "Fast Track Target"<br>
+					Count all characters that appear</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_var01.png">
+			<h2>Local</h2>
+			Mainly read and write the content of characters and players in variables<br>
+			Those with read-only are read-only<br>
+			Switch between reading and writing in the transfer direction
+			<ul>
+				<li>Signals (numbers 0-15)<br>Signal data held by the character</li>
+				<li>X-coordinates<br>A character's absolute coordinates X</li>
+				<li>Y-coordinate<br>A character's absolute coordinate Y</li>
+				<li>X movement amount (x100)<br>100 times the character's movement amount (internal) X</li>
+				<li>Y movement amount (x100)<br>100 times the character's movement amount (internal) Y</li>
+				<li>Gauge value (numbers 0-2)<br>A gauge value held by the player</li>
+				<li>Physical Strength<br>Character's Physical Strength</li>
+				<li>Maximum Strength<br>Initial value of character's health</li>
+				<li>Number of Bombs<br>Number of Bombs held by the player</li>
+				<li>Remaining Machines<br>Remaining Machines Held by the Player</li>
+				<li>Score<br>Score kept by the player</li>
+				<li>Are you inside the wall? (Lead-only)<br>Is the character in the wall hit decision? 0.. No 1. Yes</li>
+				<li>Player type<br>Set the result of player selection No.</li>
+				<li>Speed Level<br>Player's Speed Level</li>
+				<li>Continue count<br>Number of continuations left for a player to keep</li>
+				<li>Main Weapon Index<br>Main weapon in use by the player</li>
+				<li>Sub-weapon Index<br>Sub-weapons in use by the player</li>
+				<li>Bomber Index<br>Bomber in use by player</li>
+				<li>Optional Index<br>Optional Weapon in use by the player</li>
+				<li>Counter Index<br>Counter Weapon in use by the player</li>
+				<li>Main Weapon Level<br>Player's Weapon Level</li>
+				<li>Sub-weapon Level<br>Player's Weapon Level</li>
+				<li>Bomber Level<br>Player's Weapon Level</li>
+				<li>Optional Level<br>Player's Weapon Level</li>
+				<li>Counter Level<br>Player's Weapon Level</li>
+				<li>Direction of movement 0-65535<br>Direction of movement, 0-360 degrees converted to 0-65535</li>
+				<li>Image orientation 0-65535<br>Value converted from 0-360 degrees to 0-65535 in the direction the image faces</li>
+				<li>Attack Power<br>Attack Power held by a character</li>
+				<li>Defensive Power<br>Defensive Power held by a character</li>
+				<li>Speed (x100)<br>100 times the amount of movement of the character</li>
+				<li>Absolute Coordinates X in Childhood (Read-Only) <br>In-Screen Absolute Coordinates X in Childhood</li>
+				<li>Absolute Coordinates Y in Childhood (Read-Only)<br>In-Screen Absolute Coordinates Y in Childhood</li>
+				<li>Scale factor (65536=equal magnification)<br>Character's scale factor, the greater the magnification</li>
+				<li>Absolute movement X for child (x100, read-only)<br>100 times the amount of movement X for child vs. screen</li>
+				<li>Absolute movement Y as a child (x100, read-only) <br>100 times the amount of movement Y vs. the screen as a child</li>
+				<li>Absolute movement direction for child (0 to 65535, read-only) <br>Value for child vs. screen movement direction, 0 to 360 degrees converted to 0 to 65535</li>
+				<li>Collision detection display<br>When the value is not 0, the display turns ON.</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_var02.png">
+			<h2>Math</h2>
+			Perform arithmetic, shift and logic operations<br>
+			All signed operations.
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_var03.png">
+			<h2>Conditions</h2>
+			Compares a variable to a variable or a number and branches to the right if the conditions are met
+			<ul>
+				<li>The variable<br>specifies a variable to be compared</li>
+				<li>Numeric value<br>Numeric value to compare</li>
+				<li>Comparison of the top two conditions and branch to the right if the condition is true</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_var04.png">
+			<h2>Clamp</h2>
+			Clamp and normalize the contents of a variable
+			<ul>
+				<li>Minimum value, maximum value<br>Selected value to clamp</li>
+				<li>Check to normalize further<br>check if you want to normalize</li>
+				<li>Minimum value, maximum value<br>Selected value to be normalized</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_var05.png">
+			<h2>Random</h2>
+			Get a random number in the specified range as a variable.
+			<ul>
+				<li>Specify a range<br>variable or numeric range</li>
+				<li>Assigning a random number in the range<li>Select a variable to get a random number</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_var06.png">
+			<h2>Debug</h2>
+			Displays the contents of the variable in the debug window
+			<ul>
+				<li>A,B,C<br>Up to three variables can be displayed simultaneously</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_var07.png">
+			<h2>Distance</h2>
+			Find the distance between two points.
+			<ul>
+				<li>Get more square roots<br>Check if you want more distance</li>
+			</ul>
+			When you want to find the distance between Character A and Character B<br>
+			√((AX-BX) squared + (AY-BY) squared)
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_var08.png">
+			<h2>Replay</h2>
+			Get the replay state as a variable.
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_var09.png">
+			<h2>Load</h2>
+			Obtains information on the current character.
+			<ul>
+				<li>Get the total value of the load factor<br><a href="object.html"> The load factor set in the character edit</a>
+				<li>Get the normal number of characters<br>The character editing attribute flag "Important characters" is unchecked</li>
+				<li>Get the number of important characters<li>The attribute flag "important characters" for character editing is checked</li>
+			</ul>
+		</section>
+	</div>
+	<a href="#TOP">Back to the top of the page</a><br>
+
+</BODY>
+
+</html>
+

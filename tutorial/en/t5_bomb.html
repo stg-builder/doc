@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../index.css">
+
+<BODY>
+    <a name="TOP" id="TOP"></a>
+    <IMG SRC="../../png/A_160x80.png">
+    <a href="index.html">back to the original page</a>
+    <hr>
+    <div class="main2">
+        <section class="col-1">
+            <H2>5. Create an explosion</H2>
+            Create effects when enemies etc. explode<br>
+            Keep the project file created in the previous tutorial open<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/bomb00.png">
+            <h2>Creating an Explosion Sprite</h2>
+            Create a new sprite and name it 'BOMB'<br>
+            Register img_bomb01.bmp from the resource folder<br>
+            No pertinent judgment is required<br>
+            <br> <br>
+            Switch to the Edit Animation tab and create an animation<br>
+            Uncheck if the loop is checked<br>
+            <b>If you specify the animation number in this case instead of the pattern number, the animation will be played</b><br>
+            <br> <br>
+            Add 11 animated frames, enter 1-11 in the pattern number and 2 in the number of frames<br>
+            <br> <br>
+            Play the preview and check the animation<br>
+            (It will also play in a loop with no loop setting)
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/bomb01.png">
+            <h2>Creating an Explosion Character</h2>
+            Select the enemy (aerial objects) to type<br>
+            Set the pattern number to -1 (it is a negative number, so it will be the animation number) <br>
+            Register sprites and scripts<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/bomb02.png">
+            <h2>Creating an Explosion Script</h2>
+            Edit the script you just created<br>
+            Place the control category Passage and Disappearance in the task "0:Main"<br>
+            Switch to the number of frames for the transit time wait item and enter 22, which is the length of the animation<br>
+            <br> <br>
+            Now the animation will disappear once it has played out
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/bomb03.png">
+            <h2> Register as default explosion</h2>
+            Save and close the sprites, characters and scripts you have created<br>
+            <br> <br>
+            Open the game settings and click on the Specify Defaults tab<br>
+            Register the BOMB you just created by clicking on the default explosion in it... in it to register the BOMB you just created
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/bomb04.png">
+            <h2>Test play and see if the enemies explode</h2>
+            Test-play to make ENEMY-A appear as in the previous enemy creation and destroy the enemy with a shot<br>
+            If the explosion appears, it is a success!
+        </section>
+    </div>
+    <hr>
+    <a href="#TOP">Back to top of page</a><br>
+    <P>
+</BODY>
+
+</html>

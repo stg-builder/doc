@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href ="../../index.css">
+
+<BODY>
+	<a name="TOP" id="TOP"></a>
+	<IMG SRC="../../png/A_160x80.png">
+	<a href="script.html">back to the original page</a>
+	<hr>
+
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_move.png">
+			<H1>Script commands</H1>
+			<H2>Move group</H2>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_move00.png">
+			<h2>X.Y.</h2>
+			Specify the destination in XY coordinates<br>
+			Or <br>
+			Specify the movement force in XY.
+			<ul>
+				<li>Move to
+					<ul>
+						<li>Specifies the target coordinates in absolute coordinates<br>Specifies the destination coordinates in absolute coordinates. The top-left corner of the screen is the (0,0) point</li>
+						<li>Specifies the target coordinates relative to the current coordinates<br>The destination coordinates are relative to the current coordinates. If the number is positive, it is the bottom right corner. Positive numbers point to the lower right and negative numbers point to the upper left</li>
+						<li>Specify the movement force in absolute value<br>Specify the movement force in the XY direction in absolute value</li>
+						<li>Specify the force to move in the direction of <li>XY</li>, which is a relative value.
+					</ul>
+				</li>
+				<li>Movement formula<br>
+					Valid only for coordinates.
+					<ul>
+						<li>Current velocity<br>Current velocity to the target location</li>
+						<li>Acceleration, rapid acceleration<br>Accelerate while moving from the start point</li>
+						<li>Decelerate, decelerate rapidly<br>When you get close to the target point, you will move while decelerating</li>
+						<li>Acceleration and deceleration, rapid acceleration and deceleration</li>
+					</ul>
+				</li>
+				<li>Number of frames to move<br>This is the number of frames it takes to reach the target coordinates, the shortest being 1 frame</li>
+				<li>Range by random number<br>Range of coordinates or force to move to</li>
+				<li>Use a variable<br>Use a variable to specify coordinates and force of movement</li>
+			</ul>
+			<b>When you specify a target coordinate, the speed of movement will be maintained after reaching the target<br>Check "Stop when target is reached" to stop it. </b>
+		</section>
+	</div>
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_move01.png">
+			<h2>Polar Coordinates</h2>
+			Change the direction and speed of movement.
+			<ul>
+				<li>Change angle only once<br>Add the specified angle to the current direction of travel in the first frame only</li>
+				<li>Modify angle per frame<br>Add the specified angle to the current direction of travel for all frames</li>
+				<li>Number of frames<br>Continues to move for a specified number of frames</li>
+				<li>Relative Angle<br>A relative angle to change</li>
+				<li>Speed<br>When relative is checked, it is a relative speed, otherwise it is an absolute speed</li>
+				<li>Do not make it less than 0<li>When the speed is less than 0, set it to 0</li>
+				<li>Varies the speed in %<br>from the current value by a percentage</li>
+			</ul>
+			<b>When you reach the destination, your speed will be maintained<br>To stop, use the stop panel described below</b>
+		</section>
+	</div>
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_move02.png">
+			<h2>Homing</h2>
+			Correct the direction to move towards the target
+			<ul>
+				<li>Target<br>Choose the character to be guided</li>
+				<li>Moving speed<br>When relative is checked, it is a relative speed, otherwise it is an absolute speed.
+				<li>Maximum angular velocity<br>Angular velocity is the speed at which you can rotate. Value.
+				Angle is specified by multiplying the angle by 100 (if 50 is specified, the angle is adjusted up to 0.5 degrees per frame). is done) </li> </li>
+				<li>Number of frames to be tracked<br> Specifies the number of frames to be tracked. After the specified number of frames, the camera will move straight ahead.
+			</ul>
+		</section>
+	</div>
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_move03.png">
+			<h2>Scaling</h2>
+			Change the scale.
+			<ul>
+				<li>Target scale<br>Equal scale with a factor of 100. 200 means 2, 50 means 0 .5 times. If you check the Relative setting, it will be multiplied by the current scale</li>
+				<li>Time for the change<br>This is the number of frames it takes to complete the scale change</li>
+			</ul>
+		</section>
+	</div>
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_move04.png">
+			<h2>Rotate</h2>
+			Rotate towards the target.
+			<ul>
+				<li>Target.
+					<ul>
+						<li>Angle specification<br> Correct the direction to a specified angle</li>
+						<li>Correct direction towards the player<br> player</li>
+						<li>Correct the direction towards the parent<li> when the parent is present</li>
+						<li>Please specify the child<br>child ID</li>
+					</ul>
+				</li>
+				<li>Target angle<br>Target angle with absolute value or relative value for angle specification</li>
+				<li>Time for the change<br>This is the number of frames it takes to complete the rotation change</li>
+				<li>Align the force of movement to the direction of the direction of rotation<li>
+			</ul>
+		</section>
+	</div>
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_move05.png">
+			<h2>Speed</h2>
+			Correct the movement speed.
+			<ul>
+				<li>Target speed<br>Relative is checked for relative speed, otherwise it is absolute speed</li>
+				<li>Do not make it less than 0<li>When the speed is less than 0, set it to 0</li>
+				<li>Varies the speed in %<br>from the current value by a percentage</li>
+				<li>Time required for the change<br>This is the number of frames to complete the speed change</li>
+			</ul>
+		</section>
+	</div>
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_move06.png">
+			<h2>Path</h2>
+			Execute the specified path. See <a href="path.html">Edit Path</a>
+			<ul>
+				Speed to move through the path
+				<li>Use the specified speed in the path<br>The specified speed will be enabled in the path edit</li>
+				<li>Scripting control (ignore pauses) <br>Control panel "Pass speed" control</li>
+			</ul>
+		</section>
+	</div>
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_move07.png">
+			<h2>Stop</h2>
+			<ul>
+				<li>Checkbox<br>Stops the selected move panel</li>
+				<li>Movement force to 0<li>Check if you want to stop the panel from moving, as it will remain in place even if the panel stops</li>
+			</ul>
+		</section>
+	</div>
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_move08.png">
+			<h2>Position conditions</h2>
+			Branching off according to the position of the target.
+			<ul>
+				<li>Target<br>Specifying a target</li>
+				<li>Child ID<br>Specifies when the target is a child</li>
+				<li>Conditions<br>Select the positional relationship to the target</li>
+				<li>Distance<br>Specifies when the condition is "less than or equal to" distance</li>
+			</ul>
+		</section>
+	</div>
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_move09.png">
+			<h2>Orbit</h2>
+			Move in a rotating motion around the target<br>
+			However, it is not a perfect circle, and may draw a distorted circle due to target movement, etc.
+			<ul>
+				<li>Target<br>Specifying a target</li>
+				<li>Child ID<br>Specifies when the target is a child</li>
+				<li>Distance<br>Distance to target</li>
+				<li>Angle<br>Angle to the target</li>
+				<li>Number of frames to reach<br>This is the number of frames it takes to complete the move to the specified position</li>
+				<li>Control rotation<br>Control direction to match the rotation</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_move10.png">
+			<h2>Joint F.K.</h2>
+			Available only when multijoint is enabled and "Foward Kinematics" is specified as the control method<br>
+			<br>
+			You can change the distance and angle by specifying a single node (joint)<br>
+			In addition, it is possible to transmit the distance and angle to the sub-section in a damped manner
+			<ul>
+				<li>Joint number<br>Articulated tab of the character edit, number in the list of joints</li>
+				<li>Distance<br>Specifies the distance of the clause. Relative or absolute value</li>
+				<li>Angle<br>Angle of the clause. Relative or absolute value</li>
+				<li>Time required for the change<br>This is the number of frames to complete the y-change for a given distance angle</li>
+				<li>Convergence coefficients for child clauses<br>The larger the number of child clauses, the longer it takes for the child to stop when the parent stops</li>
+				<li>Transfer coefficients to the child nodes<li>The larger the transfer coefficient to the child nodes, the stronger the influence of the parent</li>
+			</ul>
+		</section>
+	</div>
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_move11.png">
+			<h2>Path speed</h2>
+			Correct the path movement speed.
+			Available only when script control is selected in the "Path" control panel.
+			<ul>
+				<li>Target speed<br>Relative is checked for relative speed, otherwise it is absolute speed</li>
+				<li>Do not make it less than 0<li>When the speed is less than 0, set it to 0</li>
+				<li>Varies the speed in %<br>from the current value by a percentage</li>
+				<li>Time required for the change<br>This is the number of frames to complete the speed change</li>
+			</ul>
+		</section>
+	</div>
+	<a href="#TOP">Back to the top of the page</a><br>
+
+</BODY>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../index.css">
+
+<BODY>
+    <a name="TOP" id="TOP"></a>
+    <IMG SRC="../../png/A_160x80.png">
+    <a href="index.html">back to the original page</a>
+    <hr>
+    <div class="main2">
+        <section class="col-1">
+            <h1>7. Extend the player</h1>
+            Create appearance and destruction scenes<br>
+            Keep the project file created in the previous tutorial open<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/player00.png">
+            <h2>Create an Appearance Scene</h2>
+            Open the previously created character 'TYPE-A' for your ship<br>
+            Create and register a new one in the script field that was left empty<br>
+            Script name should be 'TYPE-A'<br>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/player10.png">
+            <h2>Script editing and prep</h2>
+            Open the script you just created, resize the panel and set the control field wider<br>
+            <br> <br>
+            Choose an appropriate size for the number of panels used, as too large a control field will waste memory<br>
+            <br> <br>
+            Arrange the panels in the task "0:Main" as shown in the figure to the right
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <h2>Edit the contents of the panel</h2>
+            <table>
+                <tr>
+                    <td>
+                        Turn off the defensive judgment and make it invincible
+                    </td>
+                    <td>
+                        <IMG SRC="png/player11.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Turn off the autocontrol and make it inoperable
+                    </td>
+                    <td>
+                        <IMG SRC="png/player12.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Move down off the screen and make it stop there<br>
+                        Coordinates are chosen to be specified in absolute coordinates. The top left corner of the screen will be (0,0)<br>
+                        Moving requires at least 1 frame<br>
+                    </td>
+                    <td>
+                        <IMG SRC="png/player13.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Move toward the screen and make it stop after moving<br>
+                        The coordinates are chosen to be specified in relative coordinates<br>
+                        It takes 60 frames (1 second) to move<br>
+                    </td>
+                    <td>
+                        <IMG SRC="png/player14.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Turn on the autocontrol and allow it to operate<br>
+                        Wait 120 frames (2 seconds) in this state (invincible)<br>
+                    </td>
+                    <td>
+                        <IMG SRC="png/player15.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Turn on the defensive judgment and release the invincibility
+                    </td>
+                    <td>
+                        <IMG SRC="png/player16.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Stop the task "0: Main" and end the appearance scene
+                    </td>
+                    <td>
+                        <IMG SRC="png/player17.png">
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/player20.png">
+            <h2>Editing Destruction Task</h2>
+            If you do not create a destruction task, it will disappear as soon as your plane is destroyed<br>
+            Launch the task again after putting out the explosion effect<br>
+            <br> <br>
+            <b>Defensive decisions are automatically turned off by the system<br></b>
+            <br> <br>
+            Line up the panel in the task "11: Destruction" as shown in the figure to the right
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <h2>Edit the contents of the panel</h2>
+            <table>
+                <tr>
+                    <td>
+                        Turn off the autocontrol and make it inoperable
+                    </td>
+                    <td>
+                        <IMG SRC="png/player21.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Scatter the explosive characters with the shot panel
+                    </td>
+                    <td>
+                        <IMG SRC="png/player22.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Launch the task appeared
+                    </td>
+                    <td>
+                        <IMG SRC="png/player23.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Finish the destruction task
+                    </td>
+                    <td>
+                        <IMG SRC="png/player24.png">
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/player25.png">
+            <h2>Test Play</h2>
+            Start the test play to let the enemies get out and hit the enemy bullets and body blows<br>
+            If it is destroyed and reappears from below, it is complete!
+            <br> <br>
+            Check the box to see if you are invincible or not<br>
+            The red rectangle is the offensive call and the light blue rectangle is the defensive call<br>
+        </section>
+    </div>
+    <hr>
+    <a href="#TOP">Back to top of page</a><br>
+    <P>
+</BODY>
+
+</html>

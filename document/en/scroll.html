@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href ="../../index.css">
+
+<BODY>
+	<a name="TOP" id="TOP"></a>
+	<IMG SRC="../../png/A_160x80.png">
+	<a href="manual.html">back to the original page</a>
+	<hr>
+
+	<div class="main2">
+		<section>
+			<H1>Background Editing</H1><br>
+			<IMG SRC="png/scroll00.png">
+			<a href="common.html">Here's help for common operation of the edit window</a >
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<H2>Image registration (bank) </H5>
+			<UL>
+				A single background can contain up to 8 images (in terms of performance, if you're using 4 256x256 textures, it's better to combine them into 512x512) <BR>
+				Registered images are divided into chips and laid out on the map as the final background
+				<LI>Color key <BR>Describe the color to be converted to a transparent color in ARGB 32 bits</LI>
+				<LI>Chip size <BR>Specifies the size of one chip in pixels. We will cut this chip out of the image to make up the background map<BR>To reflect Please press the refresh button.
+				<LI>Map size<BR>Specifies the size of the entire map in chips<BR>Click the Refresh button to take effect</LI>
+			</UL>
+		</section>
+		</div>
+
+	<div class="main2">
+		<section>
+			<H2>Edit Map</H5>
+			<UL>
+				The left side of the window is the image you have registered. You can select a chip to place on the map by dragging it here (the red frame is the (appears around) <P>
+				Next, I made sure that the tool button above the map area on the right side was set to "set Afterwards, drag it around the map. The selected chip will be placed on the map
+			</UL>
+			<UL>
+				<LI>Set<BR>Place chips selected in the left image area to the right map area</LI>
+				<LI>Clear <BR>Clear the map area on the right side (unplaced)</LI>
+				<LI>Copy <BR>Drag the source area on the right side of the map to specify the area to be copied</LI>
+				<LI>Paste <BR>Drag the destination on the right-hand side of the map to specify where to paste</LI>
+				<LI>Move all map chips <BR>Move all content placed on the map</LI>
+			</UL>
+
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+	<H5>Shortcut Keys</H5>
+	<UL>
+		<LI>You can use the cursor keys to scroll up, down, left and right in the map area</LI>
+		<LI>Mouse wheel can be used to zoom in and out in the image and map areas</LI>
+		<LI>You can move it by right-dragging in the image and map areas</LI>
+	</UL>
+		</section>
+		</div>
+
+
+	<div class="main2">
+		<section>
+	<H5>Sensitivity to the background</H5>
+	<UL>
+		<B>When the map chip size is 32x32, you can give a hit decision</B><P></P>
+		If you click on the HIT button on the right side of the bank switch button 0-7, you can add the attribute of a hit to the background. In this mode, you will be able to add a "hit" to the image. In this mode, a list of hits is shown in the left image. Select a hit decision and place it on the right side of the map as in the normal mode. (A hit decision cannot be placed where there is no background.
+		To actually enable hit detection between the background and the character, use <a href="stage. html">Edit stage</a> to enable hit detection for the background and then click
+		<a href="chara.html">Edit character</a> to "background and judgment". Check.
+	</UL>
+		</section>
+		</div>
+
+	<HR>
+	<a href="#TOP">Back to the top of the page</a>
+</BODY>
+
+</html>
+

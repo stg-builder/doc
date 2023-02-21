@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href ="../../index.css">
+
+<BODY>
+	<a name="TOP" id="TOP"></a>
+	<IMG SRC="../../png/A_160x80.png">
+	<a href="manual.html">back to the original page</a>
+	<hr>
+
+	<div class="main2">
+		<section>
+			<H1>Edit Player</H1>
+			<a href="common.html">Here's help for common operation of the edit window</a ><BR>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<H2>Settings tab</H2>
+			<IMG SRC="png/player00.png">
+
+			<UL>
+				<LI>Power-up Type <BR>Specifies the action of the weapon when it is powered up with an item, etc.
+					<UL>
+						<LI>All weapons power up at the same time</LI>
+						<LI>Weapons are powered up individually</LI>
+					</UL>
+				</LI>
+				<LI>Maximum power-up level <BR>Not used</LI>
+				<LI>Maximum speed increase level <BR>If you want to increase the speed with an item or use a button to make it variable speed</LI>
+				<LI>Character <BR>Select the character to use for the player</LI>
+				<LI>Move speed setting
+					<UL>
+						<LI>Normal <BR>Normal Travel Speed</LI>
+						<LI>Low speed <BR>Moving speed when the low speed button is pressed</LI>
+						<LI>High-speed <BR>Moving speed when the fast button is pressed</LI>
+					</UL>
+					<BR>
+				<LI>Pattern setting <BR>Specifies the pattern number for each direction you move to</LI>
+				<li>Disable automatic 90-degree rotation in side-scrolling mode<br>For compatibility with older versions, please check</li>
+				<li>Ignore normal power-up items<li>Ignore any items you get that are not gauge increases, score additions, player additions, or bomb additions</li>
+			</UL>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+
+			<H2>Weapon Settings tab</H2>
+			<IMG SRC="png/player01.png">
+			<UL>
+				Set the weapons that the player can use (the list of weapons is shown on the left)
+				<LI>Weapon Name <BR>String to be displayed in the list. Doesn't affect the game</LI>
+				<LI>Type <BR>Selects the type of weapon. It also functions as a category for switching weapons with items, etc. If you select this option, please specify the child ID as well. Counter attacks will auto-attack when grazed</LI>
+				<LI>Maximum power-up level <BR>Set the maximum level for each weapon. It does not need to be a uniform value for all weapons</LI>
+				<li>Skip level 0 power ups when you use the <BR> button to make a weapon change, assuming you don't have a power up level 0 in your possession</li>
+				<li>Subtype<br>Specifies the type of subweapon. Must be set in conjunction with gauge settings for tame strikes</li>
+				<UL>
+					<li>Normally<br>used to create ordinary weapons</li>
+					<li>Tame (fire on release)<br>This is used to create a tame (press and hold) button to create a tame (press and hold) and release to create a tame (release and fire) type of attack</li>
+					<li>Tame (press to fire)<br>Use this to create a tame (press to fire) type of tame that you release the button and then press to fire</li>
+				</UL>
+			</UL>
+			<H5>Weapon Levels Tab</H5>
+			<UL>
+				Set the bullets to be fired for each weapon level (the list on the right is the list of bullets)
+				<LI>Character <BR>Select the character you want to use for your bullets</LI>
+				<LI>Shot sound<BR>This is the sound effect that is played when firing. If you want to fire more than one shot at a time, set it to only one of them</LI>
+				<LI>Repeat weight <BR>Repeat speed in frames when the button is held down. Disabled in tame mode. Disabled for tame hits</LI>
+				<LI>Setting the time in frames from the time the <LI>Firing Delay <BR> button is pressed to the time it takes to fire. Disabled on hoarding. Disabled on tame hits</LI>
+				<LI>Launch XY position <BR>Offset of the launch position from your aircraft</LI>
+				<LI>Moving speedXY<BR>Specifies the speed at which the bullet will move. If you write a script, you can set the movement in detail </LI>
+				<LI>Pattern number <BR><a href="chara.html">Character editing</a This takes precedence over the pattern number you set in <a>
+				<LI>Attack power<BR><a href="chara.html">In character editing</a> This takes precedence over the attack strength you set.
+			</UL>
+			<UL>
+				<li>Maximum number of shots<br>The number of shots that can be on the screen at the same time. Must be set up in conjunction with the minimum number of firings</li>
+				<li>Minimum number of shots fired<br>This is the number of spaces required to fire a shot. It must be set up in conjunction with the maximum number of shots fired. <b>Example)</b>If you want to fire two 3-way shots in a row, set 6 for the maximum number of shots and 3 for the minimum number of shots. Please set it up</li>
+				<LI>Swing <BR>You can change the firing angle when you hold down the button <BR></LI>
+				<UL>
+					<LI>One way <BR>Varies in the specified number of frames from the start angle to the end angle</LI>
+					<LI>Back and forth <BR>Change to the end angle, then change for a specified number of frames to the start angle</LI>
+					<LI>Repeat <BR>On reaching the end angle, resume from the start angle</LI>
+				</UL>
+				<li>Winder<br>You can set the vertical and horizontal settings so that the shot will move as your plane moves</li>
+				<li>Required gauge, required gauge amount<br>The gauge required for tame strikes. Only valid for tame strikes, and the one with the highest weapon level will be fired according to the gauge amount</li>
+				<li>Copy and paste <BR>Copy and paste bullet settings</li>
+			</UL>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<H2>Options tab</H2>
+			<IMG SRC="png/player02.png">
+			<UL>
+				<li>Maximum number of options <BR>Number of options that can be equipped at the same time</li>
+
+				<li>Type <BR>Basic Types of Options</li>
+				<UL>
+					<li>Fixed position <BR>Always a fixed position. Use placement A on the right side</li>
+					<li>Position Switching <BR>The right-hand placement position will lock you in the commanded position. You can use the optional buttons to switch up to four positions</li>
+					<li>Tracking the ship <BR>Tracks the path the ship has taken. The time is delayed by the number of frames you specify in the reaction delay time</li>
+					<LI>Rotate <BR>Rotate around your own machine with the right side position as the initial position. Negative rotation speed will reverse the rotation. Normally, you can rotate by pressing the option button, but if you check the Auto Rotate checkbox, your machine will always rotate. </li>
+
+				</UL>
+				<li>Optional direction (direction of attack)</li>
+				<UL>
+					<li>At a fixed direction <BR>At an angle to the right alignment position, facing the specified direction</li>
+					<li>Automatically orientates itself in the direction of travel</li>
+					<li>backward direction <BR>Automatically goes in the opposite direction to the direction the plane is moving</li>
+					<li>Facing outward <BR>Overse direction to my plane</li>
+				</UL>
+				<li>Reaction delay time <BR>Time to delay a move in relation to the movement of your aircraft</li>
+				<li>Switching delay time <BR>The time it takes for position-switching options to swap positions</li>
+				<li>Character <BR>optional character</li>
+				<li>Use the same weapon as the main shot <BR>Originally the option was a weapon type Fires the specified option. Check this to ignore it and fire the main weapon</li>
+			</UL>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<H2>Button Settings Tab</H2>
+			<IMG SRC="png/player03.png">
+			<UL>
+				<LI>Firing the main weapon <BR>Button to fire the main weapon specified in the weapon type</LI>
+				<li>Press and hold switch<br>When the button is held down for a specified number of frames, the main weapon will stop and the sub-weapon will fire</li>
+				<LI>Firing sub-weapon <BR>Button to fire a sub-weapon specified by weapon type</LI>
+				<LI>Firing Bomber <BR>Button to fire the bomber specified by weapon type</LI>
+				<li>Firing Optional Weapon<li>Button to fire an optional weapon type</li>
+				<BR>
+				<LI>Change options <BR>Button to change the position of options</LI>
+				<BR>
+				<LI>Switching the main weapon <BR>Button to switch the main weapon in sequence</LI>
+				<LI>Sub-weapon switching <BR>Button to switch sub-weapons in sequence</LI>
+				<LI>Bomber switching <BR>Bombers switching button</LI>
+				<LI>Optional Weapon Switching <BR>Button to switch option weapons in sequence</LI>
+				<BR>
+				<LI>Low speed movement <BR>You can set the button to go to low speed and the time to hold the button down</LI> in the main unit.
+				<LI>Fast travel <BR>Button for fast travel and time to hold the button down can be set on the main unit</LI>
+				<LI>Increase speed <BR>Button to increase the speed of the unit by one step, loopable</LI>
+				<LI>Speed down <BR>Button to lower the speed of the unit by one step, loopable</LI>
+				<BR>
+				<LI>Power up <BR>Button to power up when power up is panel-based</LI>
+
+			</UL>
+		</section>
+	</div>
+
+
+	<div class="main4">
+		<section>
+			<H2>Gauge Settings Tab</H2>
+			<IMG SRC="png/player04.png">
+			You can set up to 3 gauges.
+			<UL>
+				<li>Use<br> check to enable. Check the gauge to be used</li>
+				<LI>Gage name <BR>Not used in game</LI>
+				<li>Maximum gauge value<br>Maximum value of the gauge to increase. The effect occurs when this value is exceeded</li>
+				<li> Increase or decrease of gauge
+					<UL>
+						<LI>Per frame<BR>This value is added or subtracted each time one frame passes</LI>
+						<LI>When firing a sub-weapon<LI>This value is added or subtracted each time a sub-weapon is fired</LI>
+						<li>When grazing<br>This value is added or subtracted when a grazing test occurs</li>
+						<li>When an attack is hit<li>This value is added or subtracted when the shot hits an enemy</li>
+						<li>When you destroy an enemy<li>When you destroy an enemy, this value is added or subtracted</li>
+						<li>When your ship is destroyed</li>, this value is added or subtracted when your ship is destroyed.
+						<li>Increase or decrease when the main weapon button is pressed</li>
+						<li>Increase or decrease when the main weapon button is released</li>
+						<li>The sub-weapon button will be added or subtracted when the <li>sub-weapon button<br> is pressed</li>
+						<li>Additions and subtractions will be made when the sub-weapon button<li>is released</li>
+						<li>When firing a thumb shot<li>It will be added or subtracted at the time of firing a thumb shot, as set in the weapon settings</li>
+					</UL>
+				</LI>
+
+				<li>Stops increasing and decreasing the time lapse for a while when an attack is hit<li> <li>Stops increasing and decreasing the time lapse for 10 frames from the frame that your shot hits the enemy</li>
+				<li>The effect of reaching the maximum (minimum) gauge value.
+					<UL>
+						<LI>Clear the gauge<LI>Set the gauge value to 0</LI>
+						<LI>Increase the number of times the bomber is used<LI>Increase the number of times the bomber is used</LI>
+						<LI>Increase the multiplier <br>Unused</LI>
+						<LI>Execute the flash<LI>Generate a flash effect with the specified character</LI>
+						<LI>Make the character appear<LI>Make the specified character appear from the top of the screen</LI>
+						<LI>Clear the multiplier<LI>Return the increased multiplier</LI>
+					</UL>
+				</li>
+			</UL>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/player05.png">
+
+			<H2>Power Up Panel Tab</H2>
+			Set the panel-style power-up <BR>
+			We need to set up the layout for drawing
+
+			<UL>
+				<li>Sprite for the icon<br>Specifies the sprite for the panel display</li>
+				<li>Invalid Pattern Number<br> Specifies the pattern number when the panel is not available</li>
+				<li>Drawing color for selected and deselected items<br>Drawing color of the icon in 32-bit ARGB</li>
+			</UL>
+			Icon Settings in Panel
+			<UL>
+				<li>Name<br>Not used in game</li>
+				<li>Pattern number<br>Specifies the pattern number of the panel icon</li>
+				<li>Sound effect<br>Specifies the sound effect when the power is turned on</li>
+				<li>Power-up details<br><a href="chara.html">Character settings Same content as the item page in </a> </li>
+			</UL>
+		</section>
+	</div>
+
+	<HR>
+	<a href="#TOP">Back to the top of the page</a>
+</BODY>
+
+</html>
+

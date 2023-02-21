@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../index.css">
+
+<BODY>
+    <a name="TOP" id="TOP"></a>
+    <IMG SRC="../../png/A_160x80.png">
+    <a href="index.html">back to the original page</a>
+    <hr>
+    <div class="main2">
+        <section class="col-1">
+            <h1>3. Create player bullets</h1>
+            There are two parts needed for a bullet: the character and the script.
+            Keep the project file created in the previous tutorial open<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/bullet00.png">
+            <h2>Creating a character for a bullet</h2>
+            Create a new character and name it 'SHOT-A'<br>
+            <br> <br>
+            Type... Aerial-ground attack<br>
+            Attribute flags... Check as shown in the diagram to the right<br>
+            Sprite... Add the previously created 'MYSHIP'<br>
+            Script... Click the New button to create it (it will be added to the list automatically)<br>
+            <br> <br>
+            Pattern numbers and attack power are not needed here as they are set in the Weapons section of the player edit<br>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/bullet01.png">
+            <h2>Add bullets to the player</h2>
+            Open the previously created player 'TYPE-A' and edit the weapon settings tab<br>
+            <br> <br>
+            Create one new weapon by clicking the Add Weapon List button<br>
+            Name the weapon 'SHOT', maximum level 0 (no power-up)<br>
+            <br> <br>
+            Click on the Lv.0 tab and click the Add Bullet List button<br>
+            Character...' Select 'SHOT-A'<br>
+            Repeat Weight ..... .4<br>
+            Movement speed Y... -1000<br>
+            Pattern number..... .14<br>
+            Attack Power..... .10<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/bullet02.png">
+            <h2>Add the script to the bullets</h2>
+            Open the script 'SHOT-A' created earlier<br>
+            <br> <br>
+            Select the task "0: Main"<br>
+            Drag and drop the "Passage Panel" from the control group to the control field<br>
+            Select a passing panel and wait for the item to complete its operation<br>
+            <br> <br>
+            Now there will be a script that goes straight to nothing<br>
+            The initial speed is set automatically at the time of firing from the player<br>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/bullet03.png">
+            <h2>Script editing continues</h2>
+            Select the task "9: Attack Hits"<br>
+            Right-click on the control field to bring up the menu and select "Create Gate"<br>
+            If "GATE" appears in the top left corner, proceed to the next<br>
+            <br> <br>
+            Drag and drop the "Disappearing Panel" from the control group to the control field<br>
+            <br> <br>
+            The task "9: Attack Hit" is activated when a bullet hits an enemy<br>
+            Extinguish bullets upon impact<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/bullet04.png">
+            <h2>Test Run</h2>
+            When done, run a test and make sure that the bullets can be fired with the Z key
+        </section>
+    </div>
+    <hr>
+    <a href="#TOP">Back to top of page</a><br>
+    <P>
+</BODY>
+
+</html>

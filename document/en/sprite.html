@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href ="../../index.css">
+
+<BODY>
+  <a name="TOP" id="TOP"></a>
+  <IMG SRC="../../png/A_160x80.png">
+  <a href="manual.html">back to the original page</a>
+  <hr>
+
+
+  <div class="main2">
+    <section class="col-1">
+      <IMG SRC="png/sprite00.png">
+      <H1>Edit Sprite</H1>
+		<a href="common.html">Here's help for common operation of the edit window</a >
+    </section>
+  </div>
+  
+  <div class="main">
+    <section class="col-1">
+      <div class="main2">
+        <section class="col-1">
+          <a href="common.html">Here's help for common operation of the edit window</a >
+        </section>
+      </Div>
+      <UL STYLE="list-style-type : disc">
+        <LI>Register an image file and create a pattern list. You can also register a hit and animation.
+          Note that the pattern number starts from 1</LI>
+        <LI>Up to 8 image files can be stored in one sprite, and the bank switch button allows you to switch between 0 and 7</LI>
+        <LI>Color Key
+          <BR>Describes a color, in ARGB 32-bit form, that converts a particular color of an image without an alpha channel to a transparent color.
+          <BR> button to open a dialog for entering ARGB values. button to open the dialog for entering ARGB values
+          <BR>Transparency is handled differently in the alpha channel than it is in the case of a color key conversion to transparent color.
+          <BR></LI>
+      </UL>
+
+      <div class="main2">
+        <section class="col-1">
+          <H2>Image file</H2>
+          <UL STYLE="list-style-type : disc">
+            <LI>The types of files that can be used as image files are the common The Alpha channel is also available in the following formats<br>
+            Index colors (palettes) are not supported for BMP and PNG files, and all DDS files are unsupported</LI>
+            <LI>Select an image file from the "..." list in the image file section, or click on the "X" button to unregister it</LI> in the image file section, or use the "X" button to unregister the image file</LI>
+            <LI>Move the mouse in the preview by dragging right to move the image, and zoom in and out with the wheel</LI>
+          </UL>
+        </section>
+      </div>
+
+
+      <div class="main">
+        <section class="col-1">
+          <H2>Pattern List</H2>
+          Crop from an image at a specific position and size for display as a sprite<BR>
+          It will appear in the preview as a green box
+          <UL STYLE="list-style-type : disc">
+            <LI>Bank <BR>Bank number of the registered image</LI><BR>
+            <LI>X position, Y position, <BR>Start position for cutting the pattern from the image (pixel position with 0,0 at the top left of the image)</LI><BR>
+            <LI>Width, height <BR>Size of the pattern cut out of the image (in pixels)</LI><BR>
+            <LI>X center, Y center <BR>Center of the cut-out pattern. This is the center position for rotation and expansion. Also, it is the reference position for judging a hit.
+            <LI>The behavior of multiple selections<BR>
+            If you enter a numerical value with the pattern selected, the entire selected range is rewritten at the same time<BR>
+            Also, if you enter a numerical value while the pattern is selected, all of the selected patterns will be rewritten (numerical input only)</LI><BR>
+            <LI>Copy & Paste<BR>
+            CTRL+C to copy the selection to the clipboard, CTRL+V to paste it from the clipboard to the cursor position<BR>
+            Some compatibility with cell editing software such as Excel</LI>
+          </UL>
+        </section>
+      </div>
+
+
+
+      <div class="main2">
+        <section class="col-1">
+          <H2>Attack Decision List</H2>
+          Registers the hit judgment for the attack <BR>
+          It will appear in the preview as a red frame
+          <UL STYLE="list-style-type : disc">
+            <LI>X position, Y position <BR>Relative position from the center of the pattern</LI><BR>
+            <LI>Width and height <BR>Scale for judging a hit</LI><BR>
+          </UL>
+        </section>
+
+        <section class="col-2">
+          <H2>Defense Decision List</H2>
+          Registers the hit decision for defensive purposes.
+          It will appear in the preview as a light blue frame
+          <UL STYLE="list-style-type : disc">
+            <LI>X position, Y position <BR>Relative position from the center of the pattern</LI><BR>
+            <LI>Width and height <BR>Scale for judging a hit</LI><BR>
+          </UL>
+        </section>
+      </div>
+      <div class="main">
+        <section class="col-1">
+          <UL STYLE="list-style-type : disc">
+            <LI>"Subdivision of hit decisions" <BR>
+            Divide the sprite into sections so that when you rotate the sprite, the hit decision follows the rotation<BR>
+            Unchecking the "subdivision" checkbox will lighten the load for sprites with a large number of hits</LI>
+		      </UL>
+        </section>
+      </div>
+
+      <div class="main2">
+        <section class="col-1">
+          <H2>Animation</H2>
+          <IMG SRC="png/sprite02.png">
+          Switching between multiple patterns while displaying the specified frame is called animation<BR>
+          <UL STYLE="list-style-type : disc">
+            <LI>You can run the animation by specifying this number, starting with animation number <BR>-1, instead of the pattern number</LI><BR>
+            <LI>Loop control <BR>Whether the animation will loop back to the head when it reaches the end</LI><BR>
+          </UL>
+
+          <UL STYLE="list-style-type : disc">
+            <LI>Frame</LI>
+            Specifies the pattern number and number of frames to be displayed in the animation.
+            <LI>Preview Playback</LI>
+            Display the animation
+          </UL>
+
+        </section>
+      </div>
+
+
+      <div class="main">
+        <section class="col-1">
+          <H3>Pattern number and animation number</H3>
+
+          <UL>
+            <LI>The pattern number is the number of information from the image that is registered in the pattern list Index number. A serial number is assigned to the leftmost part of the pattern list table, and it is the pattern number (from 1 (Beginning with the beginning and swinging in the positive direction) </LI><BR>
+            <LI>Animation number is the number displayed in the animation list (negative direction from -1) </LI><BR>
+            Where do you want the animation numbers to go? <BR>
+            Essentially, there is a place in the script (in your character or script) where you need to specify a pattern number. So instead of a pattern number, specify an animation number.
+            Special pattern number "0 (zero)" <BR>
+            If the pattern number is a positive number, the pattern number will be the pattern number and if it is a negative number, it will be the animation. If you set it to 0, the effect is the same as turning off the display. You can also specify the animation. You can also specify a blinking animation in the animation.
+
+        </section>
+      </div>
+
+      <div class="main2">
+        <section class="col-1">
+          <IMG SRC="png/sprite01.png">
+          <H3>Automatic division</H3>
+          <UL>
+            If you find it tedious to register image file patterns that have certain rules one by one, you can use automatic division to make it easier for you<BR>E.g., images for fonts<BR>
+            <LI> Delete the entire pattern and then add it <BR>
+            If checked, it deletes all registered patterns and adds a new pattern from a clean slate</LI><BR>
+            <LI>Number of divisions<BR>In the case of the diagram on the right, divide into 4x4</LI><BR>
+            <LI>Pixel size<BR>Specifies the size of one part in pixels (if unchecked, it will be divided equally) </LI><BR>
+            <LI>Offset <BR>Start pixel position from the top left (or from the top left corner if unchecked)</LI><BR>
+            <LI>Reduce the number of pixels <BR>Minimize the size of the split by the specified number of pixels on the top, bottom, left and right sides</LI><BR>
+          </UL>
+        </section>
+      </div>
+
+    </section>
+  </div>
+
+  <hr>
+  <a href="#TOP">Back to the top of the page</a><br>
+  <P>
+</BODY>
+</html>

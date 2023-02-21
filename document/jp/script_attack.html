@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../index.css">
+
+<BODY>
+	<a name="TOP" id="TOP"></a>
+	<IMG SRC="../../png/A_160x80.png">
+	<a href="script.html">■元のページへ戻る</a>
+	<hr>
+
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_attack.png">
+			<H1>スクリプトコマンド</H1>
+			<H2>攻撃グループ</H2>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_attack00.png">
+			<h2>ショット</h2>
+			指定されたキャラクタを射出します
+			<ul>
+				<li>弾<br>弾として発射するキャラクタを指定します</li>
+				<li>発射音<br>キャラクタが発射されるときに再生する効果音を指定します</li>
+				<li>種類</li>
+				<ul>
+					<li>通常弾<br>ターゲットに対して設定された角度で発射されます</li>
+					<li>ランダム弾<br>ターゲットに対して設定された角度内でランダムに発射されます</li>
+				</ul>
+				<li>ターゲット</li>
+				<ul>
+					<li>自機を狙う<br>自機の方角を０度として計算します</li>
+					<li>進行方向<br>進行方向を０度として計算します</li>
+					<li>固定方向<br>画面真下を０度として計算します</li>
+					<li>自分の方向<br>自分が向いている方向を０度として計算します</li>
+				</ul>
+
+				<li>同時発射数<br>一回に発射される弾数、一発一発は隙間角度分の角度を持ちます</li>
+				<li>隙間角度<br>同時発射における一発ごとの角度です。ランダム弾の場合は乱数の範囲です</li>
+				<li>発射間隔<br>発射と発射の間隔をフレーム単位で指定します</li>
+				<li>発射回数<br>全部で何回発射するかを指定します</li>
+				<li>角度<br>ターゲットから角度をつける場合に指定します</li>
+				<li>弾速度<br>発射する弾の初速を指定します</li>
+				<li>発射位置<br>発射位置XYをピクセル単位で指定します</li>
+				<li>PARAM_A,B<br>発射したキャラクタに設定されます</li>
+			</ul>
+			<b>同時に複数のショットパネルを実行することはできません。全タスクで1つです</b>
+		</section>
+	</div>
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_attack01.png">
+			<h2>弾幕</h2>
+			<a href="danmak.html">弾幕編集</a>で作成した弾幕を再生します
+			<ul>
+				<li>弾幕<br>再生する弾幕を指定します</li>
+				<li>弾<br>弾として発射するキャラクタを指定します</li>
+				<li>発射音<br>弾が発射されるときに再生する効果音を指定します</li>
+				<li>発射位置<br>発射位置をピクセル単位で指定します</li>
+				<li>PARAM_A,B<br>発射したキャラクタに設定されます</li>
+			</ul>
+			<b>同時に複数の弾幕パネルを実行できます</b>
+		</section>
+	</div>
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_attack02.png">
+			<h2>停止</h2>
+			攻撃中のショット、弾幕を停止させます
+		</section>
+	</div>
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_attack03.png">
+			<h2>子生成</h2>
+			親子関係を持った子キャラクタを生成します
+			<ul>
+				<li>キャラクタ<br>子として生成するキャラクタを指定します</li>
+				<li>生成位置
+					<ul>
+						<li>直交座標で配置
+							<ul>
+								<li>XY<br>子の位置をXYで親からのオフセットで指定します</li>
+							</ul>
+						</li>
+						<li>極座標で配置
+							<ul>
+								<li>角度<br>子の位置を角度で指定します</li>
+								<li>角度の基準<br>角度が0度となる向き</li>
+								<li>距離<br>子の位置を親からの距離で指定します</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>子ID<br>何番目の子とするかを指定します（0～15）</li>
+				<li>子描画優先<br>親や他の子に対しての優先順位を指定します</li>
+				<li>配置後の向き<br>子がどっちを向くかを指定します</li>
+				<li>オフセット角度<br>子の向きにオフセットを付けます</li>
+				<li>PARAM_A,B<br>生成した子キャラクタに設定されます</li>
+			</ul>
+		</section>
+	</div>
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_attack04.png">
+			<h2>フラッシュ</h2>
+			画面の特定のキャラクタを別のキャラクタへ変換します<br>
+			対象となるキャラクタは<a href="object.html">キャラクタ編集</a>のアトリビュートフラグ「フラッシュに反応する」で指定します
+			<ul>
+				<li>変換後キャラクタ<br>主にアイテムを指定します</li>
+				<li>持続時間<br>指定したフレーム数だけフラッシュ効果が持続します</li>
+			</ul>
+		</section>
+	</div>
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_attack05.png">
+			<h2>編隊</h2>
+			<a href="group.html">編隊編集</a>で作成した編隊を射出します
+			<ul>
+				<li>編隊<br>射出する編隊を指定します</li>
+				<li>ボーナスアイテム<br>全滅時に出現させるアイテムを指定します</li>
+				<li>XY<br>発射位置をピクセル単位で指定します</li>
+				<li>PARAM_A,B<br>編隊内のキャラクタに設定されます</li>
+				<li>時間待ちを動作完了にした場合
+				<ul>
+					<li>全てのキャラクタが出現し終えるまでウエイト<br>画面内に出たかどうかは関係ありません</li>
+					<li>全てのキャラクタが消滅するまでウエイト<br>破壊、消滅全てが対象です</li>
+				</ul>
+				</li>
+			</ul>
+		</section>
+	</div>
+	<a href="#TOP">■ページ上部へ戻る</a><br>
+
+</BODY>
+
+</html>

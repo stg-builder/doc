@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../index.css">
+
+<BODY>
+    <a name="TOP" id="TOP"></a>
+    <IMG SRC="../../png/A_160x80.png">
+    <a href="index.html">back to the original page</a>
+    <hr>
+    <div class="main2">
+        <section class="col-1">
+            <h1>8. Create a background</h1>
+            There are two main types of backgrounds. In this case we will create both<br>
+            1. background as just a loop-scrolling image<br>
+            2. a background that is synchronized with the placement of ground objects and characters<br>
+            <br> <br>
+            Keep the project file created in the previous tutorial open<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/bg00.png">
+            <h2>Create a loop-scrolling background</h2>
+            Create a new project background<br>
+            Name it 'BG_CLOUD'<br>
+            <br> <br>
+            Load the image file 'resource/img_cloud.bmp'<br>
+            Since the image is as large as 600x800, try to shrink it to fit in the screen<br>
+            <br> <br>
+            Make the chip size to 100,100 and the map size to 6,8<br>
+            (Click the Update button)<br>
+            <br> <br>
+            Select all preview images on the left side (red box)<br>
+            Switch the right side map to set mode and place all map chips<br>
+            <br> <br>
+            The background for the loop scroll is now complete<br>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/bg01.png">
+            <h2>Create the background to place the ground object</h2>
+            Create a new project background<br>
+            Name it 'BG_MAP'<br>
+            <br> <br>
+            Load the image file 'resource/img_bg00.bmp'<br>
+            Make the chip size to 32,32 and the map size to 12,128<br>
+            (Click the Update button)<br>
+            <br> <br>
+            Use scaling (wheel) and scrolling (right-drag) to better position the map parts since the map size is quite large<br>
+            If you fill the whole map, you won't be able to see the background at the back of the map, so place it well<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/bg02.png">
+            <h2>Create a stage and set the background</h2>
+            Create a new project stage<br>
+            Name it 'STAGE1'<br>
+            <br> <br>
+            Open the Background Preference Settings tab, leaving the Basic Settings tab untouched<br>
+            <br> <br>
+            Click the Add Priority List button to add BG_MAP<br>
+            Click the upward triangle to change the priority<br>
+            <br> <br>
+            Set the parameters of BG_MAP as shown in the figure to the right<br>
+            Don't forget to set the scrolling position to be the starting map display position<br>
+            <b>Check the main background because it will be used for ground object placement<br></b>
+            <br> <br>
+            <br> <br>
+            <br> <br>
+            Click the Add Priority List button to add BG_CLOUD<br>
+            Set the parameters of BG_CLOUD as shown on the right<br>
+            <br> <br>
+            Loop scrolling by checking the wraparound<br>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/bg03.png">
+            <h2>Set to default stage</h2>
+            Open the Default Specifications tab of the game settings<br>
+            <br> <br>
+            Register 'STAGE1' to the default stage<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/stage03.png">
+            <h2>Register to the main stage</h2>
+            Open the Scenes tab of the game settings<br>
+            <br> <br>
+            Add 'STAGE1' to the main stage<br>
+            <br> <br>
+
+            Registering to the main stage will allow you to test in full play
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/bg04.png">
+            <h2>Test Play</h2>
+            Display the Test Play window and drag and drop 'STAGE1' in the project's stage list to the window<br>
+            <br> <br>
+            The test mode changes to a single stage, your plane appears and the background begins to scroll<br>
+        </section>
+    </div>
+    <hr>
+    <a href="#TOP">Back to top of page</a><br>
+    <P>
+</BODY>
+
+</html>

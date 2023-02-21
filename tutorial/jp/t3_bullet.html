@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../index.css">
+
+<BODY>
+    <a name="TOP" id="TOP"></a>
+    <IMG SRC="../../png/A_160x80.png">
+    <a href="index.html">■元のページへ戻る</a>
+    <hr>
+    <div class="main2">
+        <section class="col-1">
+            <h1>3.プレイヤーの弾を作成する</h1>
+            弾に必要なパーツは「キャラクタ」「スクリプト」の二つになります<br>
+            前回のチュートリアルで作成したプロジェクトファイルを開いておいてください<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/bullet00.png">
+            <h2>弾用キャラクタの作成</h2>
+            キャラクタを新規作成し、名前を'SHOT-A'とします<br>
+            <br>
+            種類...対空対地攻撃<br>
+            アトリビュートフラグ...右図の通りにチェックをいれます<br>
+            スプライト...以前作成した'MYSHIP'を追加します<br>
+            スクリプト...新規ボタンをクリックして作成します（リストには自動で追加されます）<br>
+            <br>
+            パターン番号や攻撃力はプレイヤー編集の武器項目で設定するのでここでは不要です<br>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/bullet01.png">
+            <h2>プレイヤーに弾を追加する</h2>
+            以前作成したプレイヤー'TYPE-A'を開き、武器設定タブを編集します<br>
+            <br>
+            武器リストの追加ボタンをクリックして武器を一つ新規作成します<br>
+            武器名を'SHOT'、最大レベル0（パワーアップしない）にします<br>
+            <br>
+            Lv.0タブをクリックして弾リストの追加ボタンをクリックします<br>
+            キャラクタ...'SHOT-A'を選択<br>
+            リピートウエイト...4<br>
+            移動速度Y...-1000<br>
+            パターン番号...14<br>
+            攻撃力...10<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/bullet02.png">
+            <h2>弾にスクリプトを追加する</h2>
+            以前作成したスクリプト'SHOT-A'を開きます<br>
+            <br>
+            タスク「0：メイン」を選択します<br>
+            制御グループから「通過パネル」を制御フィールドへドラッグ＆ドロップします<br>
+            通過パネルを選択し時間待ちの項目を動作完了までにします<br>
+            <br>
+            これで何もせずに直進するスクリプトになります<br>
+            初速はプレイヤーから発射時に自動設定されています<br>
+        </section>
+    </div>
+    <div class="main2">
+        <section class="col-1">
+            <IMG SRC="png/bullet03.png">
+            <h2>スクリプト編集の続き</h2>
+            タスク「9：攻撃ヒット」を選択します<br>
+            制御フィールドを右クリックしてメニューを出し、「ゲート作成」を選択します<br>
+            左上に「GATE」が出現すれば次へ進みます<br>
+            <br>
+            制御グループから「消滅パネル」を制御フィールドへドラッグ＆ドロップします<br>
+            <br>
+            タスク「9:攻撃ヒット」は弾が敵に命中したときに起動します<br>
+            命中時に弾を消滅させます<br>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <IMG SRC="png/bullet04.png">
+            <h2>テスト実行する</h2>
+            完了したらテスト実行し、Zキーで弾が発射できることを確認します
+        </section>
+    </div>
+    <hr>
+    <a href="#TOP">■ページ上部へ戻る</a><br>
+    <P>
+</BODY>
+
+</html>

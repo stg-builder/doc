@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../index.css">
+
+<BODY>
+	<a name="TOP" id="TOP"></a>
+	<IMG SRC="../../png/A_160x80.png">
+	<a href="script.html">■元のページへ戻る</a>
+	<hr>
+
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_scroll.png">
+			<H1>スクリプトコマンド</H1>
+			<H2>背景グループ</H2>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_scroll00.png">
+			<h2>速度</h2>
+			背景のスクロール速度を変更します
+			<ul>
+				<li>背景ID<br><a href="stage.html">ステージ編集</a>の優先リストに登録した背景のID</li>
+				<li>XY速度<br>背景のスクロール速度を相対値、もしくは絶対で指定します</li>
+				<li>変化フレーム数<br>設定した速度に到達するまでのフレーム数</li>
+			</ul>
+		</section>
+	</div>
+	
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_scroll01.png">
+			<h2>カラー</h2>
+			<ul>
+				<li>背景ID<br><a href="stage.html">ステージ編集</a>の優先リストに登録した背景のID</li>
+				<li>描画カラー<br>背景を描画する頂点カラーをARGB32ビットで指定します</li>
+				<li>描画ファンクション
+				<ul>
+					<li>不透明<br>一般的な描画方式で最も高速に描画できます</li>
+					<li>半透明<br>テクスチャにα値が設定されてるものや、頂点カラーのα値を変更する場合はこの描画方式にする必要があります</li>
+					<li>加算<br>すでに描画されてる物に色を加算して描画します</li>
+					<li>減算<br>すでに描画されてる物から色を減算して描画します</li>
+				</ul>
+				</li>
+				<li>変化フレーム数<br>設定したカラーになるまでのフレーム数</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_scroll02.png">
+			<h2>制御</h2>
+			<ul>
+				<li>背景ID<br><a href="stage.html">ステージ編集</a>の優先リストに登録した背景のID</li>
+				<li>表示<br>表示のON/OFFを切り替えます</li>
+				<li>当たり判定<br>当たり判定のON/OFFを切り替えます</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_scroll03.png">
+			<h2>移動</h2>
+			背景をスクロールさせます
+			<ul>
+				<li>背景ID<br><a href="stage.html">ステージ編集</a>の優先リストに登録した背景のID</li>
+				<li>移動先指定
+					<ul>
+						<li>目標座標を絶対値で指定する<br>移動先の座標を絶対座標で指定します。画面の左上が(0,0)のポイントになります</li>
+						<li>目標座標を相対値で指定する<br>移動先の座標を現在座標からの相対座標で指定します。正の数なら右下、負の数なら左上方向になります</li>
+						<li>移動力を絶対値で指定する<br>XY方向の移動力を絶対値指定します</li>
+						<li>移動力を相対値で指定する<br>XY方向の移動力を指定します</li>
+					</ul>
+				</li>
+				<li>移動計算式<br>
+					座標指定時に限り有効になります
+					<ul>
+						<li>等速<br>目標地点まで等速で移動します</li>
+						<li>加速、急加速<br>開始地点より加速しながら移動します</li>
+						<li>減速、急減速<br>目標地点に近づくと減速しながら移動します</li>
+						<li>加減速、急加減速<br>加速と減速の両方しながら移動します</li>
+					</ul>
+				</li>
+				<li>移動に要するフレーム数<br>目標座標まで到達する時間をフレーム数で指定します、最短で１フレームかかります</li>
+				<li>乱数で範囲指定<br>移動先の座標、もしくは移動力を範囲指定します</li>
+				<li>変数を使用<br>座標や移動力の指定に変数を使用します</li>
+			</ul>
+			<b>目標座標を指定する場合、目標へ到達後もそれまでの移動速度はキープされます<br>停止させるには「目標到達時に停止する」にチェックを入れます</b>
+		</section>
+	</div>
+	<a href="#TOP">■ページ上部へ戻る</a><br>
+
+</BODY>
+
+</html>

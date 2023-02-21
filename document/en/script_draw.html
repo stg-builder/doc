@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href ="../../index.css">
+
+<BODY>
+	<a name="TOP" id="TOP"></a>
+	<IMG SRC="../../png/A_160x80.png">
+	<a href="script.html">back to the original page</a>
+	<hr>
+
+
+	<div class="main2">
+		<section>
+			<H1>Script commands</H1>
+			<H2>Drawing group</H2>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_draw00.png">
+			<h2>Sprite</h2>
+			<a href="sprite.html">character editing</a> to register multiple I'll switch the sprites.
+			<ul>
+				<li>Sprite number<br>The index number of the sprite you added to your character</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_draw01.png">
+			<h2>Pattern</h2>
+			Specifies the number of the pattern list and animation list created by sprite editing
+			<ul>
+				<li>Pattern number<br>Pattern or animation number</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_draw02.png">
+			<h2>Color</h2>
+			Change the drawing color. There are two systems of color changes, and you can switch between them using the system color checkboxes<br>
+			System color ON is mainly used for the blinking of bullets and is set in the default script.
+			<ul>
+				<li>Vertex color<br>
+					Turn off the checkbox to disable vertex color when drawing.
+					The vertex color is a value that is multiplied by the texture color during drawing. Specify each ARGB value in the range of 0x00 to 0xFF. <br> <br>
+					If you set everything to 0xFF, you'll get the original color right<br>
+					When you set the alpha value to a value other than 0xFF, please set the drawing method to semi-transparent</li>
+				<li>Offset color<br>
+					Specify the offset color for drawing.
+					The offset color is the value added to the texture color during drawing. Specify each ARGB value with a value between 0x00 and 0xFF.
+					If all are set to 0x00, the primary color will be the same. </li>
+				<li>Time to complete the change<br>
+					Specify how long it will take to complete the color change, in frames. It will take at least one frame to complete the color change.
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_draw03.png">
+			<h2>Method</h2>
+			Changes the drawing functions, such as translucent and opaque.
+			<ul>
+				<li>Drawing Functions</li>
+				<ul>
+					<li>Opaque<br>The fastest of all the common drawing methods</li>
+					<li>Semi-transparent<br>When the texture has an alpha value or you want to change the alpha value of the vertex color, you need to use this rendering method</li>
+					<li>Add<br>Draw by adding color to the already drawn object</li>
+					<li>Subtract<br>Subtract the color from the already drawn object</li>
+				</ul>
+				<li>Texture Filter</li>
+				<ul>
+					<li>No<li>Draw as is</li>
+					<li>Bilinear<br>It becomes smoother when zoomed in or out, but may cause the picture to be blurred or blur the surrounding texture colors</li>
+				</ul>
+				<li>Texture mode<br> Specifies the behavior of drawing outside of the texture area</li>
+				<ul>
+					<li>Clamp<br>The outermost color of the texture will be used</li>
+					<li>Repeated<br>Texture will be used repeatedly</li>
+					<li>Mirror<br>Texture will be used repeatedly (flipped once)</li>
+				</ul>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_draw04.png">
+			<h2>Effect</h2>
+			Change the effect parameters for your character. You can change the effect parameters in advance by using <a href="chara.html">character editing</a> Please set up the tabs.
+			<ul>
+				<li>Effects<br>Select which effects are covered by the combo box</li>
+				<li>Effect values for each parameter<li>The same as the effect values for character editing</li>
+				<li>Number of frames to change<br>The time, in frames, it takes for the parameter to complete changing</li>
+				<li>Relative<br>checking makes all values relative</li>
+				<li>Use Var.<br>Apply variables to parameters when checked</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<h2>Movies</h2>
+			<ul>
+				<li>Unimplemented</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_draw06.png">
+			<h2>Shake</h2>
+			Shake the screen randomly.
+			<ul>
+				<li>Wobble width in pixels</li>
+				<li>Number of frames sustained<br>Number of frames to keep vibrating</li>
+				<li>Attenuation rate<br> Attenuates the shaking width at a specified rate per frame</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_draw07.png">
+			<h2>Fade</h2>
+			Fade in and out of the screen
+			<ul>
+				<li> mode
+				<ul>
+					<li>Fade in and out only within the main area<br>Main Area</li> of the layout edit.
+					<li>Fade in and out of the screen<li>Screen<br>Fade in and out of the entire screen</li>
+				</ul>
+				</li>
+				<li>Start value (0-255)<br>255 for fade-in, 0 for fade-out</li>
+				<li>End value (0-255)<br>0 for fade-in, 255 for fade-out</li>
+				<li>Number of frames to change<br>Time to fade in frames</li>
+				<li>Rendering Color (ARGB)<br> Specifies the fade color in ARGB 32 bits. <br> <br>
+					Alpha is replaced by a fade value</li>
+				<li>Use current value for start value<br> check this box to eliminate the need to specify a fade start value</li>
+			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_draw08.png">
+			<h2>Stop</h2>
+			<ul>
+				<li>Checkbox<br>Checked panel will be stopped</li>.
+			</ul>
+		</section>
+	</div>
+
+	<a href="#TOP">Back to the top of the page</a><br>
+
+</BODY>
+
+</html>
+
+

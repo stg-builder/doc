@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Shooting Game Builder</title>
+</head>
+<link rel="stylesheet" type="text/css" href ="../../index.css">
+
+<BODY>
+	<a name="TOP" id="TOP"></a>
+	<IMG SRC="../../png/A_160x80.png">
+	<a href="script.html">back to the original page</a>
+	<hr>
+
+
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_attack.png">
+			<H1>Script commands</H1>
+			<H2>Attack Group</H2>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_attack00.png">
+			<h2>Shot</h2>
+			Ejects the specified character.
+			<ul>
+				<li>Specifies the character to be fired as a bullet<br>
+				<li>Launch sound<br>Specifies the sound effect to be played when the character is launched</li>
+				<li>Type</li>
+				<ul>
+					<li>Normal bullets<br>Fired at a set angle to the target</li>
+					<li>Random bullets<br>Firing randomly within a set angle to the target</li>
+				</ul>
+				<li>Target</li>
+				<ul>
+					<li>Aiming at your ship<br> Calculates the direction of your ship as 0 degrees</li>
+					<li>Direction of travel<br> Calculates direction of travel as 0 degrees</li>
+					<li>Fixed direction<br>0 degrees to the bottom of the screen</li>
+					<li>Calculate your direction<br>0 degrees in the direction you are facing</li>
+				</ul>
+
+				<li>Number of simultaneous rounds fired<br>The number of rounds fired at a time, each shot has an angle for a gap angle</li>
+				<li>Gap Angle<br>This is the angle of each shot in simultaneous firing. In the case of random bullets, it's a random number range</li>
+				<li>Firing interval<br> Specifies the interval between firings, in frames</li>
+				<li>Number of firings<br>How many times to fire in total</li>
+				<li>Angle<br>Angle from the target</li>
+				<li>Bullet speed<br>Specifies the initial velocity of the bullet to be fired</li>
+				<li>Launch position<br>Specifies the firing position XY in pixels</li>
+				<li>PARAM_A,B<br>This is set to the character that fired it</li>
+			</ul>
+			<b>You can't run more than one shot panel at a time. One for all tasks</b>
+		</section>
+	</div>
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_attack01.png">
+			<h2>Barrage</h2>
+			Play the barrage created by <a href="danmak.html">Edit barrage</a>
+			<ul>
+				<li>Bullet<br>Specifies the barrage to be played back</li>
+				<li>Specifies the character to be fired as a bullet<br>
+				<li>Firing Sound<br>Specifies the sound effect to be played when a bullet is fired</li>
+				<li>Firing position<br>Specifies the firing position, in pixels</li>
+				<li>PARAM_A,B<br>This is set to the character that fired it</li>
+			</ul>
+			<b>You can run multiple barrage panels at the same time</b>
+		</section>
+	</div>
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_attack02.png">
+			<h2>Stop</h2>
+			Stops the shot and barrage during an attack
+		</section>
+	</div>
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_attack03.png">
+			<h2>Child</h2>
+			Creates a child character with a parent-child relationship
+			<ul>
+				<li> Specifies the character to be generated as a <li>character<br>child</li>
+				<li>Generated position
+					<ul>
+						<li>Alignment in Cartesian Coordinates
+							<ul>
+								<li>XY<br>Child position in XY, offset from the parent</li>
+							</ul>
+						</li>
+						<li>Positioning in polar coordinates
+							<ul>
+								<li>Angle<br>Child position in degrees</li>
+								<li>Angle criterion<br>Orientation at an angle of 0 degrees</li>
+								<li>Distance<br>Child's position in distance from parent</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>Child ID<br>How many children are to be considered (0-15)</li>
+				<li>Child drawing priority<br> Specifies priority for parents and other children</li>
+				<li>Orientation after placement<li> Specifies which way the child should face</li>
+				<li>Offset angle<br>Offset the orientation of the child</li>
+				<li>PARAM_A,B<br>Set to the generated child character</li>
+			</ul>
+		</section>
+	</div>
+	<div class="main4">
+		<section>
+			<IMG SRC="png/script_attack04.png">
+			<h2>Flash</h2>
+			Converts a specific character to another character on the screen<br>
+			Target characters are <a href="object.html">character editing</a> attribute flag "React to flash".
+			<ul>
+				<li>Characters after conversion<br>Primarily items</li>
+				<li>Length<br>The flash effect lasts for a specified number of frames</li>
+			</ul>
+		</section>
+	</div>
+	<div class="main2">
+		<section>
+			<IMG SRC="png/script_attack05.png">
+			<h2>Formation</h2>
+			Injection of the formation created by <a href="group.html">Edit formation</a>
+			<ul>
+				<li>Formation<br>Specifies the formation to be ejected</li>
+				<li>Bonus item<li>This is the item that will appear when all the players are killed</li>
+				<li>XY<br>Specifies the firing position, in pixels</li>
+				<li>PARAM_A,B<br>This will be set to the characters in the formation</li>
+				<li>When you set a wait for time to complete
+				<ul>
+					<li>It doesn't matter if the weight<br>is on the screen or not until all characters have finished appearing</li>
+					<li>All characters are targeted for destruction and annihilation until all characters are gone</li>
+				</ul>
+				</li>
+			</ul>
+		</section>
+	</div>
+	<a href="#TOP">Back to the top of the page</a><br>
+
+</BODY>
+
+</html>
+
