@@ -96,3 +96,28 @@
   padding: 2px;
   flex: 1;
 }
+
+.main6 section {
+  margin: 5px;
+  border-radius: 5px;
+  background: #F5F0CF;
+  padding: 2px;
+  flex: 1;
+}
+
+.main6 h1 {
+  color: #003f00;
+  font-size: 2.0rem;
+}
+
+.main6 li {
+  margin-top: 6px;
+}
+
+.main6 {
+  display: flex;
+}
+.main6 img {
+  float: left;
+  margin-left: 2px;
+}
