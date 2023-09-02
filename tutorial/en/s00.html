@@ -10,18 +10,86 @@
 <BODY>
     <a name="TOP" id="TOP"></a>
     <IMG SRC="../../png/A_160x80.png">
-    <a href="index.html">■元のページへ戻る</a>
+    <a href="index.html">Go back to the original page</a>
     <hr>
     <div class="main2">
         <section class="col-1">
-            <IMG SRC="png/sample00.png">
-            Open the project file (demo.sbd) of the sample game (G-Scramble) in the folder where Shooting Game Builder is installed.<br>
+            The sample projects are stored in the samples folder under the folder where Shooting Game Builder is installed.<br>
+            Image and audio resources needed for each project are located in the resources folder.<br>
             <br>
-            Then press "Test"->"Run" in the menu or F5 key to start the test play.<br>
-            <br>
-            If you have edited and saved the content, the saved content will be lost when the application is updated<br>
-            <br>
-            Please copy the entire samples folder to another location and edit it before making any modifications.
+            <b>If you have edited and saved the content, the saved content will be lost when the application is updated<br>
+            Please copy the entire samples folder to another location and edit it before making any modifications.</b>
+        </section>
+    </div>
+    <div class="main4">
+        <section class="col-1">
+            <table bgcolor="#C5F0CF">
+                <tr>
+                    <td>Demo Game</td>
+                    <td>/demo/demo.sbd</td>
+                </tr>
+                <tr>
+                    <td>Screen Blur</td>
+                    <td>/blur/blur.sbd</td>
+                </tr>
+                <tr>
+                    <td>Barrage Pattern</td>
+                    <td>/barrage/barrage.sbd</td>
+                </tr>
+                <tr>
+                    <td>Custom menu(Stage Select)</td>
+                    <td>/menu/MENU.sbd</td>
+                </tr>
+                </table>
+            <textarea cols="90" rows="48" readonly>
+    Variables.
+
+    Notation
+    (System XX) Initialization system var.
+    《System XX》 Storage system var.
+    [XX] Var.
+
+    (System 00) Cursor lock (0 = Do not lock 1 = Lock)
+    (System 01) Number of lines
+    (System 02) Number of stage selects
+    (System 03) Player display (0 = Displayed 1 = Not displayed)
+
+    《System 00》Setting 1 (0-10)
+    《System 01》Setting 2 (0=ON 1=OFF)
+
+    Variables often use "0" and "1" (for flag management, etc.), so
+    [00] = 0 [01] = 1 [02-] Any variable
+    It is useful to create rules such as
+
+    ------------------------------------------------------------------------------
+
+    How to create a menu
+
+    Register a stage(Option -> Game setting -> Scene)
+    Title Title
+    Main stages Start (Always place at the top)
+    Stage1-3
+    Option
+    End
+
+    When you "Jump to main stage" from the Title
+    It moves to "Start" at the top of the Main stage.
+    By rewriting the system variables in "Title"
+    and branching the stage transition destination from "Start",
+    Stage select can be implement
+
+    (A button = move to the next scene)(X button = move to the ranking)
+    The title has the above specifications.
+    Stage editer -> Basic Setting -> Disable buttons ON"
+    to disable this specification, and you can create your own with a script.
+
+    The "Player" is always displayed on the main stage.
+    To register a stage that does not require a "Player" on the main stage,
+    You must use a system variable to prevent the "Player" from being drawn.
+    (Option screens, etc., do not require the "Player" to be displayed.)
+    Also, since there is no need to pause on screens such as (Option)
+    Disable pausing by going to "Stage editer -> Basic Setting -> Disable pause ON".
+            </textarea>
         </section>
     </div>
     <hr>
