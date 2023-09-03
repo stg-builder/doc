@@ -41,13 +41,13 @@
                     <td>/menu/MENU.sbd</td>
                 </tr>
                 </table>
-            <textarea cols="90" rows="48" readonly>
+            <textarea cols="90" rows="50" readonly>
     Variables.
 
     Notation
     (System XX) Initialization system var.
     《System XX》 Storage system var.
-    [XX] Var.
+    [XX] Var.(character)
 
     (System 00) Cursor lock (0 = Do not lock 1 = Lock)
     (System 01) Number of lines
@@ -61,14 +61,16 @@
     [00] = 0 [01] = 1 [02-] Any variable
     It is useful to create rules such as
 
-    ------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------
 
     How to create a menu
 
-    Register a stage(Option -> Game setting -> Scene)
+    Register a stage（Option -> Game setting -> Scene）
     Title Title
-    Main stages Start (Always place at the top)
-    Stage1-3
+    Main stages Start （Always place at the top）
+    Stage1
+    Stage2
+    Stage3
     Option
     End
 
@@ -80,15 +82,14 @@
 
     (A button = move to the next scene)(X button = move to the ranking)
     The title has the above specifications.
-    Stage editer -> Basic Setting -> Disable buttons ON"
+    Edit Stage -> Base Setting -> Disable buttons ON"
     to disable this specification, and you can create your own with a script.
 
-    The "Player" is always displayed on the main stage.
-    To register a stage that does not require a "Player" on the main stage,
-    You must use a system variable to prevent the "Player" from being drawn.
-    (Option screens, etc., do not require the "Player" to be displayed.)
-    Also, since there is no need to pause on screens such as (Option)
-    Disable pausing by going to "Stage editer -> Basic Setting -> Disable pause ON".
+    On the main stage, player is always displayed and pauses are enabled.
+
+    The Option scene does not require the display of player and does not require a pause.
+    Disable pause "Edit Stage→Base Settings→Disable pause ON"
+    Disable player "Edit Stage→Base Settings→Disable player ON"
             </textarea>
         </section>
     </div>
