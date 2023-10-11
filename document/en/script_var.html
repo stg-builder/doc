@@ -32,7 +32,6 @@
 			<ul>
 				<li>System variable to be initialized<li>0-255</li>
 				<li>Number of system variables to be stored in <li>0-255</li>
-				<li>Mouse coordinates XY(read-only)<br>Unimplemented</li>
 				<li>Number of characters eligible for a quick turn in the screen (read-only) <br>
 					Attribute flag in <a href="object.html">character editing</a> Counts the number of characters that are being checked for "Fast Track Target"<br>
 					Count all characters that appear</li>
@@ -210,7 +209,7 @@
 			<ul>
 				<li>List index<br>Index of the list of achievements in game settings</li>
 				<li>Unlocked status (0-1)<br>1 if the achievement is unlocked, 0 otherwise</li>
-				<li>Progress<br>Gets or sets the value if there is an intermediate step in the release of an achievement.</li>
+				<li>Progress<br>Gets or sets the value if there is an intermediate step in the release of an achievement</li>
 				<li>Check the box to activate the item and then set the transfer direction</li>
 			</ul>
 		</section>
@@ -229,6 +228,21 @@
 			</ul>
 		</section>
 	</div>
+
+	<div class="main2">
+		<section>
+			<h2>Transfer</h2>
+			Collectively transfer values between variables (characters) and system variables
+			<ul>
+				<li>Source,Destination<br>Select the type of variable</li>
+				<li>No.<br>Range depends on variable type</li>
+				<li>Index<br>Check the box to add to the specified variable number<br>Specify the variable to be used for addition</li>
+				<li>Quantity<br>Enter the number of variables to transfer</li>
+			</ul>
+			Specifying a loop variable as an index makes it possible to refer to variables sequentially in the loop process
+		</section>
+	</div>
+
 	<a href="#TOP">Back to the top of the page</a><br>
 
 </BODY>
