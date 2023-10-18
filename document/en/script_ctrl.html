@@ -88,9 +88,11 @@
 			<h2>Flag</h2>
 			<ul>
 				<li>Attribute flag<li>Select one of the flags set in the character edit</li>
-				<li>Turn ON,OFF<br>Switch the selected attribute flag on or off</li>
+				<li>Turn on<br>Switch the selected attribute flag on</li>
+				<li>Turn off<br>Switch the selected attribute flag off</li>
+				<li>Var.<br>Gets or sets the selected attribute flag to a variable<BR>Specify direction and variables</li>
 			</ul>
-			<b>Attribute flag "Articulated Character" cannot be changed</b>
+			<b>Attribute flag "Joint" character cannot be changed</b>
 		</section>
 	</div>
 
@@ -176,10 +178,10 @@
 			Simple player selection menu<br>
 			How to make a simple menu
 			<ul>
-				<li>Select System Selection<br>Select Player Selection</li>
+				<li>System settings<br>Select Player Selection</li>
 				<li>Select sound effects<br>Select sound effects during operation</li>
-				<li>Cancelable<br>Cancelable by pressing B</li>
-				<li>Select left and right<br>Select up and down or left and right</li>
+				<li>Enable cancel<br>Cancelable by pressed Cancel Button</li>
+				<li>Selection by LR<br>Select up and down or left and right</li>
 			</ul>
 		</section>
 	</div>
@@ -223,7 +225,7 @@
 			<h2>Item</h2>
 			Used to switch content by time when creating an item character
 			<ul>
-				<li>Select the character for the item<li>Select the character for the item</li>
+				<li>Change item contents to:<br>Select the character for the item</li>
 			</ul>
 		</section>
 	</div>
@@ -233,9 +235,9 @@
 			<IMG SRC="png/script_ctrl16.png">
 			<h2>Button</h2>
 			<ul>
-				Selecting no <li> button<br> always results in a failure</li>
+				<li>Button<br>Selecting none always makes it false</li>
 				<li>Wait until pressed<br>Exit to the bottom when unchecked</li>
-				<li>Evalidated by holding down the button<br>If unchecked, it will be triggered</li>
+				<li>Enable even when keeping button<br>If unchecked, it will be triggered</li>
 			</ul>
 		</section>
 	</div>
@@ -258,7 +260,18 @@
 			<ul>
 				<li>Destruction<br>They will be in the same state as being destroyed with zero HP. Destroy task will also be activated</li>
 				<li>Exit App<br>Disabled during test play</li>
+				<li>Transition to title<br>Exit the current scene and Transition to title</li>
+				<li>Transition to player select<br>Exit the current scene and Transition to player select</li>
+				<li>Transition to opening<br>Exit the current scene and Transition to opening</li>
+				<li>Transition to ending<br>Exit the current scene and Transition to ending</li>
+				<li>Transition to ranking<br>Exit the current scene and Transition to ranking</li>
+				<li>Transition to main stage<br>Exit the current scene and Transition to main stage</li>
+				<li>Transition to auto demo<br>Exit the current scene and Transition to auto demo</li>
 			</ul>
+			<br>
+			Regarding scene transition systems<br>
+			Replay records will be destroyed<br>
+			Ignored during replay playback and auto demo
 		</section>
 	</div>
 
