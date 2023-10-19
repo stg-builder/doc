@@ -27,7 +27,6 @@
 			<IMG SRC="png/script_var00.png">
 			<h2>System</h2>
 			Reads and writes what the system is using to a variable<br>
-			Those with read-only are read-only<br>
 			Switch between reading and writing in the transfer direction
 			<ul>
 				<li>System variable to be initialized<li>0-255</li>
@@ -58,7 +57,7 @@
 				<li>Number of Bombs<br>Number of Bombs held by the player</li>
 				<li>Remaining Machines<br>Remaining Machines Held by the Player</li>
 				<li>Score<br>Score kept by the player</li>
-				<li>Are you inside the wall? (Lead-only)<br>Is the character in the wall hit decision? 0.. No 1. Yes</li>
+				<li>Are you inside the wall? (Read-only)<br>Is the character in the wall hit decision? 0.. No 1. Yes</li>
 				<li>Player type<br>Set the result of player selection No.</li>
 				<li>Speed Level<br>Player's Speed Level</li>
 				<li>Continue count<br>Number of continuations left for a player to keep</li>
@@ -83,7 +82,10 @@
 				<li>Absolute movement X for child (x100, read-only)<br>100 times the amount of movement X for child vs. screen</li>
 				<li>Absolute movement Y as a child (x100, read-only) <br>100 times the amount of movement Y vs. the screen as a child</li>
 				<li>Absolute movement direction for child (0 to 65535, read-only) <br>Value for child vs. screen movement direction, 0 to 360 degrees converted to 0 to 65535</li>
-				<li>Collision detection display<br>When the value is not 0, the display turns ON.</li>
+				<li>Collision rectangle display<br>When the value is not 0, the display turns ON</li>
+				<li>Name Entry ? (read-only)<br>If a name is entered on the ranking screen, that name is non-zero</li>
+				<li>Attack flag bits<br>The content of the bit for each item on the attack side that appears on the Custom Edit screen in character editting</li>
+				<li>Defence flag bits<br>The content of the bit for each item on the defence side that appears on the Custom Edit screen in character editting</li>
 			</ul>
 		</section>
 	</div>
