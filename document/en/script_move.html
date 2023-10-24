@@ -75,13 +75,15 @@
 		<section>
 			<IMG SRC="png/script_move02.png">
 			<h2>Homing</h2>
-			Correct the direction to move towards the target
+			Correct the direction to move towards the target<br>
+			If target does not exist, complete immediately
 			<ul>
-				<li>Target<br>Choose the character to be guided</li>
-				<li>Moving speed<br>When relative is checked, it is a relative speed, otherwise it is an absolute speed.
-				<li>Maximum angular velocity<br>Angular velocity is the speed at which you can rotate. Value.
-				Angle is specified by multiplying the angle by 100 (if 50 is specified, the angle is adjusted up to 0.5 degrees per frame). is done) </li> </li>
-				<li>Number of frames to be tracked<br> Specifies the number of frames to be tracked. After the specified number of frames, the camera will move straight ahead.
+				<li>Target<br>Choose the character to be target</li>
+				<li>Moving speed<br>When relative is checked, it is a relative speed, otherwise it is an absolute speed<br>
+				<b>While the speed panel is in operation, that speed has priority</b></li>
+				<li>Maximum angular velocity<br>Angular velocity is the speed at which you can rotate</li>
+				Angle is specified by multiplying the angle by 100 (if 50 is specified, the angle is adjusted up to 0.5 degrees per frame). is done</li>
+				<li>Number of frames to be tracked<br> Specifies the number of frames to be tracked. After the specified number of frames, the camera will move straight ahead.</li>
 			</ul>
 		</section>
 	</div>
