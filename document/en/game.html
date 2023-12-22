@@ -58,7 +58,14 @@
 				<LI>Continue (countdown) <BR>Continue waiting string</LI>
 				<LI>Pausing <BR>String to be displayed while pausing</LI>
 				<LI>Choose between the center of the screen or the center of the main screen to display the above <BR>Choose the center of the screen</LI>
-				<LI>Pause button <BR>Pause button</LI>
+				<LI>Buttons
+					<UL>
+						<LI>Decide<BR>Goto Next</LI>
+						<LI>Cancel<BR>back to previous</LI>
+						<LI>Config<BR>Bring up the configuration screen.</LI>
+						<LI>Ranking<BR>Transition from the title screen to the ranking screen</LI>
+						<LI>Pause<BR>Pause in game</LI>
+					</UL>
 				<LI>Pause sound <BR>Sound effect to be played during pause</LI>
 				<LI>Game Over BGM<BR>BGM to be played when the game is over<BR>
 					Selects whether there is a loop or not, and whether the scene transitions at the end of the BGM</LI>
@@ -73,12 +80,19 @@
 			<IMG SRC="png/game02.png">
 			<UL>
 				<LI>Player List <BR>Register a player to be used. You can register more than one player and select them during the game</LI>
-				<LI>Initial number of players <BR>Number of players remaining at the start of the game</LI>
-				<LI>Initial number of bombers <BR>Number of bombers left at the start of the game</LI>
-				<LI>Continue count <BR>The number of times you can continue</LI>
+				<LI>Initial players <BR>Number of players remaining at the start of the game</LI>
+				<LI>Initial bombs <BR>Number of bombers left at the start of the game</LI>
+				<LI>Initial continues <BR>The number of times you can continue</LI>
+				<LI>Max score<BR>Maximum score during the game</LI>
 				<LI>Enter a name in the ranking<BR>At the end of the game, go to the ranking screen to enter a name</LI>
 				<LI>Save and play replays <BR>Save replays to disk when registering for ranking</LI>
 				<LI>Ranking default string <BR>Unentered names in the ranking</LI>
+				<LI>Ranking aggregation method
+					<UL>
+						<LI>Aggregated by player(max 10)<BR>The data will be counted by player type. The number of player types is limited to a maximum of 10</LI>
+						<LI>Aggregation of all players<BR>All players will be counted into one ranking. There is no limit to the number of player types</LI>
+					</UL>
+				</LI>
 			</UL>
 		</section>
 	</div>
@@ -125,8 +139,9 @@
 		<section>
 			<H2>Config tab</H2>
 			<IMG SRC="png/game05.png">
-			Associate the function name with the pad and keyboard.
+			Associate the function name with the pad and keyboard.<BR>
 			You can use the ESC key to bring up this screen while running a built game<BR>
+			You can enter function names for Japanese and English. Please switch the language setting<BR>
 			<UL>
 				<LI>Number of buttons <BR>Number of buttons to display</LI>
 				<LI>Background image <BR>Choose the background image within the window</LI>
@@ -134,8 +149,12 @@
 				<LI>Language setting <BR>Select language for display</LI>
 				<LI>BGM volume <BR>Music volume</LI>
 				<LI>SE volume <BR>Sound effect volume</LI>
-				<LI>WINDOW SCALE <BR>WINDOW SIZE</LI>
+				<LI>Window Scale <BR>Window size</LI>
 				<LI>V-Sync<BR>Affects delay</LI>
+				<LI>Fullscreen<BR>Run in full screen</LI>
+				<LI>Vibration<BR>Enable controller vibration</LI>
+				<LI>Version<BR>Game version number</LI>
+				<LI>Preview<BR>After saving the game settings, the config screen is displayed</LI>
 			</UL>
 		</section>
 	</div>
