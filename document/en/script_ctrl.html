@@ -49,7 +49,7 @@
 			Used to repeat a series of control panels a certain number of times.
 			<ul>
 				<li>Loop numbers<br>0-15, repeating with the same numbered end-of-loop panel</li>
-				<li>Number of loops<br>Repeated times</li>
+				<li>Number of loops<br>Repeated times(value or variable)</li>
 			</ul>
 		</section>
 	</div>
@@ -259,7 +259,7 @@
 			<h2>Various</h2>
 			<ul>
 				<li>Destruction<br>They will be in the same state as being destroyed with zero HP. Destroy task will also be activated</li>
-				<li>Exit App<br>Disabled during test play</li>
+				<li>Exit application<br>Disabled during test play</li>
 				<li>Transition to title<br>Exit the current scene and Transition to title</li>
 				<li>Transition to player select<br>Exit the current scene and Transition to player select</li>
 				<li>Transition to opening<br>Exit the current scene and Transition to opening</li>
@@ -267,11 +267,20 @@
 				<li>Transition to ranking<br>Exit the current scene and Transition to ranking</li>
 				<li>Transition to main stage<br>Exit the current scene and Transition to main stage</li>
 				<li>Transition to auto demo<br>Exit the current scene and Transition to auto demo</li>
+				<li>Ranking cursor down<br>Move cursor when ranking</li>
+				<li>Ranking cursor up<br>Move cursor when ranking</li>
+				<li>Ranking page next<br>Switch page when ranking</li>
+				<li>Ranking page prev<br>Switch page when ranking</li>
+				<li>Ranking type next<br>Switching the type of my ship when ranking</li>
+				<li>Ranking type prev<br>Switching the type of my ship when ranking</li>
+				<li>Ranking execute replay<br>Execute a replay of the cursor position</li>
 			</ul>
 			<br>
 			Regarding scene transition systems<br>
 			Replay records will be destroyed<br>
-			Ignored during replay playback and auto demo
+			Ignored during replay playback and auto demo<br>
+			<br>
+			Use the "Next" command if you want the replay to continue
 		</section>
 	</div>
 
@@ -283,6 +292,21 @@
 			<ul>
 				<li>Speed selection</li>
 			</ul>
+		</section>
+	</div>
+
+	<div class="main4">
+		<section>
+			<h2>Vibration</h2>
+			Controls pad vibration motors
+			<ul>
+				<li>Motor0<br>Check if you want to change. Intensity(0-100)</li>
+				<li>Motor1<br>Check if you want to change. Intensity(0-100)</li>
+				<li>Fade Frame<br>Number of frames to reach setpoint</li>
+				<li>Total Frame<br>Overall number of frames to vibrate</li>
+			</ul>
+			Caution<br>
+			The intensity and nature of vibration varies from pad to pad
 		</section>
 	</div>
 
