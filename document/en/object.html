@@ -281,7 +281,53 @@
 		</section>
 	</div>
 
+	<div class="main">
+		<section >
+			<H2>Physics Tab</H2>
+			<IMG SRC="png/object06.png">
+				<TABLE>
+					<TR VALIGN="top">
+					  <TD>
+					  <UL>
+						  <li>Enabled<br>Be sure to check this box if you want to apply physics operations. Only valid characters will be physically operated on each other.</li><p>
+						  <li>Type
+						  <OL>
+							  <LI>static:Influences other characters. Stationary object</LI>
+							  <LI>kinematic:Influences other characters.</LI>
+							  <LI>dynamic:Influences and is influenced by other characters</LI>
+						  </OL>
+						  </li><p>
+						  <li>Shapes
+						  <OL>
+							  <LI>Rectangle:Rectangle consisting of size XY</LI>
+							  <LI>Circle:Circle with size X as radius (cannot be an oval)</LI>
+							  <li>Polygon:Convex form up to 8 vertices. Clockwise only.</li>
+						  </OL>
+						  </li><p>
+						  <li>Group no
+						  <OL>
+							  <LI>0:Masks and categories are determined</LI>
+							  <LI>Positive: Always a hit if the same group number is used for both groups. Otherwise, equal to 0.</LI>
+							  <LI>Negative: The same group number will not always hit each other. Otherwise, equal to 0.</LI>
+						  </OL>
+						  </li><p>
+						  <li>Mask bit,Category bit<br>AND of the opponent's category bits and your mask bits. 0 means no hit, non-zero means a hit.</li><p>
+						  <li>Density<br>The higher the density, the easier it is to push other characters and the less likely they are to be repelled</li><p>
+						  <li>Friction<br>The higher the coefficient of friction, the less likely it is to slip</li><p>
+						  <li>Restitution<br>The higher the coefficient of repulsion, the greater the repulsion when characters collide with each other.</li><p>
+						  <li>Gravity<br>This is the percentage of this character that is subject to the overall gravity. Inverts with negative numbers.</li><p>
+						  <li>As bullet<br>A character moving at high speed is less likely to slip past other characters. Increased computational complexity</li><p>
+						  <li>Lock rotation<br>Rotational motion will not work during physics operations (script rotation will work).</li><p>
+						  <li>Accurate<br>Movement and rotation are performed using only physics calculations. Script commands such as normal movement cannot be used.</li>
+					  </UL>
+					  Preview screen can be moved by right-dragging, centered by middle-clicking, and zoomed in and out by wheel
+					  </TD>
+					</TR>
+				  </TABLE>
+				  <a href="physics.html" target="_new" >Physics Details</a>
+				</section></div>
 	<HR>
+
 		<a href="#TOP">Back to the top of the page</a><br>
 		<P>
 </BODY>

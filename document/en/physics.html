@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Shooting Game Builder</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href ="../../index.css">
+
+<BODY>
+<a href="index.html">back to the original page</a>
+
+<H1>Physics Details</H1><br>
+
+<hr>
+<h2>
+<a href="https://box2d.org/documentation/">BOX2D documents</a>
+</h2>
+
+<h2>Relationship between the hit judgment by the physics engine and the normal attack defense judgment.</h2>
+
+<UL>
+<li>Operates as a completely different system</li>
+<li>Even if the same size hit points are prepared, only one of them may be hit.</li>
+<li>If an attack hit task is made to disappear immediately, it may not be possible to determine the physics calculation.<br>
+	To avoid, drop the attack flag in the attack hit task and let it disappear after one frame weighting.<br>
+	If the display is turned off at the same time as the attack flag is dropped, the physics calculations will produce a picture with the angle changed by only one frame.<br>
+	You can prevent the display of</li>
+</UL>
+
+<h2>About Accurate Physical Mode</h2>
+<UL>
+<li>Normal movement and rotation panels are not available.</li>
+<li>Control is done in the script's physics panel</li>
+<li>Torque cannot be used together when facing the direction of travel</li>
+<li>There may be other glitches.</li>
+</UL>
+
+<hr>
+<h1>Current Constraints</h1>
+
+<UL>
+	<li>Children synchronized to the parent's coordinates cannot perform physics operations</li>
+	<li>Player options are not physics-capable</li>
+	<li>There may be others that can't be done, but unconfirmed.</li>
+	<p>
+	<li>Characters synchronized with scrolling appear not to be moving, but they are. This can cause vertically stacked characters to collapse.</li>
+	<li>It is not possible to assign shapes to the background (placed one by one as characters by hand)</li>
+	<p>
+	<li>Caving in and slipping through cannot be completely controlled</li>
+	<li>Characters may be abnormally fast in rare cases</li>
+</UL>
+<hr>
+
+</BODY>
+</html>
