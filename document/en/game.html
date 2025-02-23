@@ -27,8 +27,10 @@
 			<UL>
 				<LI>Game title<BR>Changing the title will reset score.bin</LI>
 				<LI>Executable name<BR>Set the name of the executable file for the build, excluding .exe. </LI>
-				<LI>Executable icon<BR>If you want to change the icon of the executable file, you can set please. The only file format that can be specified is .ico. If the extension is .ico
-					But the content may be a bitmap file (not available)</LI>
+				<LI>Executable icon<BR>If you want to change the icon of the executable file, you can set please. The only file format that can be specified is .ico. 
+					If the .ico content is a bitmap, it cannot be used.<BR>
+					The image size to be included in the .ico should be 32x32.If you exceed that size, the output will appear to be normal, but the icons in the detail view will not be replaced.<BR>
+					We have confirmed the operation of 8BPP and 32BPP for the number of colors.</LI>
 				<LI>Splash screen file<BR>Displayed during loading at game startup<br>
 					If not provided, the default SB logo will be displayed</LI>
 				<LI>The maximum number of normal (important) characters<BR>The maximum number of characters that can appear on the screen and whether or not important characters are checked in the character editing process<BR>
