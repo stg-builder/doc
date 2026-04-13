@@ -45,6 +45,9 @@
 						<LI>Z-value offset <BR>Value to be added to the drawing priority (negative number: front, positive number: back)</LI>
 						<li>Adjusts the character's position XY<br> Adds to the character's coordinates. Normally, the character appears from outside the screen by 32 pixels. (a negative number) </li>
 						<LI>Load Factor <BR>You can get the total load factor in the screen from the script</LI>
+						<li>Pause ID (0-2)<br>An ID used to control pausing from a script<br>The execution order is highest for 2 and lowest for 0
+                        <br>This can be used when creating pause menus or shops.
+						<br>Assign 0 to game characters, and assign 1 or 2 to the pause menu</li>
 					</UL>
 				</section>
 			</div>
@@ -52,28 +55,31 @@
 				<section >
 					<H3>Attribute flags</H3>
 					<UL STYLE="list-style-type : disc">
-						<LI>Turn on <BR>if you want to attack some opponent with an attack decision</LI>
-						<LI>Turn on if you are attacked by some opponent with <BR>defensive judgement</LI>
-						<LI>Synchronize <BR>Main background Synchronize with the scrolling (set in <A HREF="stage.html">Stage Edit</A>).
-						<LI>Automatically rotates the direction of the <BR>character facing the direction of movement. When this flag is turned on, the sprite must be facing downward</LI>
-						<LI>Articulated character <BR>Turn ON when using the articulated character described below</LI>
-						<LI>Out-of-game characters <BR>Main area The image will be drawn outside of the "Layout Editor". Turn off hit detection</LI>
-						<LI>Pause time in appearance<BR>If any of the characters with this flag are present, time will stop progressing</LI>
-						<LI>No automatic disappearance<BR>Characters do not disappear when they go off screen</LI>
-						<LI>No drawing</LI> <BR>This will stop only drawing. The hit decision etc. remains unchanged.
-						<LI>Invincible <BR>Defense decisions disappear</LI>
-						<LI>control <BR>player controls will be enabled</LI>
-						<li>Draw a shadow<br>Draw the shadow of the character <a href="stage.html">stage settings</a> are also required) </li>
-						<li>Respond to Flash<br>Transformed to the character specified in the flash effect</li>
-						<li>Vitality Display at the location specified in the layout settings</li>
-						<li>Optimize drawing<br>Normally off</li>
-						<li>Inhibit auto-animation in the auto-machine<br>Do not switch the pattern number when moving the machine</li>
-						<li>Do not synchronize the coordinates with the parent<li>Ignore the coordinate scaling of the parent</li>
-						<li>Don't synchronize colors with the parent<li> Ignore the parent's color changes</li>
-						<li>When you are in a fast-turning target<br>, the target character will not appear in the stage edit</li>
-						<li>Not subject to induction<br>Not subject to induction panel</li>
-						<li>Important Characters<br>The maximum number of characters to be set in the game settings</li>
-						<li>Never be affected by the parent's drawing priority<li> Ignore the parent's drawing priority</li>
+						<LI>Can attack <BR>if you want to attack some opponent with an attack decision</LI>
+						<LI>Can defenced <BR>defensive judgement</LI>
+						<LI>Sync background <BR>Main background Synchronize with the scrolling (set in <A HREF="stage.html">Stage Edit</A>).
+						<LI>Turn to movement direction <BR>character facing the direction of movement. When this flag is turned on, the sprite must be facing downward</LI>
+						<LI>Enable 'Joint' <BR>Turn ON when using the joint character described below</LI>
+						<LI>Outside of game <BR>Main area The image will be drawn outside of the "Layout Editor". Turn off hit detection</LI>
+						<LI>Time stop during appearance<BR>If any of the characters with this flag are present, time will stop progressing</LI>
+						<LI>No auto disappearance<BR>Characters do not disappear when they go off screen</LI>
+						<LI>Disable rendering <BR>This will stop only drawing. The hit decision etc. remains unchanged.</LI>
+						<LI>God mode <BR>Defense decisions disappear</LI>
+						<LI>Control player <BR>player controls will be enabled</LI>
+						<li>Draw shadows<br>Draw the shadow of the character <a href="stage.html">stage settings</a> are also required) </li>
+						<li>React to flashes<br>Transformed to the character specified in the flash effect</li>
+						<li>Display life gauge<br>Life Display at the location specified in the layout settings</li>
+						<li>Optimize rendering (restricted)<br>Normally off</li>
+						<li>Disable player animations<br>Do not switch the pattern number when moving the machine</li>
+						<li>Spawn enemy quickly<br>, the target character will not appear in the stage edit</li>
+						<li>Do not target for 'Homing'<br>Not subject to auto aim</li>
+						<li>Important character<br>The maximum number of characters to be set in the game settings</li>
+						<BR>
+						<li>Rotation is not sync to parent<br>Ignore the rotation of the parent</li>
+						<li>Disable coordinate sync with parent<br>Ignore the coordinate scaling of the parent</li>
+						<li>Disable color sync with parent<br> Ignore the parent's color changes</li>
+						<li>Drawing priority is not influenced by parent<br> Ignore the parent's drawing priority</li>
+						<li>Disable scale sync with parent<br>Ignore parent scaling</li>
 					</UL>
 				</section>
 			</div>
@@ -82,7 +88,7 @@
 
 	<div class="main3">
 		<section >
-			<H2>Multi Indirect Tab</H2>
+			<H2>Joint Tab</H2>
 			<IMG SRC="png/object01.png">
 			<UL STYLE="list-style-type : disc">
 				<li>Control Method<br> Specifies the indirect method of operation</li>
