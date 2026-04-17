@@ -41,7 +41,6 @@
 						<LI>Pattern number <BR>Pattern number or animation number set by the sprite</LI>
 						<LI>Vitality, Attack Power, Defense Power<BR>When an attack hits, the attacker's attack power minus the defense power is calculated from the vitality. It is subtracted; if it reaches 0, it is destroyed</LI>
 						<LI>Number of points <BR>Value to be added upon destruction</LI>
-						<LI>Money, Experience <BR>Unused</LI>
 						<LI>Z-value offset <BR>Value to be added to the drawing priority (negative number: front, positive number: back)</LI>
 						<li>Adjusts the character's position XY<br> Adds to the character's coordinates. Normally, the character appears from outside the screen by 32 pixels. (a negative number) </li>
 						<LI>Load Factor <BR>You can get the total load factor in the screen from the script</LI>
@@ -202,11 +201,11 @@
 			<H2>String tab</H2>
 			<IMG SRC="png/object03.png">
 			<ul>
-				<li>Print the string <BR>Display the specified string in the specified font</li>
-				<BR>Centered position for <BR>expansion and rotation relative to the center of the string</li>
-				<li>Displayed characters <BR>Unable to display one-byte alphanumeric characters and characters not in the font</li>
-				<li>If you don't specify the font <BR>, the system font will be used</li>
-
+				<li>Display a string <BR>Display the specified string in the specified font</li>
+				<li>Centering string <BR>Expansion and rotation relative to the center of the string</li>
+				<li>Displayed format <BR>Specify using ascii characters. You can display the variable's value using '%d'</li>
+				<li>Font<BR>If no font is specified, the system font will be used</li>
+				<li>X,Y<BR>Offset position</li>
 			</ul>
 
 		</section>
@@ -341,8 +340,25 @@
 		</section>
 	</div>
 
-	<HR>
+	<div class="main">
+		<section >
+			<H2>Initial Tab</H2>
+			You can set various default values without using a script<BR>
+			The settings here will also be reflected in the stage edit preview<BR>
+		</section>
+	</div>
 
+	<div class="main3">
+		<section >
+			<H2>Helper Tab</H2>
+			This performs the function equivalent to the 'Attack/Child' script command during character generation.<BR>
+			You can preview the layout information. The contents of the Initial Tab are also reflected.<BR>
+			<P>
+			  Preview screen can be moved by right-dragging, centered by middle-clicking, and zoomed in and out by wheel
+		</section>
+	</div>
+
+	<HR>
 		<a href="#TOP">Back to the top of the page</a><br>
 		<P>
 </BODY>
