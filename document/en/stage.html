@@ -28,19 +28,26 @@
 			<UL>
 				<li>Main BGM<BR>The played at the start of the stage. Select background music</li>
 				<li>Special layout <BR>Specifies a layout specific to this stage (default layout will be applied if not specified)</li>
-				<li>Basic scrolling direction <BR>Switch between vertical and horizontal scrolling here</li>
+				<li>Base scroll direction
+					<UL>
+						<LI>Upward<br>Setting for Vertical-Scroll shooters</LI>
+						<LI>Rightward<br>Setting for Holizontal-Scroll shooters</LI>
+						<LI>All direction<br>Setting for All direction Scroll shooters</LI>
+					</UL>
+				</li>
 				<li>Stage start processing<BR>When changing screen resolution, main area, etc. in scripts, frame skipping prevents the screen from momentarily collapsing</li>
 				<li>Shadow rendering settings</li>
 				<UL>
 					Sets the parameters for drawing a character's shadow
-					<li>Draw shadow of character<li> Check the box to draw a shadow in the stage. <a href="chara.html">character</a>Specify attributes in the settings </li>
+					<li>Draw shadow of character<li> Check the box to draw a shadow in the stage. <a href="object.html">character</a>Specify attributes in the settings </li>
 					<li>Transparency (alpha)<br>Shadow transparency (0-255)</li>
 					<li>Scale (equal to 100)<br>Scale (equal to 100)<br>Scale of the shadow in terms of magnification</li>
 					<li>Display offset<br> Specifies the position of the shadow to be drawn</li>
 				</UL>
 				<li>Disable pause<br>Check this box if you want to disable the pause button in the main stage</li>
 				<li>Disable buttons<br>Disable button operation for scene transitions outside of the main stage</li>
-				<li></li>
+				<li>Disable player<br>The player's ship will no longer appear</li>
+				<li>Disable BGM control<br>The BGM will no longer stop playing when a stage starts or ends</li>
 			</UL>
 		</section>
 	</div>
@@ -84,6 +91,9 @@
 				</LI>
 				<LI>How to change the placement method<BR>You can change the placement method with the buttons "Time placement" and "Coordinate placement" in the placement list</LI>
 				<LI>Concept of Time <BR>Time is a minimum unit of measurement, the frame (1/60th of a second). In the placement screen, one frame is one pixel long (see the timeline)</LI>
+				<LI>Edit<BR>Opens the edit window for the selected character</LI>
+				<LI>Del<BR>Deletes the selected character</LI>
+				<LI>Dup<BR>Duplicates the selected character</LI>
 			</UL>
 			<H2>Modification of post-deployment data</H2>
 			<UL>
@@ -92,6 +102,7 @@
 				<LI>X<BR>Located X position information</LI>
 				<LI>Y (invalid for time placement) <BR>Positioned Y information</LI>
 				<LI>PARAM_A,B<BR><A HREF="script.html">Script </A> Comparison of conditional bifurcation parameters passed to the script You can do it.
+				<LI>Respawn<BR>Causes a character that has disappeared to respawn</LI>
 				<LI>When you select <BR>"Do not appear if you are in the screen," the appearance will be skipped if there is a fast-turning target (character setting)</LI>
 				<LI>Item <BR>Select the item that will appear when you destroy it. In the case of formation, it will be set as the last enemy in the formation</LI>
 			</UL>
